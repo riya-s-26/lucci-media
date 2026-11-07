@@ -1,0 +1,671 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES - LUCCI MEDIA
+   Editorial Layout System, Instagram-Aligned Warm Palette & Content Alignment
+   ========================================================================== */
+
+:root {
+  --about-gutter: clamp(56px, 5.5vw, 76px);
+  --about-border: #D3D3D3;
+  --about-border-subtle: #E1E0DE;
+  --about-bg: #FDFDFC;
+  --about-text-dark: #1E1B18;
+  --about-text-body: #55504B;
+  --about-text-muted: #7A7570;
+  --about-text-num: #8A847F;
+}
+
+.about-page-main {
+  position: relative;
+  background-color: var(--about-bg);
+  color: var(--about-text-dark);
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY HIERARCHY & REUSABLE BASELINE ELEMENTS
+   -------------------------------------------------------------------------- */
+
+.about-eyebrow {
+  margin: 0 0 20px 0;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  color: var(--about-text-muted);
+  text-transform: uppercase !important;
+}
+
+.about-sec-num {
+  margin: 0;
+  padding-top: 2px;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  color: var(--about-text-num);
+  text-transform: uppercase !important;
+  white-space: nowrap;
+}
+
+.about-sec-heading {
+  margin: 0 0 24px 0;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(26px, 2.7vw, 38px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+}
+
+.about-body-text {
+  margin: 0 0 20px 0;
+  font-family: var(--sans);
+  font-size: clamp(13px, 1.05vw, 14.5px);
+  line-height: 1.75;
+  color: var(--about-text-body);
+  text-transform: none !important;
+  max-width: 480px;
+}
+.about-body-text:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: ABOUT HERO
+   -------------------------------------------------------------------------- */
+
+.about-hero-section {
+  padding: clamp(36px, 4.5vw, 60px) 0 clamp(64px, 7vw, 96px);
+}
+
+.about-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.18fr);
+  gap: clamp(36px, 5vw, 68px);
+  align-items: start;
+}
+
+.about-hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-hero-copy .about-eyebrow {
+  margin-bottom: clamp(18px, 2.2vw, 26px);
+}
+
+.about-hero-title {
+  margin: 0 0 24px 0;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(38px, 4.2vw, 56px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+}
+
+.about-hero-title span {
+  display: block;
+}
+
+.about-hero-sub {
+  margin: 0 0 clamp(28px, 3.5vw, 44px) 0;
+  font-family: var(--sans);
+  font-size: clamp(13.5px, 1.12vw, 15px);
+  line-height: 1.75;
+  color: var(--about-text-body);
+  max-width: 460px;
+  text-transform: none !important;
+}
+
+.about-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+}
+
+.about-scroll-arrow {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.about-hero-media {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+}
+
+.about-hero-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform .7s var(--ease);
+}
+.about-hero-media:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: OUR STORY (.01)
+   -------------------------------------------------------------------------- */
+
+.about-story-section {
+  border-top: 1px solid var(--about-border);
+  padding: clamp(64px, 7.5vw, 104px) 0;
+}
+
+.about-story-layout {
+  display: grid;
+  grid-template-columns: var(--about-gutter) 1.25fr 1fr;
+  gap: clamp(24px, 3.5vw, 48px);
+  align-items: start;
+}
+
+.about-story-collage {
+  display: grid;
+  grid-template-columns: 2.15fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+  height: 100%;
+  min-height: 380px;
+}
+
+.about-story-main-img {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  height: 100%;
+}
+
+.about-story-main-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.about-story-main-img:hover img {
+  transform: scale(1.02);
+}
+
+.about-story-sub-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.about-story-sub-img {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  flex: 1;
+  height: calc(50% - 6px);
+}
+
+.about-story-sub-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.about-story-sub-img:hover img {
+  transform: scale(1.02);
+}
+
+.about-story-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 480px;
+}
+
+.about-story-copy .about-eyebrow {
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: HOW WE THINK (.02)
+   -------------------------------------------------------------------------- */
+
+.about-think-section {
+  border-top: 1px solid var(--about-border);
+  padding: clamp(64px, 7.5vw, 104px) 0;
+}
+
+.about-think-layout {
+  display: grid;
+  grid-template-columns: var(--about-gutter) 1fr 1.25fr;
+  gap: clamp(24px, 3.5vw, 48px);
+  align-items: start;
+}
+
+.about-think-copy {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+}
+
+.about-think-copy .about-eyebrow {
+  margin-top: 0;
+}
+
+.about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  align-self: flex-start;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(30, 27, 24, 0.4);
+  padding-bottom: 3px;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.about-text-link:hover {
+  color: #000000;
+  border-color: #000000;
+}
+
+.about-think-media {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+}
+
+.about-think-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.about-think-media:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: WHAT WORKING WITH US FEELS LIKE (.03)
+   -------------------------------------------------------------------------- */
+
+.about-feels-section {
+  border-top: 1px solid var(--about-border);
+  padding: clamp(64px, 7.5vw, 104px) 0;
+}
+
+.about-feels-layout {
+  display: grid;
+  grid-template-columns: var(--about-gutter) 1fr 1.6fr;
+  gap: clamp(24px, 3.5vw, 48px);
+  align-items: start;
+}
+
+.about-feels-copy {
+  position: relative;
+}
+
+.about-feels-copy .about-eyebrow {
+  margin-top: 0;
+}
+
+.about-feels-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--about-border);
+  width: 100%;
+}
+
+.about-feels-item {
+  display: grid;
+  grid-template-columns: 64px 1.25fr 1.7fr;
+  gap: clamp(16px, 2.2vw, 28px);
+  align-items: baseline;
+  padding: clamp(22px, 2.4vw, 30px) 0;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.about-feels-num {
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--about-text-num);
+  text-transform: uppercase !important;
+  line-height: 1.4;
+}
+
+.about-feels-title {
+  margin: 0;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+}
+
+.about-feels-desc {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--about-text-body);
+  text-transform: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 5: MEET THE TEAM (.04)
+   -------------------------------------------------------------------------- */
+
+.about-team-section {
+  border-top: 1px solid var(--about-border);
+  padding: clamp(64px, 7.5vw, 104px) 0;
+}
+
+.about-team-layout {
+  display: grid;
+  grid-template-columns: var(--about-gutter) minmax(200px, 1.05fr) 1.55fr minmax(190px, 1fr);
+  gap: clamp(24px, 3vw, 44px);
+  align-items: start;
+}
+
+.about-team-founder-photo {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+}
+
+.about-team-founder-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform .6s var(--ease);
+}
+.about-team-founder-photo:hover img {
+  transform: scale(1.02);
+}
+
+.about-team-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-team-info .about-eyebrow {
+  margin-top: 0;
+}
+
+.about-team-founder {
+  margin-bottom: 28px;
+}
+
+.about-team-member {
+  margin-bottom: 24px;
+}
+.about-team-member:last-child {
+  margin-bottom: 0;
+}
+
+.about-team-name {
+  margin: 0 0 8px 0;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+}
+
+.about-team-bio {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--about-text-body);
+  text-transform: none !important;
+}
+
+.about-team-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-team-gallery-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+}
+
+.about-team-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.about-team-gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 6: FINAL CTA
+   -------------------------------------------------------------------------- */
+
+.about-final-cta-section {
+  border-top: 1px solid var(--about-border);
+  padding: clamp(48px, 6vw, 76px) 0;
+}
+
+.about-final-cta-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.about-cta-headline {
+  margin: 0;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(28px, 4.2vw, 52px);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  color: var(--about-text-dark);
+  text-transform: uppercase !important;
+}
+
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--about-text-dark);
+  color: #FFFFFF !important;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase !important;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color .25s ease, transform .2s var(--ease);
+}
+
+.about-cta-button:hover {
+  background-color: #38332E;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN SYSTEM
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1120px) {
+  :root {
+    --about-gutter: 52px;
+  }
+  .about-team-layout {
+    grid-template-columns: var(--about-gutter) minmax(180px, 1fr) 1.5fr minmax(170px, 0.95fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 960px) {
+  :root {
+    --about-gutter: 44px;
+  }
+  .about-hero-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .about-story-layout {
+    grid-template-columns: var(--about-gutter) 1.15fr 1fr;
+    gap: 32px;
+  }
+  .about-think-layout {
+    grid-template-columns: var(--about-gutter) 1fr 1.15fr;
+    gap: 32px;
+  }
+  .about-feels-layout {
+    grid-template-columns: var(--about-gutter) 0.9fr 1.5fr;
+    gap: 32px;
+  }
+  .about-team-layout {
+    grid-template-columns: var(--about-gutter) 1fr 1.3fr;
+    gap: 28px;
+  }
+  .about-team-gallery {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 820px) {
+  .about-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-hero-media {
+    max-width: 560px;
+  }
+  
+  .about-story-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-sec-num {
+    margin-bottom: -12px;
+  }
+  .about-story-collage {
+    min-height: 320px;
+  }
+  
+  .about-think-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-think-media {
+    max-width: 560px;
+  }
+  
+  .about-feels-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-feels-item {
+    grid-template-columns: 50px 1fr;
+    gap: 12px;
+  }
+  .about-feels-desc {
+    grid-column: 2 / -1;
+  }
+  
+  .about-team-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-team-founder-photo {
+    max-width: 320px;
+  }
+  .about-team-gallery {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .about-final-cta-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-hero-title {
+    font-size: 32px;
+  }
+  .about-sec-heading {
+    font-size: 24px;
+  }
+  .about-cta-headline {
+    font-size: 28px;
+  }
+  .about-story-collage {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .about-story-sub-stack {
+    flex-direction: row;
+    height: auto;
+  }
+  .about-story-sub-img {
+    height: 140px;
+  }
+  .about-feels-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .about-feels-desc {
+    grid-column: 1 / -1;
+  }
+  .about-team-gallery {
+    grid-template-columns: 1fr;
+  }
+}
