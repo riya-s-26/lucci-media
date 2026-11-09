@@ -13,9 +13,6 @@
   <link rel="preload" href="assets/fonts/montserrat-latin-italic-700-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=26.0">
   <link rel="stylesheet" href="about.css?v=26.0">
   <script>document.documentElement.classList.add('js');</script>
@@ -119,14 +116,14 @@
             BUILT FROM INSIDE<br>THE TREATMENT<br>ROOM.
           </h2>
           <p class="about-body-text">
-            Before Lucci Media, there was the treatment room. Lex Luciano is a licensed esthetician who went on to build
-            a creator career working with globally recognized brands. She saw the same gap from both sides: beautiful
-            businesses with incredible results, represented online by content that looked nothing like the experience
-            inside.
+            Before Lucci Media, there was the treatment room. With 10+ years of industry experience as a licensed
+            esthetician and professional makeup artist, Lex Luciano went on to build a creator career working with
+            globally recognized brands. She saw the same gap from both sides: beautiful businesses with incredible
+            results, represented online by content that looked nothing like the experience inside.
           </p>
           <p class="about-body-text">
-            She founded Lucci Media in December 2023 to close that gap. Since then, more than 350 brands have trusted us
-            with how they show up, from med spas and injectors to skincare lines, salons and lifestyle labels across New
+            She founded Lucci Media in December 2023 to close that gap. Since then, 350+ brands have trusted us with
+            how they show up, from med spas and injectors to skincare lines, salons and lifestyle labels across New
             England and beyond.
           </p>
         </div>
@@ -204,50 +201,66 @@
 
     <!-- SECTION 5: MEET THE TEAM (.04) -->
     <section class="about-team-section" id="team" aria-labelledby="about-team-title">
-      <div class="page-wrap about-team-layout">
-        <div class="about-sec-num" aria-hidden="true">.04 ───</div>
-
-        <!-- Founder Portrait Left -->
-        <div class="about-team-founder-photo" data-reveal="image">
-          <img src="assets/about/team_lex.jpg" alt="Lex Luciano, Founder & Creative Director portrait" loading="lazy">
-        </div>
-
-        <!-- Center Team Text -->
-        <div class="about-team-info" data-reveal>
-          <p class="about-eyebrow">[ MEET THE TEAM ]</p>
-          <h2 class="about-sec-heading" id="about-team-title">
-            THE TEAM<br>BEHIND THE FEED.
-          </h2>
-
-          <div class="about-team-founder">
-            <h3 class="about-team-name">LEX LUCIANO, FOUNDER AND CREATIVE DIRECTOR.</h3>
-            <p class="about-team-bio">
-              Licensed esthetician and the eye behind every Lucci Media project. Lex leads strategy, creative direction
-              and quality on every account.
-            </p>
-          </div>
-
-          <div class="about-team-member">
-            <h3 class="about-team-name">[Team member], [Role]</h3>
-            <p class="about-team-bio">[One or two lines describing their responsibilities and strengths.]</p>
-          </div>
-
-          <div class="about-team-member">
-            <h3 class="about-team-name">[Team member], [Role]</h3>
-            <p class="about-team-bio">[One or two lines describing their responsibilities and strengths.]</p>
+      <div class="page-wrap">
+        <div class="about-team-header" data-reveal>
+          <div class="about-sec-num" aria-hidden="true">.04 ───</div>
+          <div class="about-team-header-copy">
+            <p class="about-eyebrow">[ MEET THE TEAM ]</p>
+            <h2 class="about-sec-heading" id="about-team-title">THE TEAM BEHIND THE FEED.</h2>
           </div>
         </div>
 
-        <!-- Right Studio/Team Gallery -->
-        <div class="about-team-gallery" data-reveal="image">
-          <div class="about-team-gallery-item">
-            <img src="assets/about/team_studio_chair.jpg" alt="Lucci Media studio production setup with director chair"
-              loading="lazy">
-          </div>
-          <div class="about-team-gallery-item">
-            <img src="assets/about/team_laptop.jpg" alt="Lucci Media creative team collaborating on laptop"
-              loading="lazy">
-          </div>
+        <div class="about-team-grid" data-reveal>
+          <!-- Profile 1: Lex Luciano -->
+          <article class="about-team-profile">
+            <div class="about-team-photo-wrap">
+              <img src="assets/about/team_lex.jpg" alt="Lex Luciano — Founder + Creative Director" loading="lazy">
+            </div>
+            <div class="about-team-meta">
+              <h3 class="about-team-member-name">LEX LUCIANO</h3>
+              <p class="about-team-member-role">Founder + Creative Director</p>
+              <p class="about-team-member-desc">Licensed esthetician and the eye behind every Lucci Media project. Lex leads strategy, creative direction and quality on every account.</p>
+            </div>
+          </article>
+
+          <!-- Profile 2: Soph -->
+          <article class="about-team-profile">
+            <div class="about-team-photo-wrap about-team-placeholder" data-profile="soph">
+              <div class="team-placeholder-inner">
+                <span class="placeholder-label">[ PORTRAIT COMING SOON ]</span>
+              </div>
+            </div>
+            <div class="about-team-meta">
+              <h3 class="about-team-member-name">SOPH</h3>
+              <p class="about-team-member-role">Videographer + Editor</p>
+            </div>
+          </article>
+
+          <!-- Profile 3: Nicole -->
+          <article class="about-team-profile">
+            <div class="about-team-photo-wrap about-team-placeholder" data-profile="nicole">
+              <div class="team-placeholder-inner">
+                <span class="placeholder-label">[ PORTRAIT COMING SOON ]</span>
+              </div>
+            </div>
+            <div class="about-team-meta">
+              <h3 class="about-team-member-name">NICOLE</h3>
+              <p class="about-team-member-role">Editor</p>
+            </div>
+          </article>
+
+          <!-- Profile 4: Deandra -->
+          <article class="about-team-profile">
+            <div class="about-team-photo-wrap about-team-placeholder" data-profile="deandra">
+              <div class="team-placeholder-inner">
+                <span class="placeholder-label">[ PORTRAIT COMING SOON ]</span>
+              </div>
+            </div>
+            <div class="about-team-meta">
+              <h3 class="about-team-member-name">DEANDRA</h3>
+              <p class="about-team-member-role">Account Manager + Community Engagement Specialist</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -271,7 +284,7 @@
             aria-hidden="true">↗</span></a>
       </div>
       <div class="footer-meta-col footer-meta-center">
-        <span class="footer-est">EST. 2021 ── BOSTON</span>
+        <span class="footer-est">EST. 2023 ── BOSTON</span>
         <span class="footer-script">Available Worldwide</span>
       </div>
       <div class="footer-meta-col footer-meta-right">
@@ -279,11 +292,10 @@
       </div>
     </div>
 
-    <!-- 3. Giant Editorial Brand Wordmark Spanning Left & Right -->
+    <!-- 3. Large Horizontal Brand Logo in Footer -->
     <div class="footer-brand-stage page-wrap">
-      <div class="footer-giant-wordmark" aria-label="Lucci Media">
-        <span class="fg-word fg-left">LUCCI</span>
-        <span class="fg-word fg-right">MEDIA</span>
+      <div class="footer-logo-stage" aria-label="Lucci Media">
+        <img class="footer-brand-logo" src="assets/lucci-horizontal-logo-black.png" alt="Lucci Media" width="500" height="70">
       </div>
     </div>
 

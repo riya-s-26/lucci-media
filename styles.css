@@ -1548,9 +1548,25 @@ h1, h2 { margin-bottom: 0; font-weight: 500; }
   text-align: right;
 }
 
-/* 3. Giant Editorial Wordmark Spanning Left & Right */
+/* 3. Horizontal Brand Logo in Footer */
 .footer-brand-stage {
   padding: clamp(6px, 1.5vw, 18px) 0 clamp(24px, 3.5vw, 40px);
+}
+
+.footer-logo-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: clamp(24px, 3.5vw, 42px);
+}
+
+.footer-brand-logo {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .footer-giant-wordmark {
@@ -1884,7 +1900,7 @@ html.lenis, html.lenis body {
   .ticker-track { animation: none; }
   .photo-marquee-track { animation: none; }
   .footer-marquee > div { animation: none; }
-  .js [data-reveal], .js [data-reveal="image"] { opacity: 1; transform: none; clip-path: none; }
+  .js [data-reveal], .js [data-reveal="image"], .js .scroll-reveal, .js .scroll-reveal-img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
   .js [data-reveal] .reveal-line > span, .hero h1 .title-line > span { transform: none; animation: none; }
   .hero-copy, .hero-visual { transform: none; opacity: 1; }
   .work-image img[data-parallax], .studio-image img[data-parallax] { transform: none; }

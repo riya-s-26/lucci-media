@@ -49,13 +49,18 @@
   white-space: nowrap;
 }
 
+.site-header .brand-logo {
+  clip-path: none !important;
+}
+
 .about-sec-heading {
   margin: 0 0 24px 0;
-  font-family: 'ShapiroWideRegular', var(--sans);
+  font-family: var(--sans);
+  font-style: italic;
   font-size: clamp(26px, 2.7vw, 38px);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
   color: var(--about-text-dark);
   text-transform: uppercase !important;
 }
@@ -99,11 +104,12 @@
 
 .about-hero-title {
   margin: 0 0 24px 0;
-  font-family: 'ShapiroWideRegular', var(--sans);
+  font-family: var(--sans);
+  font-style: italic;
   font-size: clamp(38px, 4.2vw, 56px);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   color: var(--about-text-dark);
   text-transform: uppercase !important;
 }
@@ -387,22 +393,41 @@
   padding: clamp(64px, 7.5vw, 104px) 0;
 }
 
-.about-team-layout {
+.about-team-header {
   display: grid;
-  grid-template-columns: var(--about-gutter) minmax(200px, 1.05fr) 1.55fr minmax(190px, 1fr);
+  grid-template-columns: var(--about-gutter) 1fr;
   gap: clamp(24px, 3vw, 44px);
+  margin-bottom: clamp(36px, 4.5vw, 56px);
   align-items: start;
 }
 
-.about-team-founder-photo {
-  position: relative;
-  overflow: hidden;
-  background-color: #F4F3EF;
-  aspect-ratio: 3 / 4;
-  width: 100%;
+.about-team-header-copy .about-eyebrow {
+  margin-top: 0;
 }
 
-.about-team-founder-photo img {
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 2.4vw, 36px);
+  align-items: start;
+}
+
+.about-team-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-team-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #F4F3EF;
+  border: 1px solid var(--about-border-subtle);
+  transition: transform .4s var(--ease), box-shadow .4s ease;
+}
+
+.about-team-photo-wrap img {
   display: block;
   width: 100%;
   height: 100%;
@@ -410,73 +435,71 @@
   object-position: center 20%;
   transition: transform .6s var(--ease);
 }
-.about-team-founder-photo:hover img {
-  transform: scale(1.02);
+
+.about-team-photo-wrap:hover img {
+  transform: scale(1.025);
 }
 
-.about-team-info {
+.about-team-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F4F0;
+  border: 1px dashed #D3D1CB;
+}
+
+.about-team-placeholder .team-placeholder-inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
 }
 
-.about-team-info .about-eyebrow {
-  margin-top: 0;
-}
-
-.about-team-founder {
-  margin-bottom: 28px;
-}
-
-.about-team-member {
-  margin-bottom: 24px;
-}
-.about-team-member:last-child {
-  margin-bottom: 0;
-}
-
-.about-team-name {
-  margin: 0 0 8px 0;
-  font-family: 'ShapiroWideRegular', var(--sans);
-  font-size: 12px;
+.about-team-placeholder .placeholder-label {
+  font-family: var(--label);
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.14em;
+  color: var(--about-text-num);
+  text-transform: uppercase;
+}
+
+.about-team-meta {
+  padding-top: 16px;
+  border-top: 1px solid var(--about-border-subtle);
+  margin-top: 14px;
+}
+
+.about-team-member-name {
+  margin: 0 0 6px 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   line-height: 1.35;
   color: var(--about-text-dark);
   text-transform: uppercase !important;
 }
 
-.about-team-bio {
+.about-team-member-role {
   margin: 0;
+  font-family: var(--label);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  color: var(--about-text-muted);
+  text-transform: uppercase;
+}
+
+.about-team-member-desc {
+  margin: 12px 0 0 0;
   font-family: var(--sans);
   font-size: 13px;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--about-text-body);
   text-transform: none !important;
-}
-
-.about-team-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.about-team-gallery-item {
-  position: relative;
-  overflow: hidden;
-  background-color: #F4F3EF;
-  aspect-ratio: 16 / 10;
-  width: 100%;
-}
-
-.about-team-gallery-item img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .6s var(--ease);
-}
-.about-team-gallery-item:hover img {
-  transform: scale(1.02);
 }
 
 /* --------------------------------------------------------------------------
@@ -497,10 +520,11 @@
 
 .about-cta-headline {
   margin: 0;
-  font-family: 'ShapiroWideRegular', var(--sans);
+  font-family: var(--sans);
+  font-style: italic;
   font-size: clamp(28px, 4.2vw, 52px);
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  letter-spacing: -0.025em;
   line-height: 1.1;
   color: var(--about-text-dark);
   text-transform: uppercase !important;
@@ -537,10 +561,6 @@
   :root {
     --about-gutter: 52px;
   }
-  .about-team-layout {
-    grid-template-columns: var(--about-gutter) minmax(180px, 1fr) 1.5fr minmax(170px, 0.95fr);
-    gap: 28px;
-  }
 }
 
 @media (max-width: 960px) {
@@ -563,16 +583,9 @@
     grid-template-columns: var(--about-gutter) 0.9fr 1.5fr;
     gap: 32px;
   }
-  .about-team-layout {
-    grid-template-columns: var(--about-gutter) 1fr 1.3fr;
-    gap: 28px;
-  }
-  .about-team-gallery {
-    grid-column: 2 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 10px;
+  .about-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
   }
 }
 
@@ -616,20 +629,6 @@
     grid-column: 2 / -1;
   }
   
-  .about-team-layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .about-team-founder-photo {
-    max-width: 320px;
-  }
-  .about-team-gallery {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  
   .about-final-cta-layout {
     flex-direction: column;
     align-items: flex-start;
@@ -665,7 +664,44 @@
   .about-feels-desc {
     grid-column: 1 / -1;
   }
-  .about-team-gallery {
+  .about-team-header {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .about-team-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   FOOTER HORIZONTAL LOGO & CURSIVE TYPOGRAPHY REMOVAL
+   -------------------------------------------------------------------------- */
+
+.footer-logo-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: clamp(24px, 3.5vw, 42px);
+}
+
+.footer-brand-logo {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-script {
+  font-family: var(--label) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: var(--about-text-muted) !important;
+  margin-top: 4px;
+}
+
+.about-page-main [data-reveal] { opacity: 1 !important; transform: none !important; }
