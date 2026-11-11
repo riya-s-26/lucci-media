@@ -694,14 +694,17 @@
   object-fit: contain;
 }
 
+@font-face { font-family: "Hello January"; src: url("assets/fonts/hello-january.woff") format("woff"), url("assets/fonts/hello-january.otf") format("opentype"), url("assets/fonts/Hello%20January.otf") format("opentype"), url("assets/fonts/Hello January.otf") format("opentype"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "HelloJanuary"; src: url("assets/fonts/hello-january.woff") format("woff"), url("assets/fonts/hello-january.otf") format("opentype"), url("assets/fonts/Hello%20January.otf") format("opentype"), url("assets/fonts/Hello January.otf") format("opentype"); font-style: normal; font-weight: 400; font-display: swap; }
+
 .footer-script {
-  font-family: var(--label) !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.16em !important;
-  text-transform: uppercase !important;
-  color: var(--about-text-muted) !important;
-  margin-top: 4px;
+  font-family: 'Hello January', 'HelloJanuary', cursive, sans-serif !important;
+  font-size: clamp(24px, 2.8vw, 36px) !important;
+  color: #2D1118 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1 !important;
+  margin-top: -3px !important;
+  text-transform: none !important;
 }
 
 .about-page-main [data-reveal] { opacity: 1 !important; transform: none !important; }

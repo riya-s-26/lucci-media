@@ -114,3 +114,13 @@
   }
 }
 
+.footer-script {
+  font-family: 'Hello January', 'HelloJanuary', cursive, sans-serif !important;
+  font-size: clamp(24px, 2.8vw, 36px) !important;
+  color: #2D1118 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1 !important;
+  margin-top: -3px !important;
+  text-transform: none !important;
+}
+
