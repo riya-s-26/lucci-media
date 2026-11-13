@@ -2755,7 +2755,7 @@ p,
   line-height: 1.08;
   letter-spacing: -0.025em;
   color: #111111;
-  text-transform: none !important;
+  text-transform: uppercase !important;
 }
 
 .work-speaks-title em {
@@ -2764,7 +2764,7 @@ p,
   font-style: italic !important;
   font-weight: 400;
   color: #111111;
-  text-transform: none !important;
+  text-transform: uppercase !important;
 }
 
 .work-speaks-title-divider {
