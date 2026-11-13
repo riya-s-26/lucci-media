@@ -104,12 +104,12 @@
 
 .about-hero-title {
   margin: 0 0 24px 0;
-  font-family: var(--sans);
-  font-style: italic;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-style: normal;
   font-size: clamp(38px, 4.2vw, 56px);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.025em;
+  letter-spacing: 0.02em;
   color: var(--about-text-dark);
   text-transform: uppercase !important;
 }
@@ -638,7 +638,8 @@
 
 @media (max-width: 540px) {
   .about-hero-title {
-    font-size: 32px;
+    font-size: clamp(28px, 8.2vw, 32px);
+    letter-spacing: 0;
   }
   .about-sec-heading {
     font-size: 24px;
@@ -698,7 +699,7 @@
 @font-face { font-family: "HelloJanuary"; src: url("assets/fonts/hello-january.woff") format("woff"), url("assets/fonts/hello-january.otf") format("opentype"), url("assets/fonts/Hello%20January.otf") format("opentype"), url("assets/fonts/Hello January.otf") format("opentype"); font-style: normal; font-weight: 400; font-display: swap; }
 
 .footer-script {
-  font-family: 'Hello January', 'HelloJanuary', cursive, sans-serif !important;
+  font-family: 'ShapiroWideRegular', var(--sans) !important;
   font-size: clamp(24px, 2.8vw, 36px) !important;
   color: #2D1118 !important;
   letter-spacing: 0.02em !important;

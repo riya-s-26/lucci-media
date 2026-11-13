@@ -115,7 +115,7 @@
 }
 
 .footer-script {
-  font-family: 'Hello January', 'HelloJanuary', cursive, sans-serif !important;
+  font-family: 'ShapiroWideRegular', var(--sans) !important;
   font-size: clamp(24px, 2.8vw, 36px) !important;
   color: #2D1118 !important;
   letter-spacing: 0.02em !important;
