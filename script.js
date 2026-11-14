@@ -337,9 +337,7 @@
     const isPaused = archivePauseToggle.getAttribute('aria-pressed') !== 'true';
     archivePauseToggle.setAttribute('aria-pressed', String(isPaused));
     const pauseText = archivePauseToggle.querySelector('.pause-text');
-    const pauseIcon = archivePauseToggle.querySelector('.pause-icon');
     if (pauseText) pauseText.textContent = isPaused ? 'Play' : 'Pause';
-    if (pauseIcon) pauseIcon.textContent = isPaused ? '▶' : '⏸';
     archiveTracks.forEach(t => t.classList.toggle('is-paused', isPaused));
   });
 

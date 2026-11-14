@@ -1,0 +1,133 @@
+import subprocess, os
+from PIL import Image
+
+chrome_path = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
+
+html = """<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+  background: #FFF;
+  font-family: Montserrat, sans-serif;
+  padding: 40px;
+}
+.star-svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+}
+.compare-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.box-label {
+  font-size: 11px;
+  color: #666;
+}
+</style>
+</head>
+<body>
+
+<h3>Studio Sparkle (color: #2D1118, size: 36px)</h3>
+<div class="compare-row">
+  <div class="box">
+    <div class="box-label">Original Glyph:</div>
+    <div style="font-size: 36px; color: #2D1118; line-height: 1;">✳</div>
+  </div>
+  <div class="box">
+    <div class="box-label">SVG stroke 1.6:</div>
+    <div style="font-size: 36px; color: #2D1118; line-height: 1;">
+      <svg class="star-svg" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+      </svg>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-label">SVG stroke 1.8:</div>
+    <div style="font-size: 36px; color: #2D1118; line-height: 1;">
+      <svg class="star-svg" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+      </svg>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-label">SVG stroke 2.0:</div>
+    <div style="font-size: 36px; color: #2D1118; line-height: 1;">
+      <svg class="star-svg" viewBox="0 0 24 24" stroke-width="2.0" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<h3>Contact Flower (color: rgba(0,0,0,0.08), size: 67px)</h3>
+<div class="compare-row" style="background: #FAF9F6; padding: 20px;">
+  <div class="box">
+    <div class="box-label">Original Glyph:</div>
+    <div style="font-size: 67px; color: rgba(0,0,0,0.08); line-height: 1;">✳</div>
+  </div>
+  <div class="box">
+    <div class="box-label">SVG stroke 1.8:</div>
+    <div style="font-size: 67px; color: rgba(0,0,0,0.08); line-height: 1;">
+      <svg class="star-svg" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+      </svg>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-label">SVG stroke 2.0:</div>
+    <div style="font-size: 67px; color: rgba(0,0,0,0.08); line-height: 1;">
+      <svg class="star-svg" viewBox="0 0 24 24" stroke-width="2.0" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+"""
+
+test_path = os.path.abspath('scratch/test_strokes.html')
+with open(test_path, 'w', encoding='utf-8') as f:
+    f.write(html)
+
+shot = os.path.abspath('scratch/test_strokes.png')
+cmd = [
+    chrome_path, '--headless=new', '--disable-gpu', '--no-sandbox',
+    '--allow-file-access-from-files',
+    '--window-size=1000,700',
+    f'--screenshot={shot}',
+    'file:///' + test_path.replace('\\', '/')
+]
+subprocess.run(cmd, capture_output=True)
+print("Saved scratch/test_strokes.png")
+

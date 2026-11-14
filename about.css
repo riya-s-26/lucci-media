@@ -689,10 +689,18 @@
 
 .footer-brand-logo {
   display: block;
-  width: 500px;
+  width: min(350px, 84vw);
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  margin-inline: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@media (min-width: 961px) {
+  .footer-brand-logo {
+    width: min(700px, 75vw);
+  }
 }
 
 @font-face { font-family: "Hello January"; src: url("assets/fonts/hello-january.woff") format("woff"), url("assets/fonts/hello-january.otf") format("opentype"), url("assets/fonts/Hello%20January.otf") format("opentype"), url("assets/fonts/Hello January.otf") format("opentype"); font-style: normal; font-weight: 400; font-display: swap; }
