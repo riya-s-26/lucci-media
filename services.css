@@ -1,0 +1,716 @@
+/* ==========================================================================
+   LUCCI MEDIA — SERVICES PAGE STYLES (services.css)
+   Clean, luxury editorial typography & layout inspired by client mockups.
+   ========================================================================== */
+
+/* Page Wrapper & Base Reset */
+.services-page-main {
+  background: #FFFFFF;
+  color: #111111;
+  overflow-x: hidden;
+  padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+.services-page-main [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ensure proper sentence case and capitalization across all body content */
+.services-page-main p,
+.services-page-main .service-desc,
+.services-page-main .service-meta-text,
+.services-page-main .service-meta-sub,
+.services-page-main .service-session-item,
+.services-page-main .process-step-desc,
+.services-page-main .who-description,
+.services-page-main .services-hero-subhead {
+  text-transform: none !important;
+}
+
+/* Category Eyebrow Tag across all sections */
+.services-category-tag {
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #767676;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION
+   -------------------------------------------------------------------------- */
+.services-hero-section {
+  padding-top: clamp(48px, 6vw, 84px);
+  padding-bottom: clamp(48px, 6vw, 76px);
+  background: #FFFFFF;
+}
+
+.services-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(36px, 5.5vw, 72px);
+}
+
+.services-hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-hero-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(30px, 3.8vw, 54px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.services-hero-subhead {
+  font-family: var(--sans);
+  font-size: clamp(13.5px, 1.15vw, 15px);
+  line-height: 1.68;
+  color: #444444;
+  max-width: 480px;
+}
+
+.services-hero-media {
+  position: relative;
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  background: #F5F5F5;
+}
+
+.services-hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 325 / 229;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services-hero-media:hover .services-hero-img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   2. FOUR SERVICES TABLE SECTION (STRUCTURED EDITORIAL ROWS)
+   -------------------------------------------------------------------------- */
+.services-table-section {
+  padding-block: clamp(20px, 3vw, 40px);
+  background: #FFFFFF;
+}
+
+.services-table {
+  border-top: 1px solid #E5E5E5;
+  width: 100%;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 24% 23% 31% 22%;
+  border-bottom: 1px solid #E5E5E5;
+  padding-block: clamp(28px, 3.5vw, 44px);
+  transition: background-color 0.25s ease;
+}
+
+.service-row:hover {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+/* Col 1: Service Index & Title */
+.service-col-title {
+  padding-right: clamp(16px, 2vw, 32px);
+  border-right: 1px solid #E5E5E5;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-num {
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #767676;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.service-name {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(14px, 1.25vw, 17px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+/* Col 2: Hook / Sub-Headline */
+.service-col-headline {
+  padding-inline: clamp(16px, 2vw, 32px);
+  border-right: 1px solid #E5E5E5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.service-headline {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(12.5px, 1.1vw, 14.5px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+/* Col 3: Description / Summary */
+.service-col-body {
+  padding-inline: clamp(16px, 2vw, 32px);
+  border-right: 1px solid #E5E5E5;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-desc {
+  font-family: var(--sans);
+  font-size: clamp(12.5px, 1.05vw, 13.5px);
+  line-height: 1.65;
+  color: #444444;
+  margin: 0;
+}
+
+/* Col 4: Investment, Sessions & Best For */
+.service-col-meta {
+  padding-left: clamp(16px, 2vw, 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.service-meta-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-meta-text {
+  font-family: var(--sans);
+  font-size: clamp(12px, 0.98vw, 13px);
+  line-height: 1.55;
+  color: #222222;
+  margin: 0;
+}
+
+.service-meta-sub {
+  font-family: var(--sans);
+  font-size: clamp(11.5px, 0.9vw, 12.5px);
+  line-height: 1.5;
+  color: #666666;
+  margin-top: 8px;
+}
+
+.service-sessions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-session-item {
+  font-family: var(--sans);
+  font-size: clamp(11.5px, 0.92vw, 12.5px);
+  line-height: 1.5;
+  color: #333333;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. PROCESS SECTION — HOW A PARTNERSHIP RUNS (REFERENCE IMAGE 2 EXACT)
+   -------------------------------------------------------------------------- */
+.services-process-section {
+  padding-block: clamp(56px, 7vw, 92px);
+  background: #FFFFFF;
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: clamp(220px, 24vw, 320px) 1fr;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.process-header-col {
+  padding-right: clamp(28px, 4vw, 56px);
+  border-right: 1px solid #E5E5E5;
+}
+
+.process-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.process-steps-track {
+  padding-left: clamp(28px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(12px, 1.8vw, 24px);
+  align-items: flex-start;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-node-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: clamp(14px, 2vw, 22px);
+  width: 100%;
+}
+
+.process-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.3px solid #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #111111;
+  background: #FFFFFF;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.process-connector {
+  flex-grow: 1;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.process-step-arrow {
+  width: 100%;
+  height: 8px;
+  display: block;
+  color: #CCCCCC;
+}
+
+.process-step-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.process-step-desc {
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. WHO WE WORK WITH SECTION
+   -------------------------------------------------------------------------- */
+.services-who-section {
+  padding-block: clamp(52px, 6.5vw, 84px);
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  background: #FFFFFF;
+}
+
+.who-layout {
+  display: grid;
+  grid-template-columns: clamp(220px, 24vw, 320px) 1fr;
+  align-items: center;
+  gap: 0;
+}
+
+.who-header-col {
+  padding-right: clamp(28px, 4vw, 56px);
+  border-right: 1px solid #E5E5E5;
+}
+
+.who-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.who-content-col {
+  padding-left: clamp(28px, 4vw, 56px);
+}
+
+.who-description {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.25vw, 17px);
+  font-weight: 400;
+  line-height: 1.78;
+  color: #333333;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. LIMITED PARTNERSHIPS CTA SECTION
+   -------------------------------------------------------------------------- */
+.services-cta-section {
+  padding-block: clamp(60px, 7.5vw, 96px);
+  background: #FFFFFF;
+}
+
+.services-cta-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  background: #F7F7F7;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  overflow: hidden;
+  align-items: stretch;
+  min-height: 240px;
+}
+
+.services-cta-content {
+  padding: clamp(36px, 5.5vw, 68px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(20px, 2.8vw, 32px);
+}
+
+.services-cta-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(22px, 2.5vw, 36px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0;
+}
+
+.services-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #111111;
+  color: #FFFFFF;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.services-cta-btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.services-cta-btn .cta-arrow-icon {
+  width: 0.85em;
+  height: 0.85em;
+  transition: transform 0.25s ease;
+}
+
+.services-cta-btn:hover .cta-arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+.services-cta-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  background: #EEEEEE;
+}
+
+.services-cta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   -------------------------------------------------------------------------- */
+
+/* TABLET (1024px and below) */
+@media (max-width: 1024px) {
+  .service-row {
+    grid-template-columns: 26% 22% 30% 22%;
+    padding-block: 30px;
+  }
+
+  .process-steps-track {
+    gap: 12px;
+  }
+
+  .process-step-title {
+    font-size: 11px;
+  }
+
+  .process-step-desc {
+    font-size: 11.5px;
+  }
+}
+
+/* MEDIUM TABLET (880px and below) */
+@media (max-width: 880px) {
+  .services-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .services-hero-copy {
+    order: 1;
+  }
+
+  .services-hero-media {
+    order: 2;
+    max-width: 580px;
+  }
+
+  /* Switch service rows to 2x2 grid cards */
+  .service-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+    padding-block: 30px;
+  }
+
+  .service-col-title {
+    padding-right: 20px;
+    border-right: 1px solid #E5E5E5;
+  }
+
+  .service-col-headline {
+    padding-inline: 0;
+    border-right: none;
+  }
+
+  .service-col-body {
+    padding-inline: 0;
+    border-right: 1px solid #E5E5E5;
+    padding-right: 20px;
+  }
+
+  .service-col-meta {
+    padding-left: 0;
+  }
+
+  /* Process section stacks header and steps track */
+  .process-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .process-header-col {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 24px;
+  }
+
+  .process-steps-track {
+    padding-left: 0;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .process-step {
+    min-width: 140px;
+  }
+
+  /* Who We Work With stacks */
+  .who-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .who-header-col {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .who-content-col {
+    padding-left: 0;
+  }
+
+  /* CTA stacks */
+  .services-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .services-cta-visual {
+    height: 180px;
+  }
+}
+
+/* MOBILE (640px and below) */
+@media (max-width: 640px) {
+  .services-hero-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .services-hero-title {
+    font-size: clamp(28px, 7.5vw, 38px);
+  }
+
+  .services-hero-subhead {
+    font-size: 13.5px;
+  }
+
+  /* Service row becomes a stacked card */
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-block: 24px;
+  }
+
+  .service-col-title,
+  .service-col-headline,
+  .service-col-body,
+  .service-col-meta {
+    padding: 0;
+    border-right: none;
+  }
+
+  .service-num {
+    margin-bottom: 6px;
+  }
+
+  .service-headline {
+    font-size: 13.5px;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .service-meta-text {
+    font-size: 12.5px;
+  }
+
+  .service-session-item {
+    font-size: 12px;
+  }
+
+  /* Process steps become a neat vertical sequence */
+  .process-steps-track {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: visible;
+  }
+
+  .process-step {
+    min-width: unset;
+    position: relative;
+    padding-left: 48px;
+  }
+
+  .process-node-row {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  .process-connector {
+    display: none;
+  }
+
+  .process-step::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 36px;
+    bottom: -20px;
+    width: 1.5px;
+    background: #E0E0E0;
+  }
+
+  .process-step:last-child::after {
+    display: none;
+  }
+
+  .process-step-title {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .process-step-desc {
+    font-size: 12px;
+  }
+
+  /* Who We Work With */
+  .who-title {
+    font-size: 26px;
+  }
+
+  .who-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* CTA */
+  .services-cta-content {
+    padding: 32px 24px;
+    gap: 20px;
+  }
+
+  .services-cta-title {
+    font-size: 22px;
+  }
+
+  .services-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}
