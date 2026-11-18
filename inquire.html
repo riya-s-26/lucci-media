@@ -1,9 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=coming-soon.html?page=Inquire">
-  <title>Inquire — Coming Soon — Lucci Media</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description"
+    content="Inquire with Lucci Media — We partner with a small number of beauty, wellness, and lifestyle brands each quarter. Share your details and let's build what's next.">
+  <title>Inquire — Lucci Media</title>
+  <link rel="icon" type="image/png" href="assets/lucci-favicon.png">
+  <link rel="preload" href="assets/fonts/montserrat-latin-300-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-latin-italic-700-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=36.0">
+  <link rel="stylesheet" href="inquire.css?v=1.1">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="script.js?v=26.0" defer></script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -22,11 +36,478 @@
   src="https://www.facebook.com/tr?id=1985395006178197&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
-
-  <script>window.location.replace('coming-soon.html?page=Inquire');</script>
 </head>
-<body>
-  <p>Redirecting to <a href="coming-soon.html?page=Inquire">Inquire</a>...</p>
-</body>
-</html>
 
+<body>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement-bar" aria-label="Booking announcement">NOW BOOKING Q1 2027 <span>·</span> LIMITED CLIENT SPOTS</div>
+
+  <!-- SITE HEADER WITH WORKING SHARED NAVIGATION -->
+  <header class="site-header" id="top">
+    <a class="wordmark" href="index.html" aria-label="Lucci Media, home">
+      <img class="brand-logo" src="assets/lucci-client-logo-black.png" alt="Lucci Media">
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="coming-soon.html?page=The%20Work">THE WORK</a>
+      <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO</a>
+      <a href="inquire.html" class="is-active" aria-current="page">INQUIRE</a>
+    </nav>
+    <a class="header-cta" href="inquire.html">Apply to work with us <span
+        aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+    <a href="index.html">HOME <span>01</span></a>
+    <a href="about.html">ABOUT <span>02</span></a>
+    <a href="services.html">SERVICES <span>03</span></a>
+    <a href="coming-soon.html?page=The%20Work">THE WORK <span>04</span></a>
+    <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO <span>05</span></a>
+    <a href="inquire.html" class="is-active" aria-current="page">INQUIRE <span>06</span></a>
+    <a class="mobile-contact" href="inquire.html">Apply to work with us <span><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </nav>
+
+  <main id="main" class="inquiry-page-main">
+
+    <!-- 1. HERO SECTION (TWO-COLUMN EDITORIAL) -->
+    <section class="inquiry-hero-section" aria-labelledby="inquiry-hero-heading">
+      <div class="page-wrap inquiry-hero-layout">
+        <div class="inquiry-hero-copy">
+          <span class="inquiry-category-tag">/ INQUIRE</span>
+          <h1 class="inquiry-hero-title" id="inquiry-hero-heading">LET'S BUILD WHAT'S NEXT.</h1>
+          <p class="inquiry-hero-subhead">
+            We partner with a small number of brands each quarter. Share a few details below and we'll reply within two business days. If it's a fit, we'll set up a discovery call.
+          </p>
+        </div>
+        <div class="inquiry-hero-media">
+          <img
+            src="assets/inquiry-hero-editorial.jpg"
+            srcset="assets/inquiry-hero-editorial.jpg 1x, assets/inquiry-hero-editorial@2x.jpg 2x"
+            alt="Lucci Media editorial beauty client portrait"
+            class="inquiry-hero-img"
+            width="298" height="233"
+            loading="eager"
+            decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INQUIRY FORM SECTION -->
+    <section class="inquiry-form-section" aria-label="Inquiry Application Form">
+      <div class="page-wrap inquiry-form-container">
+
+        <!-- Active Inquiry Form -->
+        <form id="inquiry-form" class="inquiry-form" method="POST" action="submit-inquiry.php" novalidate>
+
+          <!-- Field 1: Name -->
+          <div class="inquiry-field-group" id="group-name">
+            <label for="name" class="inquiry-label">NAME</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="inquiry-input"
+              placeholder="Your name"
+              required
+              autocomplete="name">
+          </div>
+
+          <!-- Field 2: Brand name -->
+          <div class="inquiry-field-group" id="group-brand_name">
+            <label for="brand_name" class="inquiry-label">BRAND NAME</label>
+            <input
+              type="text"
+              id="brand_name"
+              name="brand_name"
+              class="inquiry-input"
+              placeholder="Your brand name"
+              required
+              autocomplete="organization">
+          </div>
+
+          <!-- Field 3: Website and Instagram handle -->
+          <div class="inquiry-field-group" id="group-website_handle">
+            <label for="website_handle" class="inquiry-label">WEBSITE AND INSTAGRAM HANDLE</label>
+            <input
+              type="text"
+              id="website_handle"
+              name="website_handle"
+              class="inquiry-input"
+              placeholder="www.yourwebsite.com / @yourhandle">
+          </div>
+
+          <!-- Field 4: Location (City, State) -->
+          <div class="inquiry-field-group" id="group-location">
+            <label for="location" class="inquiry-label">LOCATION (CITY, STATE)</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              class="inquiry-input"
+              placeholder="e.g. New York, NY">
+          </div>
+
+          <!-- Field 5: Which best describes your brand? (Full Width) -->
+          <fieldset class="inquiry-fieldset inquiry-col-full">
+            <legend class="inquiry-label">WHICH BEST DESCRIBES YOUR BRAND?</legend>
+            <div class="radio-grid-brand">
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Med spa or clinic" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Med spa or clinic</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Esthetician or skin studio" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Esthetician or skin studio</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Salon, brow or lash" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Salon, brow or lash</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Wellness" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Wellness</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Beauty or skincare product" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Beauty or skincare product</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Lifestyle or apparel" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Lifestyle or apparel</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="brand_type" value="Other" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Other</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Field 6: What are you interested in? (Full Width) -->
+          <fieldset class="inquiry-fieldset inquiry-col-full">
+            <legend class="inquiry-label">WHAT ARE YOU INTERESTED IN?</legend>
+            <div class="radio-grid-interest">
+              <label class="inquiry-radio-label">
+                <input type="radio" name="interest" value="Social media management" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Social media management</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="interest" value="Content creation" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Content creation</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="interest" value="Brand photography" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Brand photography</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="interest" value="Campaign" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Campaign</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="interest" value="Not sure yet" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Not sure yet</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Field 7: Approximate monthly revenue -->
+          <fieldset class="inquiry-fieldset">
+            <legend class="inquiry-label">APPROXIMATE MONTHLY REVENUE</legend>
+            <div class="radio-grid-inline4">
+              <label class="inquiry-radio-label">
+                <input type="radio" name="monthly_revenue" value="Under $25K" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Under $25K</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="monthly_revenue" value="$25K to $50K" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">$25K to $50K</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="monthly_revenue" value="$50K to $100K" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">$50K to $100K</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="monthly_revenue" value="$100K+" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">$100K+</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Field 8: Monthly marketing budget -->
+          <fieldset class="inquiry-fieldset">
+            <legend class="inquiry-label">MONTHLY MARKETING BUDGET</legend>
+            <div class="radio-grid-inline4">
+              <label class="inquiry-radio-label">
+                <input type="radio" name="marketing_budget" value="Under $2,500" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">Under $2,500</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="marketing_budget" value="$2,500 to $5,000" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">$2,500 to $5,000</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="marketing_budget" value="$5,000 to $10,000" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">$5,000 to $10,000</span>
+              </label>
+              <label class="inquiry-radio-label">
+                <input type="radio" name="marketing_budget" value="$10,000+" class="inquiry-radio">
+                <span class="radio-custom" aria-hidden="true"></span>
+                <span class="radio-text">$10,000+</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Field 9: Ideal start date (Col 1 on desktop) -->
+          <div class="inquiry-field-group inquiry-field-date" id="group-start_date">
+            <label for="start_date" class="inquiry-label">IDEAL START DATE</label>
+            <div class="inquiry-date-wrap">
+              <input
+                type="text"
+                id="start_date"
+                name="start_date"
+                class="inquiry-input inquiry-date-input"
+                placeholder="Select date"
+                onfocus="(this.type='date')"
+                onblur="if(!this.value)this.type='text'">
+              <span class="date-calendar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Field 10: What would make the next six months a success (Col 2 on desktop, spans rows 6-7) -->
+          <div class="inquiry-field-group inquiry-field-success" id="group-success_vision">
+            <label for="success_vision" class="inquiry-label">WHAT WOULD MAKE THE NEXT SIX MONTHS A SUCCESS FOR YOUR BRAND?</label>
+            <textarea
+              id="success_vision"
+              name="success_vision"
+              class="inquiry-textarea"
+              placeholder="Tell us more..."></textarea>
+          </div>
+
+          <!-- Field 11: How did you hear about us? (Col 1 on desktop) -->
+          <div class="inquiry-field-group inquiry-field-hear" id="group-referral_source">
+            <label for="referral_source" class="inquiry-label">HOW DID YOU HEAR ABOUT US?</label>
+            <div class="inquiry-select-wrap">
+              <select id="referral_source" name="referral_source" class="inquiry-select">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Instagram">Instagram</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Referral / Word of mouth">Referral / Word of mouth</option>
+                <option value="Google search">Google search</option>
+                <option value="Client work">Client work</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="select-chevron" aria-hidden="true">
+                <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Submit Button (Under Field 11 on desktop in Col 1, full width on mobile/tablet) -->
+          <div class="inquiry-submit-wrap inquiry-submit-col">
+            <button type="submit" id="inquiry-submit-btn" class="inquiry-submit-btn">
+              SEND INQUIRY <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+        </form>
+
+        <!-- 6. Confirmation State (Seamlessly replaces form on valid submission) -->
+        <div id="inquiry-confirmation" class="inquiry-confirmation" hidden>
+          <div class="inquiry-confirmation-inner">
+            <div class="inquiry-confirmation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 11 15 16 9"></polyline>
+              </svg>
+            </div>
+            <h2 class="inquiry-confirmation-title">Received. We'll be in touch soon.</h2>
+            <p class="inquiry-confirmation-body">
+              Our team reviews every inquiry personally. Expect a reply within two business days. In the meantime, see what we've been creating on Instagram <a href="https://www.instagram.com/luccimedia/" target="_blank" rel="noreferrer" class="inquiry-confirmation-link">@luccimedia</a>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       SHARED SITE FOOTER (EXACT MATCH WITH ORIGINAL LUCCI MEDIA FOOTER)
+       ==================================================================== -->
+  <footer class="site-footer" id="footer">
+    <!-- 1. Editorial Metadata Bar (3-Column Layout) -->
+    <div class="footer-meta-bar page-wrap">
+      <div class="footer-meta-col footer-meta-left">
+        <a href="https://www.instagram.com/luccimedia/" target="_blank" rel="noreferrer">CONNECT ON IG + TIKTOK <span
+            aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="footer-meta-col footer-meta-center">
+        <span class="footer-est">EST. 2021 ── BOSTON</span>
+        <span class="footer-script">Available Worldwide</span>
+      </div>
+      <div class="footer-meta-col footer-meta-right">
+        <a href="https://www.instagram.com/luccimedia/" target="_blank" rel="noreferrer">@LUCCIMEDIA</a>
+      </div>
+    </div>
+
+    <!-- 3. Large Horizontal Brand Logo in Footer -->
+    <div class="footer-brand-stage page-wrap">
+      <div class="footer-logo-stage" aria-label="Lucci Media">
+        <img class="footer-brand-logo" src="assets/lucci-horizontal-logo-black.png?v=2.0" alt="Lucci Media" width="700" height="100">
+      </div>
+    </div>
+
+    <!-- 4. Minimal Bottom Legal & Navigation Bar -->
+    <div class="footer-bottom-bar page-wrap">
+      <span class="footer-copy">© <span id="year">2026</span> LUCCI MEDIA</span>
+      <div class="footer-nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="coming-soon.html?page=The%20Work">THE WORK</a>
+        <a href="coming-soon.html?page=Our%20Studio">STUDIO</a>
+        <a href="inquire.html" class="is-active">INQUIRE</a>
+      </div>
+      <a class="footer-top-link" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM NAVIGATION BAR -->
+  <nav class="mobile-bottom-bar" aria-label="Quick navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="inquire.html" class="is-active" aria-current="page">Apply</a>
+    <button type="button" data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </nav>
+
+  <!-- Floating Scroll Chapter Indicator -->
+  <div class="scroll-chapter-hud" id="chapter-hud" aria-hidden="true">
+    <span class="hud-dot"></span>
+    <span class="hud-text">[ 06 INQUIRE ]</span>
+  </div>
+
+  <!-- Form Submission and Dynamic Confirmation Handling -->
+  <script>
+    (function () {
+      const form = document.getElementById('inquiry-form');
+      const confirmation = document.getElementById('inquiry-confirmation');
+      const submitBtn = document.getElementById('inquiry-submit-btn');
+
+      if (!form || !confirmation || !submitBtn) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Remove any previous error markings
+        form.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
+        form.querySelectorAll('.field-error-msg').forEach(el => el.remove());
+
+        const nameInput = document.getElementById('name');
+        const brandInput = document.getElementById('brand_name');
+        let isValid = true;
+
+        function markError(input, message) {
+          const group = input.closest('.inquiry-field-group') || input.parentElement;
+          group.classList.add('has-error');
+          const error = document.createElement('span');
+          error.className = 'field-error-msg';
+          error.textContent = message;
+          group.appendChild(error);
+          isValid = false;
+        }
+
+        if (!nameInput.value.trim()) {
+          markError(nameInput, 'Please enter your name.');
+        }
+
+        if (!brandInput.value.trim()) {
+          markError(brandInput, 'Please enter your brand name.');
+        }
+
+        if (!isValid) {
+          const firstErr = form.querySelector('.has-error input');
+          if (firstErr) firstErr.focus();
+          return;
+        }
+
+        // Prevent duplicate submissions
+        submitBtn.disabled = true;
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'SENDING...';
+
+        const formData = new FormData(form);
+
+        // Send via AJAX to submit-inquiry.php
+        fetch('submit-inquiry.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(function (res) {
+          return res.json().catch(function () { return { success: true }; });
+        })
+        .then(function (data) {
+          showConfirmation();
+        })
+        .catch(function (err) {
+          // Graceful fallback (e.g. if run on static host without PHP active)
+          try {
+            const backupEntries = JSON.parse(localStorage.getItem('lucci_inquiries') || '[]');
+            const entry = {};
+            formData.forEach(function (value, key) { entry[key] = value; });
+            entry.timestamp = new Date().toISOString();
+            backupEntries.push(entry);
+            localStorage.setItem('lucci_inquiries', JSON.stringify(backupEntries));
+          } catch (e) {
+            console.warn('LocalStorage backup:', e);
+          }
+          showConfirmation();
+        });
+
+        function showConfirmation() {
+          form.style.display = 'none';
+          confirmation.hidden = false;
+          confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

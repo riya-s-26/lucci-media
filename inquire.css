@@ -1,0 +1,666 @@
+/* ==========================================================================
+   LUCCI MEDIA — INQUIRY PAGE STYLES (inquire.css)
+   Pure white, editorial luxury typography & form styling matching reference.
+   ========================================================================== */
+
+/* Page Wrapper & Base Reset */
+.inquiry-page-main {
+  background: #FFFFFF;
+  color: #111111;
+  overflow-x: hidden;
+  padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+.inquiry-page-main [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ensure proper capitalization on all body content */
+.inquiry-page-main p,
+.inquiry-page-main .inquiry-hero-subhead,
+.inquiry-page-main .inquiry-confirmation-body {
+  text-transform: none !important;
+}
+
+/* Category Eyebrow Tag */
+.inquiry-category-tag {
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #767676;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION (TWO-COLUMN EDITORIAL)
+   -------------------------------------------------------------------------- */
+.inquiry-hero-section {
+  padding-top: clamp(48px, 6vw, 84px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+  background: #FFFFFF;
+}
+
+.inquiry-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(36px, 5.5vw, 72px);
+}
+
+.inquiry-hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.inquiry-hero-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(32px, 3.8vw, 54px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.inquiry-hero-subhead {
+  font-family: var(--sans);
+  font-size: clamp(13.5px, 1.15vw, 15px);
+  line-height: 1.68;
+  color: #444444;
+  max-width: 480px;
+  margin: 0;
+}
+
+.inquiry-hero-media {
+  position: relative;
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  background: #F5F5F5;
+}
+
+.inquiry-hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 298 / 233;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inquiry-hero-media:hover .inquiry-hero-img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   2. INQUIRY FORM SECTION
+   -------------------------------------------------------------------------- */
+.inquiry-form-section {
+  padding-block: clamp(24px, 3vw, 48px);
+  background: #FFFFFF;
+}
+
+.inquiry-form-container {
+  box-sizing: border-box;
+}
+
+.inquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3vw, 36px) clamp(28px, 3.5vw, 44px);
+  width: 100%;
+}
+
+.inquiry-col-full {
+  grid-column: 1 / -1;
+}
+
+/* Field Group */
+.inquiry-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+/* Labels */
+.inquiry-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111111;
+  display: block;
+  margin: 0;
+}
+
+/* Inputs, Select & Textarea */
+.inquiry-input,
+.inquiry-select,
+.inquiry-textarea {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: #111111;
+  background-color: #FFFFFF;
+  border: 1px solid #DCDCDC;
+  border-radius: 2px;
+  padding: 13px 16px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inquiry-input::placeholder,
+.inquiry-textarea::placeholder {
+  color: #8E8A85;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.inquiry-input:focus,
+.inquiry-select:focus,
+.inquiry-textarea:focus {
+  border-color: #111111;
+  box-shadow: 0 0 0 1px #111111;
+}
+
+/* Custom Select Dropdown with Chevron */
+.inquiry-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.inquiry-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.inquiry-select:invalid,
+.inquiry-select option[value=""] {
+  color: #8E8A85;
+}
+
+.inquiry-select option {
+  color: #111111;
+  background: #FFFFFF;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 10px;
+  height: 6px;
+  color: #767676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-chevron svg {
+  width: 10px;
+  height: 6px;
+  display: block;
+}
+
+/* Date Input Wrap & Icon */
+.inquiry-date-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.inquiry-date-input {
+  cursor: pointer;
+  padding-right: 42px;
+}
+
+.date-calendar-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  color: #767676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-calendar-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.inquiry-date-input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Textarea */
+.inquiry-textarea {
+  min-height: 142px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. RADIO BUTTON FIELDSETS & OPTIONS
+   -------------------------------------------------------------------------- */
+.inquiry-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.inquiry-fieldset legend.inquiry-label {
+  padding: 0;
+  margin-bottom: 12px;
+  float: left;
+  width: 100%;
+}
+
+/* Field 5: Which best describes your brand? (Grid of 4 cols on desktop) */
+.radio-grid-brand {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px 20px;
+  width: 100%;
+}
+
+/* Field 6: What are you interested in? (Grid of 5 cols in a single row) */
+.radio-grid-interest {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px 16px;
+  width: 100%;
+}
+
+/* Field 7 & 8: Revenue and Budget (Grid of 4 inline options per col) */
+.radio-grid-inline4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 12px;
+  width: 100%;
+}
+
+/* Radio Option Label Component */
+.inquiry-radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: #222222;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+  position: relative;
+}
+
+.inquiry-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.radio-custom {
+  width: 16px;
+  height: 16px;
+  border: 1.4px solid #CBC8C3;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inquiry-radio-label:hover .radio-custom {
+  border-color: #767676;
+}
+
+.inquiry-radio:focus-visible + .radio-custom {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.inquiry-radio:checked + .radio-custom {
+  border-color: #111111;
+  background-color: #111111;
+  box-shadow: inset 0 0 0 3px #FFFFFF;
+}
+
+.radio-text {
+  display: inline-block;
+  padding-top: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   4. SUBMIT BUTTON
+   -------------------------------------------------------------------------- */
+.inquiry-submit-wrap {
+  margin-top: 0;
+  width: 100%;
+}
+
+/* Desktop Form Row 6 & 7 Placement (Start Date, Hear About Us, Vision Textarea, Submit) */
+@media (min-width: 881px) {
+  .inquiry-field-date {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  .inquiry-field-hear {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .inquiry-field-success {
+    grid-column: 2;
+    grid-row: 6 / span 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inquiry-field-success .inquiry-textarea {
+    flex: 1;
+    min-height: 148px;
+    height: 100%;
+  }
+
+  .inquiry-submit-col {
+    grid-column: 1;
+    grid-row: 8;
+  }
+}
+
+@media (max-width: 880px) {
+  .inquiry-submit-col {
+    grid-column: 1 / -1;
+  }
+
+  .inquiry-submit-btn {
+    width: 100%;
+  }
+}
+
+.inquiry-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #111111;
+  color: #FFFFFF;
+  font-family: var(--label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inquiry-submit-btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.inquiry-submit-btn .cta-arrow-icon {
+  width: 0.85em;
+  height: 0.85em;
+  transition: transform 0.25s ease;
+}
+
+.inquiry-submit-btn:hover .cta-arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+.inquiry-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Inline Validation States */
+.has-error .inquiry-input,
+.has-error .inquiry-select,
+.has-error .inquiry-textarea {
+  border-color: #D32F2F !important;
+}
+
+.field-error-msg {
+  color: #D32F2F;
+  font-family: var(--sans);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   5. CONFIRMATION STATE (SHOWN AFTER SUCCESSFUL SUBMISSION)
+   -------------------------------------------------------------------------- */
+.inquiry-confirmation {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(48px, 6vw, 84px) clamp(20px, 3.5vw, 48px);
+  background: #FFFFFF;
+  border: 1px solid #EBEBEB;
+  border-radius: 3px;
+  text-align: center;
+  margin-block: 24px;
+}
+
+@keyframes confirmation-pop-in {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.inquiry-confirmation:not([hidden]) {
+  animation: confirmation-pop-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inquiry-confirmation-inner {
+  max-width: 620px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inquiry-confirmation-check {
+  width: 44px;
+  height: 44px;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(18px, 2.5vw, 28px);
+}
+
+.inquiry-confirmation-check svg {
+  width: 44px;
+  height: 44px;
+  stroke: currentColor;
+}
+
+.inquiry-confirmation-title {
+  font-family: 'ShapiroWideRegular', var(--sans);
+  font-size: clamp(22px, 3.2vw, 36px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  color: #111111;
+  text-transform: none;
+  margin: 0 0 clamp(16px, 2vw, 24px) 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.inquiry-confirmation-body {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.72;
+  color: #444444;
+  margin: 0 0 clamp(24px, 3vw, 36px) 0;
+}
+
+.inquiry-confirmation-link {
+  color: #111111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.inquiry-confirmation-link:hover {
+  color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE DESIGN (TABLET & MOBILE)
+   -------------------------------------------------------------------------- */
+
+/* TABLET (1024px and below) */
+@media (max-width: 1024px) {
+  .radio-grid-brand {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .radio-grid-interest {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .radio-grid-inline4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MEDIUM TABLET (880px and below) */
+@media (max-width: 880px) {
+  .inquiry-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .inquiry-hero-copy {
+    order: 1;
+  }
+
+  .inquiry-hero-media {
+    order: 2;
+    max-width: 580px;
+  }
+
+  .radio-grid-brand {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .radio-grid-interest {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE (640px and below) */
+@media (max-width: 640px) {
+  .inquiry-hero-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .inquiry-hero-title {
+    font-size: clamp(22px, 6.2vw, 32px);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .inquiry-hero-subhead {
+    font-size: 13.5px;
+  }
+
+  /* Form Stacks to Single Column */
+  .inquiry-form {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .inquiry-col-full {
+    grid-column: 1;
+  }
+
+  .radio-grid-brand,
+  .radio-grid-interest,
+  .radio-grid-inline4 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .inquiry-textarea {
+    min-height: 120px;
+  }
+
+  .inquiry-submit-btn {
+    padding: 16px 24px;
+    font-size: 11px;
+  }
+
+  .inquiry-confirmation {
+    padding: 36px 16px;
+  }
+
+  .inquiry-confirmation-title {
+    font-size: clamp(13px, 3.8vw, 17px);
+    line-height: 1.35;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .inquiry-confirmation-body {
+    font-size: 13.5px;
+  }
+}
