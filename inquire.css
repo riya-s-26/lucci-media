@@ -309,6 +309,16 @@
   width: 100%;
 }
 
+/* Field 8: Marketing Budget Custom Desktop Spacing (balances gap after short '$2,000' option) */
+@media (min-width: 1025px) {
+  .radio-grid-budget {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px clamp(20px, 2.8vw, 44px);
+  }
+}
+
 /* Radio Option Label Component */
 .inquiry-radio-label {
   display: inline-flex;
