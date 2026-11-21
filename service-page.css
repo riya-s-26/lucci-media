@@ -298,6 +298,7 @@
 }
 
 /* Right Feature Panel: "BUILT FOR THE BEAUTY INDUSTRY." */
+/* Existing divider line kept completely unchanged */
 .smm-included-aside {
   border-left: 1px solid rgba(30, 27, 24, 0.14);
   padding: 2.5rem 2.25rem;
@@ -309,11 +310,14 @@
   background-color: #F5F3EF;
 }
 
+/* New, separate dark line in highlighted area */
 .smm-included-aside-inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 22ch;
+  border-left: 1px solid rgba(30, 27, 24, 0.50);
+  padding-left: 1.5rem;
 }
 
 .smm-included-aside h3 {
@@ -509,6 +513,7 @@
 }
 
 /* 90% Statistic (Right) */
+/* Existing divider line kept completely unchanged */
 .smm-trio-col-right {
   border-left: 1px solid rgba(30, 27, 24, 0.15);
   padding-left: 2.5rem;
@@ -516,6 +521,15 @@
   flex-direction: column;
   justify-content: center;
   min-height: 220px;
+}
+
+/* New, separate dark line in highlighted area */
+.smm-stat-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 1px solid rgba(30, 27, 24, 0.50);
+  padding-left: 1.5rem;
 }
 
 .smm-stat-big {
@@ -818,6 +832,8 @@
   }
   .smm-included-aside-inner {
     max-width: 36ch;
+    border-left: 1px solid rgba(30, 27, 24, 0.50);
+    padding-left: 1.5rem;
   }
   .smm-included-aside h3 {
     max-width: none;
@@ -836,6 +852,10 @@
     padding-left: 0;
     padding-top: 2rem;
     min-height: auto;
+  }
+  .smm-stat-inner {
+    border-left: 1px solid rgba(30, 27, 24, 0.50);
+    padding-left: 1.5rem;
   }
   .smm-stat-desc {
     max-width: none;
@@ -888,6 +908,14 @@
     border-left: none;
     border-top: 1px solid rgba(30, 27, 24, 0.14);
     padding: 2.25rem 1.25rem;
+  }
+  .smm-included-aside-inner {
+    border-left: 1px solid rgba(30, 27, 24, 0.50);
+    padding-left: 1.25rem;
+  }
+  .smm-stat-inner {
+    border-left: 1px solid rgba(30, 27, 24, 0.50);
+    padding-left: 1.25rem;
   }
   .smm-included-aside h3 {
     font-size: 1.35rem;
