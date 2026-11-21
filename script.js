@@ -51,6 +51,19 @@
     if (window.innerWidth > 760) setMenu(false);
   });
 
+  // Mobile Services Dropdown: Separate arrow toggle control for mobile accordion
+  const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+  const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+
+  if (mobileDropdownToggle && mobileDropdownMenu) {
+    mobileDropdownToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = mobileDropdownToggle.getAttribute('aria-expanded') === 'true';
+      mobileDropdownToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mobileDropdownMenu.hidden = isExpanded;
+    });
+  }
+
   const revealItems = document.querySelectorAll('[data-reveal], .scroll-reveal, .reveal-stagger');
   if ('IntersectionObserver' in window && !reducedMotion) {
     const revealObserver = new IntersectionObserver((entries, observer) => {

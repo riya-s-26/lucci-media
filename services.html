@@ -13,8 +13,8 @@
   <link rel="preload" href="assets/fonts/montserrat-latin-italic-700-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=36.0">
-  <link rel="stylesheet" href="services.css?v=3.0">
+  <link rel="stylesheet" href="styles.css?v=37.0">
+  <link rel="stylesheet" href="services.css?v=4.0">
   <script>document.documentElement.classList.add('js');</script>
   <script src="assets/vendor/lenis.min.js"></script>
   <script src="script.js?v=26.0" defer></script>
@@ -46,20 +46,31 @@
     SPOTS</div>
 
   <!-- SITE HEADER WITH WORKING SHARED NAVIGATION -->
-  <header class="site-header" id="top">
+    <header class="site-header" id="top">
     <a class="wordmark" href="index.html" aria-label="Lucci Media, home">
       <img class="brand-logo" src="assets/lucci-client-logo-black.png" alt="Lucci Media">
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
-      <a href="services.html" class="is-active" aria-current="page">SERVICES</a>
+      <div class="nav-dropdown-item">
+        <a href="services.html" class="nav-dropdown-trigger is-active" aria-haspopup="true" aria-expanded="false"><span>SERVICES</span> <svg class="nav-dropdown-arrow" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1.25L4 3.75L7 1.25" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Services dropdown">
+          <a href="social-media-management-boston.html" role="menuitem" class="nav-dropdown-link is-available"><span>Social Media Management</span></a>
+          <a href="beauty-content-creation-boston.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Trending Socials</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="brand-photography-boston.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Brand Photography</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="beauty-campaign-production.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Campaign Shoots</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="beauty-brand-identity-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Brand Identity</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="med-spa-website-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Website Design</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="google-business-profile-management.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Google Business Profile</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="local-seo-med-spas.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Local SEO</span><span class="nav-soon-badge">COMING SOON</span></a>
+        </div>
+      </div>
       <a href="coming-soon.html?page=The%20Work">THE WORK</a>
       <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO</a>
       <a href="inquire.html">INQUIRE</a>
     </nav>
-    <a class="header-cta" href="inquire.html">Apply to work with us <span
-        aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <a class="header-cta" href="inquire.html">Apply to work with us <span aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span>
     </button>
@@ -69,7 +80,31 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
     <a href="index.html">HOME <span>01</span></a>
     <a href="about.html">ABOUT <span>02</span></a>
-    <a href="services.html" class="is-active" aria-current="page">SERVICES <span>03</span></a>
+    <div class="mobile-nav-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="services.html" class="mobile-services-title is-active" aria-current="page">SERVICES <span>03</span></a>
+        <button type="button" class="mobile-dropdown-toggle" aria-expanded="true" aria-controls="mobile-services-menu" aria-label="Toggle Services menu">
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+            <div class="mobile-dropdown-menu" id="mobile-services-menu">
+          <a href="social-media-management-boston.html" class="mobile-dropdown-link is-available"><span>Social Media Management</span></a>
+          <a href="beauty-content-creation-boston.html" class="mobile-dropdown-link is-soon"><span>Trending Socials</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="brand-photography-boston.html" class="mobile-dropdown-link is-soon"><span>Brand Photography</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="beauty-campaign-production.html" class="mobile-dropdown-link is-soon"><span>Campaign Shoots</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="beauty-brand-identity-design.html" class="mobile-dropdown-link is-soon"><span>Brand Identity</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="med-spa-website-design.html" class="mobile-dropdown-link is-soon"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="google-business-profile-management.html" class="mobile-dropdown-link is-soon"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="local-seo-med-spas.html" class="mobile-dropdown-link is-soon"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></a>
+        </div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Brand Photography</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Campaign Shoots</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Brand Identity</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></div>
+      </div>
+    </div>
     <a href="coming-soon.html?page=The%20Work">THE WORK <span>04</span></a>
     <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO <span>05</span></a>
     <a href="inquire.html">INQUIRE <span>06</span></a>
@@ -107,17 +142,20 @@
     </section>
 
     <!-- ====================================================================
-         SECTION 2: FOUR NUMBERED SERVICE SECTIONS (.01, .02, .03, .04)
-         Structured editorial horizontal-row table matching Reference Image 1
+         SECTION 2: EIGHT NUMBERED SERVICE SECTIONS (.01 TO .08)
+         Structured editorial horizontal-row table with availability status
          ==================================================================== -->
     <section class="services-table-section" aria-label="Lucci Media services breakdown">
       <div class="page-wrap">
         <div class="services-table" data-reveal>
 
-          <!-- SERVICE ROW .01 -->
-          <a href="social-media-management-boston.html" class="service-row" id="social-media-management" aria-label="Social Media Management — View Service Details" style="text-decoration: none; color: inherit; cursor: pointer;">
+          <!-- SERVICE ROW .01: AVAILABLE NOW -->
+          <a href="social-media-management-boston.html" class="service-row is-available" id="social-media-management" aria-label="Social Media Management — Available Now">
             <div class="service-col-title">
-              <span class="service-num">.01 ──</span>
+              <div class="service-status-row">
+                <span class="service-num">.01 ──</span>
+                <span class="service-status-badge is-available">AVAILABLE NOW</span>
+              </div>
               <h2 class="service-name">SOCIAL MEDIA<br>MANAGEMENT</h2>
             </div>
             <div class="service-col-headline">
@@ -132,15 +170,19 @@
               <div class="service-meta-group">
                 <p class="service-meta-text">From $[X]/month · Six-month minimum.</p>
                 <p class="service-meta-sub">Best for: Established brands ready to hand off social completely.</p>
+                <span class="service-row-action">Explore Service →</span>
               </div>
             </div>
           </a>
 
-          <!-- SERVICE ROW .02 -->
-          <article class="service-row" id="content-creation">
+          <!-- SERVICE ROW .02: COMING SOON -->
+          <a href="beauty-content-creation-boston.html" class="service-row is-soon" id="trending-socials" aria-label="Trending Socials — Coming Soon">
             <div class="service-col-title">
-              <span class="service-num">.02 ──</span>
-              <h2 class="service-name">CONTENT<br>CREATION</h2>
+              <div class="service-status-row">
+                <span class="service-num">.02 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
+              <h2 class="service-name">TRENDING<br>SOCIALS</h2>
             </div>
             <div class="service-col-headline">
               <h3 class="service-headline">A MONTH OF CONTENT<br>IN ONE DAY.</h3>
@@ -153,14 +195,19 @@
             <div class="service-col-meta">
               <div class="service-meta-group">
                 <p class="service-meta-text">From $2,200/month · Six-month minimum.</p>
+                <p class="service-meta-sub">Launching soon for beauty & med spa brands.</p>
+                <span class="service-row-action">Explore Service →</span>
               </div>
             </div>
-          </article>
+          </a>
 
-          <!-- SERVICE ROW .03 -->
-          <article class="service-row" id="brand-photography">
+          <!-- SERVICE ROW .03: COMING SOON -->
+          <a href="brand-photography-boston.html" class="service-row is-soon" id="brand-photography" aria-label="Brand Photography — Coming Soon">
             <div class="service-col-title">
-              <span class="service-num">.03 ──</span>
+              <div class="service-status-row">
+                <span class="service-num">.03 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
               <h2 class="service-name">BRAND<br>PHOTOGRAPHY</h2>
             </div>
             <div class="service-col-headline">
@@ -175,31 +222,144 @@
               <div class="service-sessions-group">
                 <p class="service-session-item">2 Hours · Minimum 125 edited images · $2,499</p>
                 <p class="service-session-item">3 Hours · Minimum 175 edited images · $3,499</p>
-                <p class="service-session-item">Teams and multi-location shoots quoted custom.</p>
+                <p class="service-meta-sub">Editorial sessions at Social Haus.</p>
+                <span class="service-row-action">Explore Service →</span>
               </div>
             </div>
-          </article>
+          </a>
 
-          <!-- SERVICE ROW .04 -->
-          <article class="service-row" id="campaigns">
+          <!-- SERVICE ROW .04: COMING SOON -->
+          <a href="beauty-campaign-production.html" class="service-row is-soon" id="campaign-shoots" aria-label="Campaign Shoots — Coming Soon">
             <div class="service-col-title">
-              <span class="service-num">.04 ──</span>
-              <h2 class="service-name">CAMPAIGNS</h2>
+              <div class="service-status-row">
+                <span class="service-num">.04 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
+              <h2 class="service-name">CAMPAIGN<br>SHOOTS</h2>
             </div>
             <div class="service-col-headline">
               <h3 class="service-headline">LAUNCHES PEOPLE<br>REMEMBER.</h3>
             </div>
             <div class="service-col-body">
               <p class="service-desc">
-                Creative concept, casting, styling, photography and video production for launches, new products and rebrands.
+                Creative concept, casting, styling, photography and video for new locations, treatments and rebrands.
               </p>
             </div>
             <div class="service-col-meta">
               <div class="service-meta-group">
                 <p class="service-meta-text">Custom proposal.</p>
+                <p class="service-meta-sub">Full creative direction & campaign execution.</p>
+                <span class="service-row-action">Explore Service →</span>
               </div>
             </div>
-          </article>
+          </a>
+
+          <!-- SERVICE ROW .05: COMING SOON -->
+          <a href="beauty-brand-identity-design.html" class="service-row is-soon" id="brand-identity" aria-label="Brand Identity — Coming Soon">
+            <div class="service-col-title">
+              <div class="service-status-row">
+                <span class="service-num">.05 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
+              <h2 class="service-name">BRAND<br>IDENTITY</h2>
+            </div>
+            <div class="service-col-headline">
+              <h3 class="service-headline">DISTINCTIVE IDENTITY<br>FOR BEAUTY BRANDS.</h3>
+            </div>
+            <div class="service-col-body">
+              <p class="service-desc">
+                Logo suite, typography system, color palette and brand guidelines crafted specifically for aesthetics and beauty.
+              </p>
+            </div>
+            <div class="service-col-meta">
+              <div class="service-meta-group">
+                <p class="service-meta-text">Custom proposal.</p>
+                <p class="service-meta-sub">Complete visual branding package.</p>
+                <span class="service-row-action">Explore Service →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- SERVICE ROW .06: COMING SOON -->
+          <a href="med-spa-website-design.html" class="service-row is-soon" id="website-design" aria-label="Website Design — Coming Soon">
+            <div class="service-col-title">
+              <div class="service-status-row">
+                <span class="service-num">.06 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
+              <h2 class="service-name">WEBSITE<br>DESIGN</h2>
+            </div>
+            <div class="service-col-headline">
+              <h3 class="service-headline">CUSTOM WEBSITES THAT<br>CONVERT VISITORS.</h3>
+            </div>
+            <div class="service-col-body">
+              <p class="service-desc">
+                Custom websites for med spas, salons and estheticians, designed to rank on Google and turn visitors into booked appointments.
+              </p>
+            </div>
+            <div class="service-col-meta">
+              <div class="service-meta-group">
+                <p class="service-meta-text">Custom proposal.</p>
+                <p class="service-meta-sub">Engineered for booking conversion & local search.</p>
+                <span class="service-row-action">Explore Service →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- SERVICE ROW .07: COMING SOON -->
+          <a href="google-business-profile-management.html" class="service-row is-soon" id="google-business-profile" aria-label="Google Business Profile — Coming Soon">
+            <div class="service-col-title">
+              <div class="service-status-row">
+                <span class="service-num">.07 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
+              <h2 class="service-name">GOOGLE BUSINESS<br>PROFILE</h2>
+            </div>
+            <div class="service-col-headline">
+              <h3 class="service-headline">SHOW UP FIRST<br>ON GOOGLE MAPS.</h3>
+            </div>
+            <div class="service-col-body">
+              <p class="service-desc">
+                We post 20 to 25 times a month, optimize your profile and manage reviews for Boston med spas, injectors and salons.
+              </p>
+            </div>
+            <div class="service-col-meta">
+              <div class="service-meta-group">
+                <p class="service-meta-text">Monthly management.</p>
+                <p class="service-meta-sub">Dominate local map pack visibility.</p>
+                <span class="service-row-action">Explore Service →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- SERVICE ROW .08: COMING SOON -->
+          <a href="local-seo-med-spas.html" class="service-row is-soon" id="local-seo" aria-label="Local SEO — Coming Soon">
+            <div class="service-col-title">
+              <div class="service-status-row">
+                <span class="service-num">.08 ──</span>
+                <span class="service-status-badge is-soon">COMING SOON</span>
+              </div>
+              <h2 class="service-name">LOCAL<br>SEO</h2>
+            </div>
+            <div class="service-col-headline">
+              <h3 class="service-headline">RANK FOR THE TREATMENTS<br>CLIENTS SEARCH.</h3>
+            </div>
+            <div class="service-col-body">
+              <p class="service-desc">
+                Rank for high-intent treatment keywords. Local SEO for Boston med spas: keywords, on-page optimization and monthly reporting.
+              </p>
+            </div>
+            <div class="service-col-meta">
+              <div class="service-meta-group">
+                <p class="service-meta-text">Monthly management.</p>
+                <p class="service-meta-sub">Keyword tracking & search growth.</p>
+                <span class="service-row-action">Explore Service →</span>
+              </div>
+            </div>
+          </a>
+
+        </div></div>
+    </section>
 
         </div>
       </div>

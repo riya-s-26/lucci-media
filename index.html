@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=36.0">
+  <link rel="stylesheet" href="styles.css?v=37.0">
   <script>document.documentElement.classList.add('js');</script>
   <script src="assets/vendor/lenis.min.js"></script>
   <script src="script.js?v=26.0" defer></script>
@@ -45,14 +45,26 @@
   <div class="announcement-bar" aria-label="Booking announcement">NOW BOOKING Q1 2027 <span>·</span> LIMITED CLIENT
     SPOTS</div>
 
-  <header class="site-header" id="top">
+    <header class="site-header" id="top">
     <a class="wordmark" href="index.html" aria-label="Lucci Media, home">
       <img class="brand-logo" src="assets/lucci-client-logo-black.png" alt="Lucci Media">
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
-      <a href="services.html">SERVICES</a>
+      <div class="nav-dropdown-item">
+        <a href="services.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false"><span>SERVICES</span> <svg class="nav-dropdown-arrow" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1.25L4 3.75L7 1.25" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Services dropdown">
+          <a href="social-media-management-boston.html" role="menuitem" class="nav-dropdown-link is-available"><span>Social Media Management</span></a>
+          <a href="beauty-content-creation-boston.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Trending Socials</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="brand-photography-boston.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Brand Photography</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="beauty-campaign-production.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Campaign Shoots</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="beauty-brand-identity-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Brand Identity</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="med-spa-website-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Website Design</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="google-business-profile-management.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Google Business Profile</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="local-seo-med-spas.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Local SEO</span><span class="nav-soon-badge">COMING SOON</span></a>
+        </div>
+      </div>
       <a href="coming-soon.html?page=The%20Work">THE WORK</a>
       <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO</a>
       <a href="inquire.html">INQUIRE</a>
@@ -66,7 +78,31 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
     <a href="index.html">HOME <span>01</span></a>
     <a href="about.html">ABOUT <span>02</span></a>
-    <a href="services.html">SERVICES <span>03</span></a>
+    <div class="mobile-nav-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="services.html" class="mobile-services-title">SERVICES <span>03</span></a>
+        <button type="button" class="mobile-dropdown-toggle" aria-expanded="true" aria-controls="mobile-services-menu" aria-label="Toggle Services menu">
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+            <div class="mobile-dropdown-menu" id="mobile-services-menu">
+          <a href="social-media-management-boston.html" class="mobile-dropdown-link is-available"><span>Social Media Management</span></a>
+          <a href="beauty-content-creation-boston.html" class="mobile-dropdown-link is-soon"><span>Trending Socials</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="brand-photography-boston.html" class="mobile-dropdown-link is-soon"><span>Brand Photography</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="beauty-campaign-production.html" class="mobile-dropdown-link is-soon"><span>Campaign Shoots</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="beauty-brand-identity-design.html" class="mobile-dropdown-link is-soon"><span>Brand Identity</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="med-spa-website-design.html" class="mobile-dropdown-link is-soon"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="google-business-profile-management.html" class="mobile-dropdown-link is-soon"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="local-seo-med-spas.html" class="mobile-dropdown-link is-soon"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></a>
+        </div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Brand Photography</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Campaign Shoots</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Brand Identity</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></div>
+      </div>
+    </div>
     <a href="coming-soon.html?page=The%20Work">THE WORK <span>04</span></a>
     <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO <span>05</span></a>
     <a href="inquire.html">INQUIRE <span>06</span></a>

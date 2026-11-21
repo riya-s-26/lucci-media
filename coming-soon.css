@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(80px, 12vw, 160px) 0 clamp(90px, 14vw, 180px);
+  padding: clamp(90px, 12vw, 160px) 24px clamp(100px, 14vw, 180px);
   background-color: #FDFDFC;
   text-align: center;
   position: relative;
@@ -21,13 +21,14 @@
   justify-content: center;
   max-width: 680px;
   margin-inline: auto;
+  width: 100%;
 }
 
 .cs-eyebrow {
   margin: 0 0 24px 0;
-  font-family: var(--label);
+  font-family: var(--label), "Lekton", "Courier New", monospace;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.22em;
   color: #7A7570;
   text-transform: uppercase !important;
@@ -35,11 +36,11 @@
 
 .cs-title {
   margin: 0 0 24px 0;
-  font-family: 'ShapiroWideRegular', var(--sans);
-  font-size: clamp(40px, 6vw, 76px);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1.05;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(40px, 6.5vw, 76px);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
   color: #1E1B18;
   text-transform: uppercase !important;
 }
@@ -47,13 +48,13 @@
 .cs-divider {
   width: 60px;
   height: 1px;
-  background-color: #C7C6C4;
+  background-color: #D3D3D3;
   margin: 0 auto 28px;
 }
 
 .cs-desc {
   margin: 0 0 44px 0;
-  font-family: var(--sans);
+  font-family: var(--sans), "Montserrat", sans-serif;
   font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.75;
   color: #55504B;
@@ -75,7 +76,7 @@
   justify-content: center;
   gap: 8px;
   padding: 13px 26px;
-  font-family: var(--label);
+  font-family: var(--label), "Lekton", "Courier New", monospace;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -87,21 +88,35 @@
 .cs-btn-primary {
   background-color: #1E1B18;
   color: #FFFFFF !important;
+  border: 1px solid #1E1B18;
 }
 .cs-btn-primary:hover {
   background-color: #3d3733;
+  border-color: #3d3733;
   transform: translateY(-2px);
 }
 
 .cs-btn-secondary {
   background-color: transparent;
   color: #1E1B18 !important;
-  border: 1px solid #1E1B18;
+  border: 1px solid #C7C6C4;
 }
 .cs-btn-secondary:hover {
   background-color: #1E1B18;
   color: #FFFFFF !important;
+  border-color: #1E1B18;
   transform: translateY(-2px);
+}
+
+.cs-btn .cta-arrow-icon {
+  width: 9px;
+  height: 9px;
+  stroke: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.cs-btn:hover .cta-arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 @media (max-width: 600px) {
@@ -124,3 +139,8 @@
   text-transform: none !important;
 }
 
+.cs-page-main [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}

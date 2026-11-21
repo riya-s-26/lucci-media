@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../styles.css?v=36.0">
-  <link rel="stylesheet" href="../service-page.css?v=2.0">
+  <link rel="stylesheet" href="../styles.css?v=37.0">
+  <link rel="stylesheet" href="../service-page.css?v=2.2">
   <script>document.documentElement.classList.add('js');</script>
   <script src="../assets/vendor/lenis.min.js"></script>
   <script src="../script.js?v=26.0" defer></script>
@@ -118,14 +118,26 @@
   </div>
 
   <!-- ORIGINAL LUCCI MEDIA SITE HEADER (EXACT COMPONENT REUSED) -->
-  <header class="site-header" id="top">
+    <header class="site-header" id="top">
     <a class="wordmark" href="../index.html" aria-label="Lucci Media, home">
       <img class="brand-logo" src="../assets/lucci-client-logo-black.png" alt="Lucci Media">
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="../index.html">HOME</a>
       <a href="../about.html">ABOUT</a>
-      <a href="../services.html" class="is-active">SERVICES</a>
+      <div class="nav-dropdown-item">
+        <a href="../services.html" class="nav-dropdown-trigger is-active" aria-haspopup="true" aria-expanded="false"><span>SERVICES</span> <svg class="nav-dropdown-arrow" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1.25L4 3.75L7 1.25" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Services dropdown">
+          <a href="../social-media-management-boston.html" role="menuitem" class="nav-dropdown-link is-available"><span>Social Media Management</span></a>
+          <a href="../beauty-content-creation-boston.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Trending Socials</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="../brand-photography-boston.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Brand Photography</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="../beauty-campaign-production.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Campaign Shoots</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="../beauty-brand-identity-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Brand Identity</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="../med-spa-website-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Website Design</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="../google-business-profile-management.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Google Business Profile</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="../local-seo-med-spas.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Local SEO</span><span class="nav-soon-badge">COMING SOON</span></a>
+        </div>
+      </div>
       <a href="../coming-soon.html?page=The%20Work">THE WORK</a>
       <a href="../coming-soon.html?page=Our%20Studio">OUR STUDIO</a>
       <a href="../inquire.html">INQUIRE</a>
@@ -140,7 +152,31 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
     <a href="../index.html">HOME <span>01</span></a>
     <a href="../about.html">ABOUT <span>02</span></a>
-    <a href="../services.html" class="is-active">SERVICES <span>03</span></a>
+    <div class="mobile-nav-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="../services.html" class="mobile-services-title is-active" aria-current="page">SERVICES <span>03</span></a>
+        <button type="button" class="mobile-dropdown-toggle" aria-expanded="true" aria-controls="mobile-services-menu" aria-label="Toggle Services menu">
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+            <div class="mobile-dropdown-menu" id="mobile-services-menu">
+          <a href="../social-media-management-boston.html" class="mobile-dropdown-link is-available"><span>Social Media Management</span></a>
+          <a href="../beauty-content-creation-boston.html" class="mobile-dropdown-link is-soon"><span>Trending Socials</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="../brand-photography-boston.html" class="mobile-dropdown-link is-soon"><span>Brand Photography</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="../beauty-campaign-production.html" class="mobile-dropdown-link is-soon"><span>Campaign Shoots</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="../beauty-brand-identity-design.html" class="mobile-dropdown-link is-soon"><span>Brand Identity</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="../med-spa-website-design.html" class="mobile-dropdown-link is-soon"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="../google-business-profile-management.html" class="mobile-dropdown-link is-soon"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></a>
+          <a href="../local-seo-med-spas.html" class="mobile-dropdown-link is-soon"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></a>
+        </div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Brand Photography</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Campaign Shoots</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Brand Identity</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></div>
+        <div class="mobile-dropdown-link is-soon" aria-disabled="true"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></div>
+      </div>
+    </div>
     <a href="../coming-soon.html?page=The%20Work">THE WORK <span>04</span></a>
     <a href="../coming-soon.html?page=Our%20Studio">OUR STUDIO <span>05</span></a>
     <a href="../inquire.html">INQUIRE <span>06</span></a>
@@ -164,24 +200,22 @@
               <div class="smm-kicker-line" aria-hidden="true"></div>
             </div>
 
-            <div class="smm-display-title">
-              MORE<br>THAN POSTS.<br>IT'S A FULL<br>STRATEGY.
-            </div>
-
             <h1 class="smm-h1">
-              SOCIAL MEDIA MANAGEMENT FOR MED SPAS AND BEAUTY BRANDS
+              SOCIAL MEDIA MANAGEMENT<br>FOR MED SPAS AND BEAUTY BRANDS
             </h1>
 
             <p class="smm-hero-line">
               You run the treatment room. We run the feed that fills it.
             </p>
 
+            <div class="smm-hero-divider" aria-hidden="true"></div>
+
             <div class="smm-intro-copy">
               <p>
-                Lucci Media is a Boston social media management agency built for med spas, injectors, salons and skin studios. We plan your content, film on site, edit every reel and publish it, so your social presence works as hard as your front desk.
+                Lucci Media is a Boston social media management agency built for med spas, injectors, salons and skin studios.
               </p>
               <p>
-                Our founder spent 10+ years in beauty as a licensed esthetician and makeup artist before building the agency, so we already speak your clients' language.
+                We plan your content, film on site, edit every reel and publish it.
               </p>
             </div>
           </div>
@@ -212,69 +246,73 @@
          ==================================================================== -->
     <section class="smm-included-section" aria-label="What is Included in Social Media Management">
       <div class="smm-container">
-        <div class="smm-included-header">
-          <h2>WHAT'S INCLUDED</h2>
-        </div>
-
-        <div class="smm-included-layout">
-          <!-- Left 7-item Numbered Grid -->
-          <div class="smm-included-grid">
-            
-            <!-- Item 01 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">01</span>
-              <h3 class="smm-included-title">CONTENT STRATEGY</h3>
-              <p class="smm-included-desc">A content strategy built around your offers, promos and slow weeks.</p>
-            </div>
-
-            <!-- Item 02 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">02</span>
-              <h3 class="smm-included-title">ON-SITE FILMING</h3>
-              <p class="smm-included-desc">On-site filming at your location, scheduled monthly, bi-monthly or quarterly depending on your plan.</p>
-            </div>
-
-            <!-- Item 03 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">03</span>
-              <h3 class="smm-included-title">EDITED CONTENT</h3>
-              <p class="smm-included-desc">Reels, carousels and photos, fully edited.</p>
-            </div>
-
-            <!-- Item 04 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">04</span>
-              <h3 class="smm-included-title">SEO-FRIENDLY CAPTIONS</h3>
-              <p class="smm-included-desc">Captions written for search, with local keywords so new clients find you.</p>
-            </div>
-
-            <!-- Item 05 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">05</span>
-              <h3 class="smm-included-title">SCHEDULING & PUBLISHING</h3>
-              <p class="smm-included-desc">Scheduling and publishing through your content calendar, with your approval on every post.</p>
-            </div>
-
-            <!-- Item 06 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">06</span>
-              <h3 class="smm-included-title">COMMUNITY ENGAGEMENT</h3>
-              <p class="smm-included-desc">Community engagement.</p>
-            </div>
-
-            <!-- Item 07 -->
-            <div class="smm-included-item">
-              <span class="smm-included-num">07</span>
-              <h3 class="smm-included-title">MONTHLY PERFORMANCE REPORTS</h3>
-              <p class="smm-included-desc">A monthly performance report tied to what matters: inquiries, bookings and growth.</p>
-            </div>
-
+        <div class="smm-included-card">
+          <div class="smm-included-header">
+            <h2>WHAT'S INCLUDED</h2>
           </div>
 
-          <!-- Right Aside Card -->
-          <div class="smm-included-aside">
-            <h3>BUILT FOR<br>THE BEAUTY<br>INDUSTRY.</h3>
-            <p>It's not just content. It's a full strategy to attract, engage and convert your ideal clients.</p>
+          <div class="smm-included-layout">
+            <!-- Left 7-item Numbered Grid -->
+            <div class="smm-included-grid">
+              
+              <!-- Item 01 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">01</span>
+                <h3 class="smm-included-title">CONTENT STRATEGY</h3>
+                <p class="smm-included-desc">A content strategy built around your offers, promos and slow weeks.</p>
+              </div>
+
+              <!-- Item 02 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">02</span>
+                <h3 class="smm-included-title">ON-SITE FILMING</h3>
+                <p class="smm-included-desc">On-site filming at your location, scheduled monthly, bi-monthly or quarterly depending on your plan.</p>
+              </div>
+
+              <!-- Item 03 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">03</span>
+                <h3 class="smm-included-title">EDITED CONTENT</h3>
+                <p class="smm-included-desc">Reels, carousels and photos, fully edited.</p>
+              </div>
+
+              <!-- Item 04 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">04</span>
+                <h3 class="smm-included-title">SEO-FRIENDLY CAPTIONS</h3>
+                <p class="smm-included-desc">Captions written for search, with local keywords so new clients find you.</p>
+              </div>
+
+              <!-- Item 05 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">05</span>
+                <h3 class="smm-included-title">SCHEDULING & PUBLISHING</h3>
+                <p class="smm-included-desc">Scheduling and publishing through your content calendar, with your approval on every post.</p>
+              </div>
+
+              <!-- Item 06 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">06</span>
+                <h3 class="smm-included-title">COMMUNITY ENGAGEMENT</h3>
+                <p class="smm-included-desc">Community engagement.</p>
+              </div>
+
+              <!-- Item 07 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">07</span>
+                <h3 class="smm-included-title">MONTHLY PERFORMANCE REPORTS</h3>
+                <p class="smm-included-desc">A monthly performance report tied to what matters: inquiries, bookings and growth.</p>
+              </div>
+
+            </div>
+
+            <!-- Right Aside Feature Panel -->
+            <aside class="smm-included-aside">
+              <div class="smm-included-aside-inner">
+                <h3>BUILT FOR<br>THE BEAUTY<br>INDUSTRY.</h3>
+                <p>It's not just content. It's a full strategy to attract, engage and convert your ideal clients.</p>
+              </div>
+            </aside>
           </div>
         </div>
       </div>

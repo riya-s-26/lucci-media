@@ -232,6 +232,96 @@
   margin: 0;
 }
 
+/* Service Status Badges & Row Availability Treatment */
+.service-status-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.service-status-row .service-num {
+  margin-bottom: 0;
+}
+
+.service-status-badge {
+  font-family: var(--label), "Lekton", "Courier New", monospace !important;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 3px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.service-status-badge.is-available {
+  background: #1E1B18;
+  color: #FFFFFF;
+}
+
+.service-status-badge.is-soon {
+  background: #F4F2EE;
+  color: #8A847F;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.service-row.is-available {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.service-row.is-available:hover {
+  background-color: rgba(30, 27, 24, 0.02);
+}
+
+.service-row.is-soon {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.25s ease;
+}
+
+.service-row.is-soon:hover {
+  background-color: rgba(30, 27, 24, 0.02);
+}
+
+.service-row.is-soon .service-name {
+  color: #2D2824;
+}
+
+.service-row.is-soon .service-headline {
+  color: #44403C;
+}
+
+.service-row.is-soon .service-desc {
+  color: #6E6862;
+}
+
+.service-row-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--label), "Lekton", "Courier New", monospace !important;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1E1B18;
+  margin-top: 10px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.service-row.is-available:hover .service-row-action {
+  color: #000000;
+  transform: translateX(4px);
+}
+
 /* --------------------------------------------------------------------------
    3. PROCESS SECTION — HOW A PARTNERSHIP RUNS (REFERENCE IMAGE 2 EXACT)
    -------------------------------------------------------------------------- */

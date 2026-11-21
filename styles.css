@@ -101,6 +101,290 @@ button { font: inherit; }
 .desktop-nav a.is-active {
   color: #000000;
 }
+
+/* Navigation Dropdown Container */
+.desktop-nav .nav-dropdown-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.desktop-nav .nav-dropdown-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-block: 6px;
+}
+
+.desktop-nav .nav-dropdown-arrow {
+  width: 7px;
+  height: 5px;
+  opacity: 0.65;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.desktop-nav .nav-dropdown-item:hover .nav-dropdown-arrow,
+.desktop-nav .nav-dropdown-item:focus-within .nav-dropdown-arrow,
+.desktop-nav .nav-dropdown-item.is-open .nav-dropdown-arrow {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.desktop-nav .nav-dropdown-trigger::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s var(--ease);
+}
+
+.desktop-nav .nav-dropdown-item:hover .nav-dropdown-trigger::after,
+.desktop-nav .nav-dropdown-item:focus-within .nav-dropdown-trigger::after,
+.desktop-nav .nav-dropdown-trigger.is-active::after {
+  transform: scaleX(1);
+}
+
+/* Dropdown Menu Box */
+.desktop-nav .nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  min-width: 320px;
+  width: max-content;
+  max-width: 400px;
+  padding: 10px 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+  z-index: 100;
+}
+
+/* Hover bridge to prevent menu closing during cursor transit */
+.desktop-nav .nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.desktop-nav .nav-dropdown-item:hover .nav-dropdown-menu,
+.desktop-nav .nav-dropdown-item:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Dropdown Link Items - Lekton UPPERCASE matching Brand Typography Sheet (Row: Lekton -> Navigation -> UPPERCASE) */
+.desktop-nav .nav-dropdown-menu a,
+.desktop-nav .nav-dropdown-menu .nav-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 22px;
+  font-family: var(--label), "Lekton", "Courier New", monospace !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase !important;
+  color: #231E1B;
+  white-space: nowrap;
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  z-index: 101;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.desktop-nav .nav-dropdown-menu a::after,
+.desktop-nav .nav-dropdown-menu .nav-dropdown-link::after {
+  display: none !important;
+}
+
+.desktop-nav .nav-dropdown-menu a.is-available {
+  color: #1E1B18;
+}
+
+.desktop-nav .nav-dropdown-menu a.is-soon {
+  color: #55504B;
+}
+
+.desktop-nav .nav-dropdown-menu a:hover,
+.desktop-nav .nav-dropdown-menu a:focus-visible {
+  background-color: #F8F7F5;
+  color: #1E1B18;
+}
+
+/* Subtle COMING SOON badge in desktop dropdown */
+.nav-soon-badge {
+  font-family: var(--label), "Lekton", "Courier New", monospace !important;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7A7570;
+  background-color: #FBF9F6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.desktop-nav .nav-dropdown-menu a:hover .nav-soon-badge {
+  color: #55504B;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile Menu Scroll & Dropdown Styling */
+.mobile-menu {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav-dropdown {
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobile-dropdown-header > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding-block: 17px;
+  font: 600 24px/1.2 var(--sans);
+  color: inherit;
+  text-decoration: none;
+}
+
+.mobile-dropdown-header > a span {
+  color: #7A7570;
+  font: 400 12px var(--label);
+}
+
+.mobile-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+  padding: 0;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-dropdown-toggle:active {
+  background-color: rgba(45, 17, 24, 0.08);
+}
+
+.mobile-dropdown-toggle svg {
+  width: 12px;
+  height: 8px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-dropdown-toggle[aria-expanded="false"] svg {
+  transform: rotate(-90deg);
+}
+
+.mobile-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 16px 14px;
+  gap: 2px;
+  border-left: 2px solid rgba(45, 17, 24, 0.12);
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.mobile-dropdown-menu[hidden] {
+  display: none;
+}
+
+.mobile-dropdown-menu a,
+.mobile-dropdown-menu .mobile-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-family: var(--label), "Lekton", "Courier New", monospace !important;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase !important;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mobile-dropdown-menu a.is-available {
+  color: #231E1B;
+}
+
+.mobile-dropdown-menu a.is-soon {
+  color: #55504B;
+}
+
+.mobile-dropdown-menu a:hover,
+.mobile-dropdown-menu a:active {
+  background-color: #F8F7F5;
+  color: #000000;
+}
+
+.mobile-soon-badge {
+  font-family: var(--label), "Lekton", "Courier New", monospace !important;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7A7570;
+  background-color: #FBF9F6;
+  padding: 3px 7px;
+  border-radius: 3px;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
 .footer-links a {
   position: relative;
   font-size: 11px;
