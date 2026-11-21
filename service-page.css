@@ -5,6 +5,14 @@
    ========================================================================== */
 
 /* Scoped Container & Typography */
+@font-face {
+  font-family: "ShapiroWideRegular";
+  src: url("assets/fonts/shapirowide-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 .service-page {
   font-family: var(--font-primary, "Montserrat", sans-serif);
   color: #1E1B18;
@@ -77,11 +85,12 @@
 }
 
 .smm-h1 {
-  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-family: 'ShapiroWideRegular', var(--sans, 'Montserrat', sans-serif);
   font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #1E1B18;
   margin: 0 0 1.25rem 0;
@@ -868,7 +877,8 @@
   }
   .smm-h1 {
     font-size: clamp(1.65rem, 6vw, 2.2rem);
-    line-height: 1.18;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
   }
   .smm-hero-grid {
     grid-template-columns: 1fr;
