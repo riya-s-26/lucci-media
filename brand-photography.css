@@ -29,7 +29,7 @@
   --bp-border-subtle: rgba(30, 27, 24, 0.08);
   --bp-bg: #FFFFFF;
   --bp-bg-dark: #191816;
-  --font-bp-heading: 'Nothing You Could Do', cursive;
+  --font-bp-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
   --font-bp-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-bp-mono: "Lekton", "Courier Prime", monospace;
   --font-bp-serif: "Playfair Display", Georgia, serif;
@@ -131,7 +131,7 @@
 }
 
 .bp-hero-title {
-  font-family: var(--font-bp-heading);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(2.1rem, 3.4vw, 3.4rem);
   font-weight: 700;
   line-height: 1.08;
@@ -223,7 +223,7 @@
 }
 
 .bp-included-header h2 {
-  font-family: 'Nothing You Could Do', cursive;
+  font-family: var(--font-bp-sans);
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
