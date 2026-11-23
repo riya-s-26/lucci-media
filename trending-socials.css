@@ -1,0 +1,767 @@
+/* ==========================================================================
+   SERVICE 2: TRENDING SOCIALS (CONTENT DAYS) - PAGE-SPECIFIC STYLES
+   Scoped strictly to .trending-socials-page and .ts-* elements.
+   Does NOT modify global styles, header, footer, or Service 1.
+   ========================================================================== */
+
+@font-face {
+  font-family: "ShapiroWideRegular";
+  src: url("assets/fonts/shapirowide-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --ts-dark: #1E1B18;
+  --ts-body: #55514C;
+  --ts-muted: #7A7570;
+  --ts-border: rgba(30, 27, 24, 0.14);
+  --ts-border-dark: rgba(30, 27, 24, 0.50);
+  --ts-border-subtle: rgba(30, 27, 24, 0.08);
+  --ts-bg: #FFFFFF;
+  --ts-bg-dark: #191816;
+  --font-ts-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-ts-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-ts-mono: "Lekton", "Courier Prime", monospace;
+  --font-ts-serif: "Playfair Display", Georgia, serif;
+}
+
+.trending-socials-page {
+  font-family: var(--font-ts-sans);
+  color: var(--ts-dark);
+  background-color: var(--ts-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ts-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: HERO (2-COLUMN EDITORIAL LAYOUT)
+   -------------------------------------------------------------------------- */
+.ts-hero-section {
+  padding: 3rem 0 3.5rem;
+  background-color: var(--ts-bg);
+  border-bottom: 1px solid var(--ts-border-subtle);
+  overflow: hidden;
+}
+
+.ts-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.ts-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.ts-hero-kicker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.ts-hero-kicker {
+  font-family: var(--font-ts-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ts-dark);
+  white-space: nowrap;
+}
+
+.ts-kicker-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--ts-dark);
+  opacity: 0.25;
+}
+
+.ts-h1 {
+  font-family: var(--font-ts-heading);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ts-dark);
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.ts-hero-line {
+  font-family: var(--font-ts-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ts-body);
+  line-height: 1.5;
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.ts-hero-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(30, 27, 24, 0.12);
+  margin: 0 0 1.25rem 0;
+}
+
+.ts-intro-copy p {
+  font-family: var(--font-ts-sans);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--ts-body);
+  margin: 0 0 1rem 0;
+}
+
+.ts-hero-right {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.ts-hero-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  max-height: 460px;
+  border: 1px solid var(--ts-border);
+  overflow: hidden;
+  background-color: #F8F7F5;
+}
+
+.ts-hero-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: WHAT'S INCLUDED (BOXED 3x2 GRID + ASIDE)
+   -------------------------------------------------------------------------- */
+.ts-included-section {
+  padding: 3.5rem 0;
+  background-color: var(--ts-bg);
+  border-bottom: 1px solid var(--ts-border-subtle);
+}
+
+.ts-included-card {
+  border: 1px solid var(--ts-border);
+  background-color: var(--ts-bg);
+  box-sizing: border-box;
+}
+
+.ts-included-header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--ts-border);
+}
+
+.ts-included-header h2 {
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ts-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.ts-included-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+}
+
+.ts-included-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+}
+
+.ts-included-item {
+  padding: 1.5rem 1.75rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-included-grid .ts-included-item:nth-child(1),
+.ts-included-grid .ts-included-item:nth-child(2),
+.ts-included-grid .ts-included-item:nth-child(3) {
+  border-bottom: 1px solid var(--ts-border);
+}
+
+.ts-included-grid .ts-included-item:nth-child(1),
+.ts-included-grid .ts-included-item:nth-child(2),
+.ts-included-grid .ts-included-item:nth-child(4),
+.ts-included-grid .ts-included-item:nth-child(5) {
+  border-right: 1px solid var(--ts-border);
+}
+
+.ts-included-num {
+  font-family: var(--font-ts-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ts-dark);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.ts-included-title {
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--ts-dark);
+  margin: 0 0 0.6rem 0;
+}
+
+.ts-included-desc {
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--ts-body);
+  margin: 0;
+}
+
+.ts-included-aside {
+  border-left: 1px solid var(--ts-border-dark);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.ts-included-aside-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ts-included-aside h3 {
+  font-family: var(--font-ts-heading);
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ts-dark);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: MIDDLE (WHO IT'S FOR, HOW IT WORKS & 90% STAT)
+   -------------------------------------------------------------------------- */
+.ts-middle-section {
+  padding: 4rem 0;
+  background-color: var(--ts-bg);
+  border-bottom: 1px solid var(--ts-border-subtle);
+}
+
+.ts-middle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.ts-middle-image-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  max-height: 480px;
+  border: 1px solid var(--ts-border);
+  overflow: hidden;
+  background-color: #F8F7F5;
+}
+
+.ts-middle-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.ts-middle-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-sub-heading {
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ts-dark);
+  margin: 0 0 0.85rem 0;
+}
+
+.ts-whofor-body {
+  font-family: var(--font-ts-sans);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ts-body);
+  margin: 0 0 1.75rem 0;
+}
+
+.ts-mid-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--ts-border);
+  margin-bottom: 1.75rem;
+}
+
+.ts-process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.ts-process-step {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.ts-step-num {
+  font-family: var(--font-ts-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ts-dark);
+  min-width: 22px;
+}
+
+.ts-step-body {
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ts-body);
+}
+
+.ts-step-body strong {
+  font-weight: 700;
+  color: var(--ts-dark);
+}
+
+.ts-middle-stat-col {
+  border-left: 1px solid var(--ts-border-dark);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+.ts-stat-big {
+  font-family: var(--font-ts-heading);
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ts-dark);
+  margin-bottom: 1rem;
+}
+
+.ts-stat-desc {
+  font-family: var(--font-ts-sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ts-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: INVESTMENT DARK BANNER
+   -------------------------------------------------------------------------- */
+.ts-invest-banner {
+  background-color: var(--ts-bg-dark);
+  color: #FFFFFF;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ts-invest-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ts-invest-headline {
+  font-family: var(--font-ts-sans);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.ts-invest-sub {
+  font-family: var(--font-ts-sans);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 620px;
+  margin: 0;
+}
+
+.ts-invest-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-ts-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.ts-invest-btn:hover {
+  background-color: #FFFFFF;
+  color: #1E1B18;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 5: PROOF / TESTIMONIAL
+   -------------------------------------------------------------------------- */
+.ts-proof-section {
+  padding: 4rem 0;
+  background-color: var(--ts-bg);
+  border-bottom: 1px solid var(--ts-border-subtle);
+}
+
+.ts-proof-box {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.ts-sub-eyebrow {
+  font-family: var(--font-ts-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ts-muted);
+  display: block;
+}
+
+.ts-proof-quote {
+  font-family: var(--font-ts-serif);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--ts-dark);
+  margin: 1.25rem 0 1.5rem 0;
+  padding: 0;
+  border: none;
+  font-style: italic;
+}
+
+.ts-proof-attrib {
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ts-muted);
+  font-style: normal;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 6: FAQ ACCORDION
+   -------------------------------------------------------------------------- */
+.ts-faq-section {
+  padding: 4.5rem 0;
+  background-color: var(--ts-bg);
+  border-bottom: 1px solid var(--ts-border-subtle);
+}
+
+.ts-faq-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.ts-faq-header h2 {
+  font-family: var(--font-ts-sans);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ts-dark);
+  margin: 0;
+}
+
+.ts-faq-accordion {
+  max-width: 820px;
+  margin: 0 auto;
+  border-top: 1px solid var(--ts-border);
+}
+
+.ts-faq-item {
+  border-bottom: 1px solid var(--ts-border);
+}
+
+.ts-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 0.5rem;
+  background: none;
+  border: none;
+  font-family: var(--font-ts-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ts-dark);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.ts-faq-trigger:hover {
+  color: #2D1118;
+}
+
+.ts-faq-icon {
+  font-family: var(--font-ts-mono);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--ts-muted);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.ts-faq-item.is-open .ts-faq-icon {
+  transform: rotate(45deg);
+  color: var(--ts-dark);
+}
+
+.ts-faq-body {
+  padding: 0 0.5rem 1.35rem;
+}
+
+.ts-faq-body[hidden] {
+  display: none;
+}
+
+.ts-faq-body p {
+  font-family: var(--font-ts-sans);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ts-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 7: FINAL CTA (SPLIT BLACK BOX)
+   -------------------------------------------------------------------------- */
+.ts-cta-section {
+  width: 100%;
+  background-color: var(--ts-bg-dark);
+  overflow: hidden;
+}
+
+.ts-cta-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 440px;
+  width: 100%;
+}
+
+.ts-cta-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  overflow: hidden;
+  background-color: #231E1B;
+}
+
+.ts-cta-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.ts-cta-black-box {
+  background-color: var(--ts-bg-dark);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  box-sizing: border-box;
+}
+
+.ts-cta-headline {
+  font-family: var(--font-ts-heading);
+  font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin: 0 0 2rem 0;
+}
+
+.ts-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-ts-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.ts-cta-button:hover {
+  background-color: #FFFFFF;
+  color: #1E1B18;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .ts-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .ts-hero-img-wrap {
+    min-height: 320px;
+    max-height: 400px;
+  }
+  .ts-included-layout {
+    grid-template-columns: 1fr;
+  }
+  .ts-included-aside {
+    border-left: none;
+    border-top: 1px solid var(--ts-border-dark);
+    padding: 2rem 1.75rem;
+  }
+  .ts-middle-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .ts-middle-stat-col {
+    grid-column: span 2;
+    border-left: none;
+    border-top: 1px solid var(--ts-border-dark);
+    padding-left: 0;
+    padding-top: 2rem;
+    min-height: auto;
+  }
+  .ts-cta-split {
+    grid-template-columns: 1fr;
+  }
+  .ts-cta-image-wrap {
+    min-height: 300px;
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-container {
+    padding: 0 1.25rem;
+  }
+  .ts-hero-section {
+    padding: 2.5rem 0 3rem;
+  }
+  .ts-h1 {
+    font-size: clamp(1.65rem, 6vw, 2.2rem);
+    line-height: 1.12;
+    margin-bottom: 1rem;
+  }
+  .ts-hero-line {
+    font-size: 0.9375rem;
+  }
+  .ts-included-grid {
+    grid-template-columns: 1fr;
+  }
+  .ts-included-grid .ts-included-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--ts-border);
+  }
+  .ts-middle-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .ts-middle-stat-col {
+    grid-column: span 1;
+  }
+  .ts-invest-banner {
+    padding: 2.75rem 1.25rem;
+  }
+  .ts-proof-section {
+    padding: 3rem 0;
+  }
+  .ts-faq-section {
+    padding: 3.5rem 0;
+  }
+  .ts-cta-black-box {
+    padding: 2.5rem 1.5rem;
+  }
+  .ts-cta-headline {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
