@@ -4,32 +4,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#FDFDFC">
-  <meta name="description" content="Website Design — Coming Soon | Lucci Media">
-  <title>Website Design — Coming Soon | Lucci Media</title>
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Med Spa + Salon Website Design | Lucci Media Boston</title>
+  <meta name="description"
+    content="Custom websites for med spas, salons and estheticians, designed to rank on Google and turn visitors into booked appointments.">
   <link rel="canonical" href="https://luccimedia.com/med-spa-website-design">
+
+  <meta property="og:title" content="Med Spa + Salon Website Design | Lucci Media Boston">
+  <meta property="og:description"
+    content="Custom websites for med spas, salons and estheticians, designed to rank on Google and turn visitors into booked appointments.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luccimedia.com/med-spa-website-design">
+  <meta property="og:image" content="https://luccimedia.com/assets/services/website-design-hero.jpg">
 
   <link rel="icon" type="image/png" href="assets/lucci-favicon.png">
   <link rel="preload" href="assets/fonts/montserrat-latin-300-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/montserrat-latin-italic-700-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/shapirowide-regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css?v=38.0">
-  <link rel="stylesheet" href="coming-soon.css?v=30.0">
+  <link rel="stylesheet" href="website-design.css?v=1.0">
   <script>document.documentElement.classList.add('js');</script>
   <script src="assets/vendor/lenis.min.js"></script>
   <script src="script.js?v=28.0" defer></script>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Website Design for Med Spas, Salons and Beauty Brands",
+        "serviceType": "Web Design & Development",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Lucci Media",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "370 Merrimack St",
+            "addressLocality": "Lawrence",
+            "addressRegion": "MA",
+            "postalCode": "01843",
+            "addressCountry": "US"
+          },
+          "telephone": "978-221-7122",
+          "url": "https://luccimedia.com"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Boston"},
+          {"@type": "AdministrativeArea", "name": "Massachusetts"},
+          {"@type": "AdministrativeArea", "name": "New England"}
+        ],
+        "description": "Custom websites for med spas, salons and estheticians, designed to rank on Google and turn visitors into booked appointments."
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body>
+<body class="website-design-page">
   <div class="reading-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="announcement-bar" aria-label="Booking announcement">NOW BOOKING Q1 2027 <span>·</span> LIMITED CLIENT SPOTS</div>
+  <!-- ORIGINAL LUCCI MEDIA ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" aria-label="Booking announcement">
+    NOW BOOKING Q1 2027 <span>·</span> LIMITED CLIENT SPOTS
+  </div>
 
-  <!-- SITE HEADER -->
-    <header class="site-header" id="top">
+  <!-- ORIGINAL LUCCI MEDIA SITE HEADER (EXACT COMPONENT REUSED) -->
+  <header class="site-header" id="top">
     <a class="wordmark" href="index.html" aria-label="Lucci Media, home">
       <img class="brand-logo" src="assets/lucci-client-logo-black.png" alt="Lucci Media">
     </a>
@@ -44,7 +93,7 @@
           <a href="brand-photography-boston.html" role="menuitem" class="nav-dropdown-link is-available"><span>Brand Photography</span></a>
           <a href="beauty-campaign-production.html" role="menuitem" class="nav-dropdown-link is-available"><span>Campaign Shoots</span></a>
           <a href="beauty-brand-identity-design.html" role="menuitem" class="nav-dropdown-link is-available"><span>Brand Identity</span></a>
-          <a href="med-spa-website-design.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Website Design</span><span class="nav-soon-badge">COMING SOON</span></a>
+          <a href="med-spa-website-design.html" role="menuitem" class="nav-dropdown-link is-available is-current" aria-current="page"><span>Website Design</span></a>
           <a href="google-business-profile-management.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Google Business Profile</span><span class="nav-soon-badge">COMING SOON</span></a>
           <a href="local-seo-med-spas.html" role="menuitem" class="nav-dropdown-link is-soon"><span>Local SEO</span><span class="nav-soon-badge">COMING SOON</span></a>
         </div>
@@ -59,71 +108,296 @@
     </button>
   </header>
 
-  <!-- MOBILE MENU DRAWER -->
-  <aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
-    <div class="mobile-menu-header">
-      <a class="wordmark" href="index.html" aria-label="Lucci Media, home">
-        <img class="brand-logo" src="assets/lucci-client-logo-black.png" alt="Lucci Media">
-      </a>
-      <button class="mobile-menu-close" type="button" data-mobile-menu-trigger aria-label="Close navigation menu">
-        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+  <!-- ORIGINAL LUCCI MEDIA MOBILE NAVIGATION DRAWER -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+    <a href="index.html">HOME <span>01</span></a>
+    <a href="about.html">ABOUT <span>02</span></a>
+    <div class="mobile-nav-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="services.html" class="mobile-services-title is-active" aria-current="page">SERVICES <span>03</span></a>
+        <button type="button" class="mobile-dropdown-toggle" aria-expanded="true" aria-controls="mobile-services-menu" aria-label="Toggle Services menu">
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="mobile-dropdown-menu" id="mobile-services-menu">
+        <a href="social-media-management-boston.html" class="mobile-dropdown-link is-available"><span>Social Media Management</span></a>
+        <a href="beauty-content-creation-boston.html" class="mobile-dropdown-link is-available"><span>Trending Socials</span></a>
+        <a href="brand-photography-boston.html" class="mobile-dropdown-link is-available"><span>Brand Photography</span></a>
+        <a href="beauty-campaign-production.html" class="mobile-dropdown-link is-available"><span>Campaign Shoots</span></a>
+        <a href="beauty-brand-identity-design.html" class="mobile-dropdown-link is-available"><span>Brand Identity</span></a>
+        <a href="med-spa-website-design.html" class="mobile-dropdown-link is-available is-current" aria-current="page"><span>Website Design</span></a>
+        <a href="google-business-profile-management.html" class="mobile-dropdown-link is-soon"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></a>
+        <a href="local-seo-med-spas.html" class="mobile-dropdown-link is-soon"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></a>
+      </div>
     </div>
+    <a href="coming-soon.html?page=The%20Work">THE WORK <span>04</span></a>
+    <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO <span>05</span></a>
+    <a href="inquire.html">INQUIRE <span>06</span></a>
+    <a class="mobile-contact" href="inquire.html">Apply to work with us <span><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </nav>
 
-    <div class="mobile-menu-links">
-      <a href="index.html">HOME <span>01</span></a>
-      <a href="about.html">ABOUT <span>02</span></a>
-      <div class="mobile-nav-dropdown">
-        <div class="mobile-dropdown-header">
-          <a href="services.html" class="mobile-services-title">SERVICES <span>03</span></a>
-          <button type="button" class="mobile-dropdown-toggle" aria-expanded="true" aria-controls="mobile-services-menu" aria-label="Toggle Services menu">
-            <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+  <!-- ====================================================================
+       PAGE MAIN CONTENT
+       ==================================================================== -->
+  <main class="wdp-main" id="main">
+
+    <!-- ====================================================================
+         SECTION 1: HERO
+         ==================================================================== -->
+    <section class="wdp-hero-section" aria-label="Website Design Overview">
+      <div class="wdp-wrap">
+        <div class="wdp-hero-grid">
+
+          <!-- Left Text Column -->
+          <div class="wdp-hero-left">
+            <div class="wdp-hero-eyebrow-wrap">
+              <span class="wdp-hero-eyebrow">WEBSITE DESIGN</span>
+              <span class="wdp-hero-eyebrow-line" aria-hidden="true"></span>
+            </div>
+
+            <h1 class="wdp-hero-title">
+              WEBSITE DESIGN<br>
+              FOR MED SPAS,<br>
+              SALONS AND BEAUTY BRANDS
+            </h1>
+
+            <p class="wdp-hero-subline">Your Instagram gets their attention. Your website gets the booking.</p>
+
+            <p class="wdp-hero-desc">
+              At 11pm she searches "lash lift near me" and books whoever shows up first with good reviews and a working booking page. Lucci Media designs websites for med spas, injectors, salons and estheticians that look as premium as your services and are built to be found on Google. Every site is written for search, connected to your booking software, and designed around your brand.
+            </p>
+          </div>
+
+          <!-- Right Media Column -->
+          <div class="wdp-hero-media">
+            <img src="assets/services/website-design-hero.jpg"
+              srcset="assets/services/website-design-hero.jpg 1x, assets/services/website-design-hero@2x.jpg 2x"
+              alt="Lucci Media med spa and salon luxury website design on laptop" width="540" height="380"
+              fetchpriority="high">
+          </div>
+
         </div>
-        <div class="mobile-dropdown-menu" id="mobile-services-menu">
-          <a href="social-media-management-boston.html" class="mobile-dropdown-link is-available"><span>Social Media Management</span></a>
-          <a href="beauty-content-creation-boston.html" class="mobile-dropdown-link is-available"><span>Trending Socials</span></a>
-          <a href="brand-photography-boston.html" class="mobile-dropdown-link is-available"><span>Brand Photography</span></a>
-          <a href="beauty-campaign-production.html" class="mobile-dropdown-link is-available"><span>Campaign Shoots</span></a>
-          <a href="beauty-brand-identity-design.html" class="mobile-dropdown-link is-available"><span>Brand Identity</span></a>
-          <a href="med-spa-website-design.html" class="mobile-dropdown-link is-soon"><span>Website Design</span><span class="mobile-soon-badge">COMING SOON</span></a>
-          <a href="google-business-profile-management.html" class="mobile-dropdown-link is-soon"><span>Google Business Profile</span><span class="mobile-soon-badge">COMING SOON</span></a>
-          <a href="local-seo-med-spas.html" class="mobile-dropdown-link is-soon"><span>Local SEO</span><span class="mobile-soon-badge">COMING SOON</span></a>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: WHAT'S INCLUDED (6-COLUMN CARD)
+         ==================================================================== -->
+    <section class="wdp-included-section" aria-label="What's Included">
+      <div class="wdp-wrap">
+        <div class="wdp-included-card">
+
+          <!-- Header -->
+          <div class="wdp-included-header">
+            <h2>WHAT'S INCLUDED</h2>
+          </div>
+
+          <!-- 6-Column Grid -->
+          <div class="wdp-included-grid">
+
+            <!-- Column 1 -->
+            <div class="wdp-included-col">
+              <p class="wdp-included-text">Custom design in your brand colors and fonts</p>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="wdp-included-col">
+              <p class="wdp-included-text">Copy written for local search, with your services and city on every page</p>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="wdp-included-col">
+              <p class="wdp-included-text">Your booking system connected, so visitors can book in two clicks</p>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="wdp-included-col">
+              <p class="wdp-included-text">Mobile-first layouts, since most of your clients book from their phone</p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="wdp-included-col">
+              <p class="wdp-included-text">Service pages, before and after galleries and reviews</p>
+            </div>
+
+            <!-- Column 6 -->
+            <div class="wdp-included-col">
+              <p class="wdp-included-text">Basic on-page SEO: titles, meta descriptions, headings and image alt text</p>
+            </div>
+
+          </div>
+
         </div>
       </div>
-      <a href="coming-soon.html?page=The%20Work">THE WORK <span>04</span></a>
-      <a href="coming-soon.html?page=Our%20Studio">OUR STUDIO <span>05</span></a>
-      <a href="inquire.html">INQUIRE <span>06</span></a>
-    </div>
+    </section>
 
-    <div class="mobile-menu-footer">
-      <a class="mobile-menu-cta" href="inquire.html">APPLY TO WORK WITH US <span aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-    </div>
-  </aside>
+    <!-- ====================================================================
+         SECTION 3: WHO IT'S FOR + HOW IT WORKS + INVESTMENT
+         ==================================================================== -->
+    <section class="wdp-details-section" aria-label="Who It's For and How It Works">
+      <div class="wdp-wrap">
+        <div class="wdp-details-grid">
 
-  <!-- MAIN COMING SOON CONTENT -->
-  <main id="main" class="cs-page-main">
-    <div class="page-wrap cs-container" data-reveal>
-      <div class="cs-preview-media">
-        <img src="assets/services/website-design-preview.jpg"
-          srcset="assets/services/website-design-preview.jpg 1x, assets/services/website-design-preview@2x.jpg 2x"
-          alt="Lucci Media website design for med spas and beauty brands" width="560" height="370" loading="eager">
+          <!-- Left Media Column -->
+          <div class="wdp-details-media">
+            <img src="assets/services/website-design-who.jpg"
+              srcset="assets/services/website-design-who.jpg 1x, assets/services/website-design-who@2x.jpg 2x"
+              alt="Mobile booking experience for beauty and med spa website design" width="480" height="360"
+              loading="lazy">
+          </div>
+
+          <!-- Right Content Column -->
+          <div class="wdp-details-content">
+
+            <!-- Who It's For Block -->
+            <div class="wdp-who-block">
+              <h2 class="wdp-block-title">WHO IT'S FOR</h2>
+              <p class="wdp-who-text">
+                Med spas, injectors, salons and estheticians whose current site is outdated, built on a template, or not showing up on Google.
+              </p>
+              <p class="wdp-who-note">
+                <strong>Before we start:</strong> every website we build requires a finished brand kit and professional photography. They don't have to be done by us, but if you need either one, we create both.
+              </p>
+            </div>
+
+            <div class="wdp-details-divider" aria-hidden="true"></div>
+
+            <!-- Split Row: How It Works & Investment -->
+            <div class="wdp-split-row">
+
+              <!-- How It Works (Left) -->
+              <div class="wdp-steps-block">
+                <h2 class="wdp-block-title">HOW IT WORKS</h2>
+                <ol class="wdp-step-list">
+                  <li class="wdp-step-row">
+                    <span class="wdp-step-num">01</span>
+                    <span class="wdp-step-content"><strong>Plan.</strong> Pages, services and keywords mapped before any design.</span>
+                  </li>
+                  <li class="wdp-step-row">
+                    <span class="wdp-step-num">02</span>
+                    <span class="wdp-step-content"><strong>Design.</strong> You approve the look on desktop and mobile.</span>
+                  </li>
+                  <li class="wdp-step-row">
+                    <span class="wdp-step-num">03</span>
+                    <span class="wdp-step-content"><strong>Build.</strong> Copy, booking and SEO set up.</span>
+                  </li>
+                  <li class="wdp-step-row">
+                    <span class="wdp-step-num">04</span>
+                    <span class="wdp-step-content"><strong>Launch.</strong> We go live and submit your site to Google.</span>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Investment (Right) -->
+              <div class="wdp-investment-block">
+                <h2 class="wdp-block-title">INVESTMENT</h2>
+                <p class="wdp-investment-text">
+                  Every website is custom quoted based on the number of pages and features you need. Share your goals in our inquiry form and we'll send a proposal.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
-      <p class="cs-eyebrow">[ SERVICE · WEBSITE DESIGN ]</p>
-      <h1 class="cs-title">COMING SOON</h1>
-      <div class="cs-divider" aria-hidden="true"></div>
-      <p class="cs-desc">
-        We are currently crafting our Website Design offering for med spas and beauty brands. In the meantime, explore our available services or connect with our team.
-      </p>
-      <div class="cs-actions">
-        <a href="services.html" class="cs-btn cs-btn-primary">← BACK TO SERVICES</a>
-        <a href="social-media-management-boston.html" class="cs-btn cs-btn-secondary">VIEW SOCIAL MEDIA MANAGEMENT <span class="cta-arrow-inline" aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: FAQ ACCORDION
+         ==================================================================== -->
+    <section class="wdp-faq-section" aria-label="Frequently Asked Questions">
+      <div class="wdp-wrap">
+        <div class="wdp-faq-card">
+
+          <div class="wdp-faq-header">
+            <h2>FAQ</h2>
+          </div>
+
+          <div class="wdp-faq-accordion">
+
+            <!-- Item 1 -->
+            <div class="wdp-faq-item">
+              <button class="wdp-faq-trigger" type="button" aria-expanded="false" aria-controls="wd-faq-ans-1" id="wd-faq-q-1">
+                <span>1. How many pages does my website need?</span>
+                <span class="wdp-faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="wdp-faq-body" id="wd-faq-ans-1" role="region" aria-labelledby="wd-faq-q-1" hidden>
+                <p>We build one-page and multi-page sites. Most med spas and salons benefit from a page for each core service, since each one gives you another way to rank on Google.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="wdp-faq-item">
+              <button class="wdp-faq-trigger" type="button" aria-expanded="false" aria-controls="wd-faq-ans-2" id="wd-faq-q-2">
+                <span>2. Will my website show up on Google?</span>
+                <span class="wdp-faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="wdp-faq-body" id="wd-faq-ans-2" role="region" aria-labelledby="wd-faq-q-2" hidden>
+                <p>Every site is built with on-page SEO from day one. For ongoing rankings, pair it with our Local SEO and Google Business Profile management.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="wdp-faq-item">
+              <button class="wdp-faq-trigger" type="button" aria-expanded="false" aria-controls="wd-faq-ans-3" id="wd-faq-q-3">
+                <span>3. Can you connect my booking software?</span>
+                <span class="wdp-faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="wdp-faq-body" id="wd-faq-ans-3" role="region" aria-labelledby="wd-faq-q-3" hidden>
+                <p>Yes. We connect the booking platform you already use so clients can book straight from your site.</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="wdp-faq-item">
+              <button class="wdp-faq-trigger" type="button" aria-expanded="false" aria-controls="wd-faq-ans-4" id="wd-faq-q-4">
+                <span>4. Do I need a brand kit and photos before my website?</span>
+                <span class="wdp-faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="wdp-faq-body" id="wd-faq-ans-4" role="region" aria-labelledby="wd-faq-q-4" hidden>
+                <p>Yes. Every website we build requires a finished brand kit and professional photography. They don't have to be created by us, but we offer both if you need them.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: MID CTA SECTION ("LET'S BUILD THE SITE THAT BOOKS YOU.")
+         ==================================================================== -->
+    <section class="wdp-mid-cta-section" aria-label="Start Your Website Project">
+      <div class="wdp-wrap">
+        <div class="wdp-mid-cta-card">
+          <h2 class="wdp-mid-cta-title">LET'S BUILD THE SITE THAT BOOKS YOU.</h2>
+          <a href="inquire.html" class="wdp-mid-cta-btn">START YOUR INQUIRY</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: INVESTMENT BANNER (FULL WIDTH BLACK)
+         ==================================================================== -->
+    <section class="wdp-investment-banner" aria-label="Investment Packages">
+      <div class="wdp-wrap">
+        <div class="wdp-investment-inner">
+          <p class="wdp-investment-line">INVESTMENT PACKAGES ARE BASED ON YOUR NEEDS AND GOALS.</p>
+          <a href="inquire.html" class="wdp-investment-btn">APPLY TO WORK WITH US</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- SITE FOOTER -->
+  <!-- ====================================================================
+       ORIGINAL LUCCI MEDIA FOOTER (EXACT COMPONENT REUSED)
+       ==================================================================== -->
   <footer class="site-footer" id="footer" data-reveal>
+    <!-- 1. Editorial Metadata Bar (3-Column Layout with Handwritten Script) -->
     <div class="footer-meta-bar page-wrap">
       <div class="footer-meta-col footer-meta-left">
         <a href="https://www.instagram.com/luccimedia/" target="_blank" rel="noreferrer">CONNECT ON IG + TIKTOK <span
@@ -138,31 +412,55 @@
       </div>
     </div>
 
+    <!-- 2. Large Horizontal Brand Logo in Footer -->
     <div class="footer-brand-stage page-wrap">
       <div class="footer-logo-stage" aria-label="Lucci Media">
         <img class="footer-brand-logo" src="assets/lucci-horizontal-logo-black.png?v=2.0" alt="Lucci Media" width="700" height="100">
       </div>
     </div>
 
+    <!-- 3. Minimal Bottom Legal & Navigation Bar -->
     <div class="footer-bottom-bar page-wrap">
       <span class="footer-copy">© <span id="year">2026</span> LUCCI MEDIA</span>
       <div class="footer-nav-links">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
+        <a href="coming-soon.html?page=The%20Work">WORK</a>
         <a href="services.html">SERVICES</a>
-        <a href="coming-soon.html?page=The%20Work">THE WORK</a>
         <a href="coming-soon.html?page=Our%20Studio">STUDIO</a>
-        <a href="inquire.html">INQUIRE</a>
+        <a href="mailto:lex@luccimedia.com">CONTACT</a>
       </div>
       <a class="footer-top-link" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 
+  <!-- ORIGINAL MOBILE BOTTOM NAVIGATION BAR -->
   <nav class="mobile-bottom-bar" aria-label="Quick navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="inquire.html">Apply</a>
-    <button type="button" data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    <a href="index.html">Home</a><a href="about.html">About</a><a
+      href="inquire.html">Apply</a><button type="button"
+      data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
   </nav>
+
+  <!-- FAQ Accordion Interactive Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var triggers = document.querySelectorAll('.wdp-faq-trigger');
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var item = this.closest('.wdp-faq-item');
+          var body = item.querySelector('.wdp-faq-body');
+          var isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+          this.setAttribute('aria-expanded', !isExpanded);
+          if (isExpanded) {
+            item.classList.remove('is-open');
+            body.hidden = true;
+          } else {
+            item.classList.add('is-open');
+            body.hidden = false;
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>

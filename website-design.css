@@ -1,0 +1,672 @@
+/* ==========================================================================
+   SERVICE 6: WEBSITE DESIGN - PAGE-SPECIFIC STYLES
+   Scoped strictly to .website-design-page and .wdp-* elements.
+   Does NOT modify global styles, header, footer, or other service pages.
+   ========================================================================== */
+
+@font-face {
+  font-family: "ShapiroWideRegular";
+  src: url("assets/fonts/shapirowide-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --wdp-dark: #1E1B18;
+  --wdp-body: #55514C;
+  --wdp-muted: #7A7570;
+  --wdp-border: rgba(30, 27, 24, 0.14);
+  --wdp-border-dark: rgba(30, 27, 24, 0.45);
+  --wdp-border-subtle: rgba(30, 27, 24, 0.08);
+  --wdp-bg: #FFFFFF;
+  --wdp-bg-warm: #FAF8F5;
+  --wdp-bg-dark: #191816;
+  --font-wdp-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-wdp-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-wdp-mono: "Lekton", "Courier Prime", monospace;
+  --font-wdp-serif: "Playfair Display", Georgia, serif;
+}
+
+.website-design-page {
+  font-family: var(--font-wdp-sans);
+  color: var(--wdp-dark);
+  background-color: var(--wdp-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neutralize global styles.css lowercase rule so mockup sentence-case and uppercase display exactly */
+.website-design-page p,
+.website-design-page span,
+.website-design-page li,
+.website-design-page blockquote,
+.website-design-page cite,
+.website-design-page button {
+  text-transform: none !important;
+}
+
+.website-design-page .wdp-hero-eyebrow,
+.website-design-page .wdp-hero-title,
+.website-design-page .wdp-included-header h2,
+.website-design-page .wdp-block-title,
+.website-design-page .wdp-step-num,
+.website-design-page .wdp-faq-header h2,
+.website-design-page .wdp-mid-cta-title,
+.website-design-page .wdp-mid-cta-btn,
+.website-design-page .wdp-investment-line,
+.website-design-page .wdp-investment-btn {
+  text-transform: uppercase !important;
+}
+
+.wdp-main {
+  width: 100%;
+  position: relative;
+}
+
+.wdp-wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION
+   -------------------------------------------------------------------------- */
+.wdp-hero-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0 clamp(3rem, 4.5vw, 4.5rem);
+  background-color: var(--wdp-bg);
+  border-bottom: 1px solid var(--wdp-border-subtle);
+  overflow: hidden;
+}
+
+.wdp-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) 1.08fr;
+  gap: clamp(2rem, 3.5vw, 3.75rem);
+  align-items: center;
+}
+
+.wdp-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 560px;
+}
+
+.wdp-hero-eyebrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.35rem;
+  padding: 0;
+}
+
+.wdp-hero-eyebrow {
+  font-family: var(--font-wdp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--wdp-dark);
+  white-space: nowrap;
+}
+
+.wdp-hero-eyebrow-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background-color: var(--wdp-dark);
+  opacity: 0.35;
+}
+
+.wdp-hero-title {
+  font-family: var(--font-wdp-heading);
+  font-size: clamp(2rem, 3.2vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--wdp-dark);
+  margin: 0 0 1.35rem 0;
+  padding: 0;
+  text-align: left;
+  word-break: break-word;
+}
+
+.wdp-hero-subline {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--wdp-dark);
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.wdp-hero-desc {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--wdp-body);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.wdp-hero-media {
+  position: relative;
+  width: 100%;
+  background-color: #F5F3EF;
+  border: 1px solid var(--wdp-border);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.wdp-hero-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 380;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wdp-hero-media:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   2. WHAT'S INCLUDED SECTION (6-COLUMN CARD)
+   -------------------------------------------------------------------------- */
+.wdp-included-section {
+  padding: clamp(3rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--wdp-bg);
+  border-bottom: 1px solid var(--wdp-border-subtle);
+}
+
+.wdp-included-card {
+  border: 1px solid var(--wdp-border);
+  background-color: var(--wdp-bg-warm);
+  box-sizing: border-box;
+}
+
+.wdp-included-header {
+  border-bottom: 1px solid var(--wdp-border);
+  padding: 1.15rem 1.75rem;
+  background-color: var(--wdp-bg-warm);
+}
+
+.wdp-included-header h2 {
+  font-family: var(--font-wdp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--wdp-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.wdp-included-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: var(--wdp-bg-warm);
+}
+
+.wdp-included-col {
+  padding: clamp(1.25rem, 2vw, 1.75rem) clamp(1rem, 1.4vw, 1.35rem);
+  border-right: 1px solid var(--wdp-border);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wdp-included-col:last-child {
+  border-right: none;
+}
+
+.wdp-included-text {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--wdp-dark);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. WHO IT'S FOR + HOW IT WORKS + INVESTMENT SECTION
+   -------------------------------------------------------------------------- */
+.wdp-details-section {
+  padding: clamp(3rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--wdp-bg);
+  border-bottom: 1px solid var(--wdp-border-subtle);
+}
+
+.wdp-details-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 460px) 1.25fr;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
+  align-items: start;
+}
+
+.wdp-details-media {
+  position: relative;
+  width: 100%;
+  background-color: #F5F3EF;
+  border: 1px solid var(--wdp-border);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.wdp-details-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 360;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wdp-details-media:hover img {
+  transform: scale(1.02);
+}
+
+.wdp-details-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wdp-who-block {
+  margin-bottom: 2rem;
+}
+
+.wdp-block-title {
+  font-family: var(--font-wdp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--wdp-dark);
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.wdp-who-text {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--wdp-body);
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.wdp-who-note {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--wdp-muted);
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--wdp-border);
+}
+
+.wdp-who-note strong {
+  color: var(--wdp-dark);
+  font-weight: 600;
+}
+
+.wdp-details-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--wdp-border);
+  margin: 2rem 0;
+}
+
+.wdp-split-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.75rem, 3vw, 3rem);
+}
+
+.wdp-steps-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.wdp-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.wdp-step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  line-height: 1.6;
+  color: var(--wdp-body);
+}
+
+.wdp-step-num {
+  font-family: var(--font-wdp-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--wdp-dark);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.wdp-step-content strong {
+  font-weight: 700;
+  color: var(--wdp-dark);
+}
+
+.wdp-investment-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.wdp-investment-text {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--wdp-body);
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. FAQ ACCORDION SECTION
+   -------------------------------------------------------------------------- */
+.wdp-faq-section {
+  padding: clamp(3rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--wdp-bg);
+  border-bottom: 1px solid var(--wdp-border-subtle);
+}
+
+.wdp-faq-card {
+  border: 1px solid var(--wdp-border);
+  background-color: var(--wdp-bg-warm);
+  box-sizing: border-box;
+}
+
+.wdp-faq-header {
+  border-bottom: 1px solid var(--wdp-border);
+  padding: 1.15rem 1.75rem;
+  background-color: var(--wdp-bg-warm);
+}
+
+.wdp-faq-header h2 {
+  font-family: var(--font-wdp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--wdp-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.wdp-faq-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.wdp-faq-item {
+  border-bottom: 1px solid var(--wdp-border);
+  transition: background-color 0.2s ease;
+}
+
+.wdp-faq-item:last-child {
+  border-bottom: none;
+}
+
+.wdp-faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.95rem);
+  font-weight: 600;
+  color: var(--wdp-dark);
+  transition: color 0.2s ease;
+}
+
+.wdp-faq-trigger:hover {
+  color: #000000;
+}
+
+.wdp-faq-trigger span:first-child {
+  flex: 1;
+}
+
+.wdp-faq-icon {
+  font-family: var(--font-wdp-sans);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--wdp-muted);
+  line-height: 1;
+  margin-left: 1rem;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
+}
+
+.wdp-faq-item.is-open .wdp-faq-icon {
+  transform: rotate(45deg);
+  color: var(--wdp-dark);
+}
+
+.wdp-faq-body {
+  padding: 0 1.75rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.wdp-faq-body[hidden] {
+  display: none;
+}
+
+.wdp-faq-body p {
+  font-family: var(--font-wdp-sans);
+  font-size: clamp(0.84375rem, 0.9vw, 0.90625rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--wdp-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. MID CTA SECTION ("LET'S BUILD THE SITE THAT BOOKS YOU.")
+   -------------------------------------------------------------------------- */
+.wdp-mid-cta-section {
+  padding: clamp(3.5rem, 5vw, 5rem) 0;
+  background-color: var(--wdp-bg-warm);
+  border-bottom: 1px solid var(--wdp-border-subtle);
+  text-align: center;
+}
+
+.wdp-mid-cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.wdp-mid-cta-title {
+  font-family: var(--font-wdp-heading);
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--wdp-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.wdp-mid-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2.25rem;
+  font-family: var(--font-wdp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--wdp-dark);
+  background: transparent;
+  border: 1px solid var(--wdp-dark);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wdp-mid-cta-btn:hover {
+  background-color: var(--wdp-dark);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   6. INVESTMENT BANNER (FULL WIDTH BLACK)
+   -------------------------------------------------------------------------- */
+.wdp-investment-banner {
+  background-color: var(--wdp-bg-dark);
+  color: #FFFFFF;
+  padding: clamp(2.25rem, 3.5vw, 3rem) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wdp-investment-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.wdp-investment-line {
+  font-family: var(--font-wdp-mono);
+  font-size: clamp(0.75rem, 0.85vw, 0.875rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0;
+}
+
+.wdp-investment-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-wdp-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #FFFFFF;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wdp-investment-btn:hover {
+  background: #FFFFFF;
+  color: var(--wdp-dark);
+  border-color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .wdp-included-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wdp-included-col:nth-child(3n) {
+    border-right: none;
+  }
+
+  .wdp-included-col:nth-child(-n+3) {
+    border-bottom: 1px solid var(--wdp-border);
+  }
+
+  .wdp-details-grid {
+    grid-template-columns: minmax(280px, 380px) 1.2fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wdp-wrap {
+    padding: 0 1.25rem;
+  }
+
+  .wdp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .wdp-hero-left {
+    max-width: 100%;
+  }
+
+  .wdp-hero-media {
+    max-width: 100%;
+  }
+
+  .wdp-included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wdp-included-col {
+    border-right: none !important;
+    border-bottom: 1px solid var(--wdp-border);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .wdp-included-col:last-child {
+    border-bottom: none;
+  }
+
+  .wdp-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wdp-details-media {
+    max-width: 100%;
+  }
+
+  .wdp-split-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wdp-faq-trigger {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .wdp-faq-body {
+    padding: 0 1.25rem 1.25rem;
+  }
+}
