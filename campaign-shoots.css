@@ -5,6 +5,14 @@
    ========================================================================== */
 
 @font-face {
+  font-family: "Nothing You Could Do";
+  src: url("assets/fonts/nothing-you-could-do-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "ShapiroWideRegular";
   src: url("assets/fonts/shapirowide-regular.woff") format("woff");
   font-style: normal;
@@ -22,7 +30,7 @@
   --csp-bg: #FFFFFF;
   --csp-bg-warm: #FAF8F5;
   --csp-bg-dark: #191816;
-  --font-csp-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-csp-heading: 'Nothing You Could Do', cursive;
   --font-csp-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-csp-mono: "Lekton", "Courier Prime", monospace;
   --font-csp-serif: "Playfair Display", Georgia, serif;
@@ -206,7 +214,7 @@
 }
 
 .csp-included-header h2 {
-  font-family: var(--font-csp-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -233,7 +241,7 @@
 }
 
 .csp-stat-num {
-  font-family: var(--font-csp-heading);
+  font-family: 'ShapiroWideRegular', 'Montserrat', sans-serif;
   font-size: clamp(2.25rem, 3.5vw, 3.25rem);
   font-weight: 700;
   line-height: 1;
@@ -306,7 +314,7 @@
 }
 
 .csp-block-title {
-  font-family: var(--font-csp-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -553,7 +561,7 @@
 }
 
 .csp-mid-cta-title {
-  font-family: var(--font-csp-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(1.15rem, 1.6vw, 1.5rem);
   font-weight: 700;
   letter-spacing: 0.12em;

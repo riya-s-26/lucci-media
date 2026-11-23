@@ -6,6 +6,14 @@
 
 /* Scoped Container & Typography */
 @font-face {
+  font-family: "Nothing You Could Do";
+  src: url("assets/fonts/nothing-you-could-do-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "ShapiroWideRegular";
   src: url("assets/fonts/shapirowide-regular.woff") format("woff");
   font-style: normal;
@@ -85,7 +93,7 @@
 }
 
 .smm-h1 {
-  font-family: 'ShapiroWideRegular', var(--sans, 'Montserrat', sans-serif);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(2rem, 3.2vw, 3rem);
   font-weight: 700;
   font-style: normal;
@@ -226,7 +234,7 @@
 }
 
 .smm-included-header h2 {
-  font-family: var(--font-primary, "Montserrat", sans-serif);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -285,7 +293,7 @@
 }
 
 .smm-included-title {
-  font-family: var(--font-primary, "Montserrat", sans-serif);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -330,7 +338,7 @@
 }
 
 .smm-included-aside h3 {
-  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(1.4rem, 1.8vw, 1.7rem);
   font-weight: 400;
   line-height: 1.15;
@@ -405,7 +413,7 @@
 }
 
 .smm-whofor-heading {
-  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 500;
   font-style: italic;
@@ -446,6 +454,7 @@
 }
 
 .smm-trio-heading {
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -589,7 +598,7 @@
 }
 
 .smm-sub-title {
-  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 1.85rem;
   font-weight: 500;
   line-height: 1.2;
@@ -767,6 +776,7 @@
 }
 
 .smm-cta-headline {
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.2em;

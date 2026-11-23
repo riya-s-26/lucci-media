@@ -5,6 +5,14 @@
    ========================================================================== */
 
 @font-face {
+  font-family: "Nothing You Could Do";
+  src: url("assets/fonts/nothing-you-could-do-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "ShapiroWideRegular";
   src: url("assets/fonts/shapirowide-regular.woff") format("woff");
   font-style: normal;
@@ -21,7 +29,7 @@
   --ts-border-subtle: rgba(30, 27, 24, 0.08);
   --ts-bg: #FFFFFF;
   --ts-bg-dark: #191816;
-  --font-ts-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-ts-heading: 'Nothing You Could Do', cursive;
   --font-ts-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-ts-mono: "Lekton", "Courier Prime", monospace;
   --font-ts-serif: "Playfair Display", Georgia, serif;
@@ -180,7 +188,7 @@
 }
 
 .ts-included-header h2 {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -231,7 +239,7 @@
 }
 
 .ts-included-title {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -315,7 +323,7 @@
 }
 
 .ts-sub-heading {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -383,7 +391,7 @@
 }
 
 .ts-stat-big {
-  font-family: var(--font-ts-heading);
+  font-family: 'ShapiroWideRegular', 'Montserrat', sans-serif;
   font-size: clamp(3.5rem, 5vw, 5rem);
   font-weight: 700;
   line-height: 1;
@@ -421,7 +429,7 @@
 }
 
 .ts-invest-headline {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(0.85rem, 1.1vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -685,22 +693,27 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
   .ts-hero-img-wrap {
     min-height: 320px;
     max-height: 400px;
   }
+
   .ts-included-layout {
     grid-template-columns: 1fr;
   }
+
   .ts-included-aside {
     border-left: none;
     border-top: 1px solid var(--ts-border-dark);
     padding: 2rem 1.75rem;
   }
+
   .ts-middle-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
   }
+
   .ts-middle-stat-col {
     grid-column: span 2;
     border-left: none;
@@ -709,9 +722,11 @@
     padding-top: 2rem;
     min-height: auto;
   }
+
   .ts-cta-split {
     grid-template-columns: 1fr;
   }
+
   .ts-cta-image-wrap {
     min-height: 300px;
     max-height: 380px;
@@ -722,46 +737,57 @@
   .ts-container {
     padding: 0 1.25rem;
   }
+
   .ts-hero-section {
     padding: 2.5rem 0 3rem;
   }
+
   .ts-h1 {
     font-size: clamp(1.65rem, 6vw, 2.2rem);
     line-height: 1.12;
     margin-bottom: 1rem;
   }
+
   .ts-hero-line {
     font-size: 0.9375rem;
   }
+
   .ts-included-grid {
     grid-template-columns: 1fr;
   }
+
   .ts-included-grid .ts-included-item {
     border-right: none !important;
     border-bottom: 1px solid var(--ts-border);
   }
+
   .ts-middle-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
   .ts-middle-stat-col {
     grid-column: span 1;
   }
+
   .ts-invest-banner {
     padding: 2.75rem 1.25rem;
   }
+
   .ts-proof-section {
     padding: 3rem 0;
   }
+
   .ts-faq-section {
     padding: 3.5rem 0;
   }
+
   .ts-cta-black-box {
     padding: 2.5rem 1.5rem;
   }
+
   .ts-cta-headline {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 }
-

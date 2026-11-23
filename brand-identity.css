@@ -5,6 +5,14 @@
    ========================================================================== */
 
 @font-face {
+  font-family: "Nothing You Could Do";
+  src: url("assets/fonts/nothing-you-could-do-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "ShapiroWideRegular";
   src: url("assets/fonts/shapirowide-regular.woff") format("woff");
   font-style: normal;
@@ -22,7 +30,7 @@
   --bip-bg: #FFFFFF;
   --bip-bg-warm: #FAF8F5;
   --bip-bg-dark: #191816;
-  --font-bip-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-bip-heading: 'Nothing You Could Do', cursive;
   --font-bip-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-bip-mono: "Lekton", "Courier Prime", monospace;
   --font-bip-serif: "Playfair Display", Georgia, serif;
@@ -204,7 +212,7 @@
 }
 
 .bip-included-header h2 {
-  font-family: var(--font-bip-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -279,7 +287,7 @@
 }
 
 .bip-block-title {
-  font-family: var(--font-bip-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -480,7 +488,7 @@
 }
 
 .bip-mid-cta-title {
-  font-family: var(--font-bip-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(1.15rem, 1.6vw, 1.5rem);
   font-weight: 700;
   letter-spacing: 0.12em;
