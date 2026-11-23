@@ -1,0 +1,635 @@
+/* ==========================================================================
+   SERVICE 5: BRAND IDENTITY - PAGE-SPECIFIC STYLES
+   Scoped strictly to .brand-identity-page and .bip-* elements.
+   Does NOT modify global styles, header, footer, or other service pages.
+   ========================================================================== */
+
+@font-face {
+  font-family: "ShapiroWideRegular";
+  src: url("assets/fonts/shapirowide-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --bip-dark: #1E1B18;
+  --bip-body: #55514C;
+  --bip-muted: #7A7570;
+  --bip-border: rgba(30, 27, 24, 0.14);
+  --bip-border-dark: rgba(30, 27, 24, 0.45);
+  --bip-border-subtle: rgba(30, 27, 24, 0.08);
+  --bip-bg: #FFFFFF;
+  --bip-bg-warm: #FAF8F5;
+  --bip-bg-dark: #191816;
+  --font-bip-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-bip-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-bip-mono: "Lekton", "Courier Prime", monospace;
+  --font-bip-serif: "Playfair Display", Georgia, serif;
+}
+
+.brand-identity-page {
+  font-family: var(--font-bip-sans);
+  color: var(--bip-dark);
+  background-color: var(--bip-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neutralize global styles.css lowercase rule so mockup sentence-case and uppercase display exactly */
+.brand-identity-page p,
+.brand-identity-page span,
+.brand-identity-page li,
+.brand-identity-page blockquote,
+.brand-identity-page cite,
+.brand-identity-page button {
+  text-transform: none !important;
+}
+
+.brand-identity-page .bip-hero-eyebrow,
+.brand-identity-page .bip-hero-title,
+.brand-identity-page .bip-included-header h2,
+.brand-identity-page .bip-block-title,
+.brand-identity-page .bip-step-num,
+.brand-identity-page .bip-faq-header h2,
+.brand-identity-page .bip-mid-cta-title,
+.brand-identity-page .bip-mid-cta-btn,
+.brand-identity-page .bip-investment-line,
+.brand-identity-page .bip-investment-btn {
+  text-transform: uppercase !important;
+}
+
+.bip-main {
+  width: 100%;
+  position: relative;
+}
+
+.bip-wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION
+   -------------------------------------------------------------------------- */
+.bip-hero-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0 clamp(3rem, 4.5vw, 4.5rem);
+  background-color: var(--bip-bg);
+  border-bottom: 1px solid var(--bip-border-subtle);
+  overflow: hidden;
+}
+
+.bip-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) 1.08fr;
+  gap: clamp(2rem, 3.5vw, 3.75rem);
+  align-items: center;
+}
+
+.bip-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 560px;
+}
+
+.bip-hero-eyebrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.35rem;
+  padding: 0;
+}
+
+.bip-hero-eyebrow {
+  font-family: var(--font-bip-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--bip-dark);
+  white-space: nowrap;
+}
+
+.bip-hero-eyebrow-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background-color: var(--bip-dark);
+  opacity: 0.35;
+}
+
+.bip-hero-title {
+  font-family: var(--font-bip-heading);
+  font-size: clamp(2rem, 3.2vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--bip-dark);
+  margin: 0 0 1.35rem 0;
+  padding: 0;
+  text-align: left;
+  word-break: break-word;
+}
+
+.bip-hero-subline {
+  font-family: var(--font-bip-sans);
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--bip-dark);
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.bip-hero-desc {
+  font-family: var(--font-bip-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--bip-body);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.bip-hero-media {
+  position: relative;
+  width: 100%;
+  background-color: #F5F3EF;
+  border: 1px solid var(--bip-border);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.bip-hero-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 410;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bip-hero-media:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   2. WHAT'S INCLUDED SECTION (5-COLUMN CARD)
+   -------------------------------------------------------------------------- */
+.bip-included-section {
+  padding: clamp(2.5rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--bip-bg);
+  border-bottom: 1px solid var(--bip-border-subtle);
+}
+
+.bip-included-card {
+  border: 1px solid var(--bip-border);
+  background-color: var(--bip-bg-warm);
+  box-sizing: border-box;
+}
+
+.bip-included-header {
+  padding: 1rem clamp(1.25rem, 2.5vw, 2rem);
+  border-bottom: 1px solid var(--bip-border);
+}
+
+.bip-included-header h2 {
+  font-family: var(--font-bip-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--bip-dark);
+  margin: 0;
+}
+
+.bip-included-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+}
+
+.bip-included-col {
+  padding: clamp(1.5rem, 2vw, 2.25rem) clamp(1rem, 1.5vw, 1.5rem);
+  border-right: 1px solid var(--bip-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bip-included-col:last-child {
+  border-right: none;
+}
+
+.bip-included-text {
+  font-family: var(--font-bip-sans);
+  font-size: 0.84375rem;
+  line-height: 1.6;
+  color: var(--bip-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. DETAILS SECTION: MEDIA + WHO IT'S FOR + HOW IT WORKS + INVESTMENT
+   -------------------------------------------------------------------------- */
+.bip-details-section {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  background-color: var(--bip-bg);
+  border-bottom: 1px solid var(--bip-border-subtle);
+}
+
+.bip-details-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: clamp(2.5rem, 4.5vw, 4.5rem);
+  align-items: start;
+}
+
+.bip-details-media {
+  border: 1px solid var(--bip-border);
+  background-color: #F5F3EF;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.bip-details-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 440;
+  object-fit: cover;
+  display: block;
+}
+
+.bip-details-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bip-who-block {
+  margin-bottom: 2.25rem;
+}
+
+.bip-block-title {
+  font-family: var(--font-bip-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--bip-dark);
+  margin: 0 0 1rem 0;
+}
+
+.bip-who-text {
+  font-family: var(--font-bip-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--bip-body);
+  margin: 0;
+}
+
+.bip-details-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--bip-border);
+  margin: 0 0 2.25rem 0;
+}
+
+.bip-split-row {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.bip-steps-block {
+  padding-right: clamp(1rem, 2vw, 1.75rem);
+  border-right: 1px solid var(--bip-border);
+}
+
+.bip-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bip-step-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.bip-step-num {
+  font-family: var(--font-bip-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--bip-dark);
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.bip-step-content {
+  font-family: var(--font-bip-sans);
+  font-size: 0.84375rem;
+  line-height: 1.55;
+  color: var(--bip-body);
+}
+
+.bip-step-content strong {
+  font-weight: 700;
+  color: var(--bip-dark);
+}
+
+.bip-investment-block {
+  padding-left: 0;
+}
+
+.bip-investment-text {
+  font-family: var(--font-bip-sans);
+  font-size: 0.84375rem;
+  line-height: 1.65;
+  color: var(--bip-body);
+  margin: 0 0 1rem 0;
+}
+
+.bip-investment-recommendation {
+  font-family: var(--font-bip-sans);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--bip-muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. FAQ ACCORDION SECTION
+   -------------------------------------------------------------------------- */
+.bip-faq-section {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  background-color: var(--bip-bg);
+  border-bottom: 1px solid var(--bip-border-subtle);
+}
+
+.bip-faq-card {
+  border: 1px solid var(--bip-border);
+  background-color: var(--bip-bg-warm);
+  padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.bip-faq-header {
+  margin-bottom: 1.5rem;
+}
+
+.bip-faq-header h2 {
+  font-family: var(--font-bip-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--bip-dark);
+  margin: 0;
+}
+
+.bip-faq-accordion {
+  width: 100%;
+  border-top: 1px solid var(--bip-border);
+}
+
+.bip-faq-item {
+  border-bottom: 1px solid var(--bip-border);
+}
+
+.bip-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-bip-sans);
+  font-size: clamp(0.9375rem, 1.1vw, 1.05rem);
+  font-weight: 500;
+  color: var(--bip-dark);
+  transition: color 0.2s ease;
+}
+
+.bip-faq-trigger:hover {
+  color: #000;
+}
+
+.bip-faq-icon {
+  font-family: var(--font-bip-mono);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--bip-dark);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+.bip-faq-item.is-open .bip-faq-icon {
+  transform: rotate(45deg);
+}
+
+.bip-faq-body {
+  padding: 0 0.5rem 1.25rem;
+}
+
+.bip-faq-body[hidden] {
+  display: none;
+}
+
+.bip-faq-body p {
+  font-family: var(--font-bip-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--bip-body);
+  margin: 0;
+  max-width: 900px;
+}
+
+/* --------------------------------------------------------------------------
+   5. MID CTA SECTION ("READY TO LOOK THE PART?")
+   -------------------------------------------------------------------------- */
+.bip-mid-cta-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+  background-color: var(--bip-bg);
+}
+
+.bip-mid-cta-card {
+  border: 1px solid var(--bip-border);
+  background-color: var(--bip-bg-warm);
+  padding: clamp(3rem, 5vw, 4.5rem) 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.bip-mid-cta-title {
+  font-family: var(--font-bip-sans);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--bip-dark);
+  margin: 0;
+}
+
+.bip-mid-cta-btn {
+  display: inline-block;
+  font-family: var(--font-bip-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--bip-dark);
+  text-decoration: none;
+  border: 1px solid var(--bip-dark);
+  background-color: #FFFFFF;
+  padding: 0.95rem 2.25rem;
+  transition: all 0.25s ease;
+}
+
+.bip-mid-cta-btn:hover {
+  background-color: var(--bip-dark);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   6. BOTTOM INVESTMENT BANNER (FULL WIDTH BLACK)
+   -------------------------------------------------------------------------- */
+.bip-investment-banner {
+  background-color: var(--bip-bg-dark);
+  color: #FFFFFF;
+  padding: clamp(2.5rem, 3.5vw, 3.25rem) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bip-investment-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.bip-investment-line {
+  font-family: var(--font-bip-mono);
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 900px;
+}
+
+.bip-investment-btn {
+  display: inline-block;
+  font-family: var(--font-bip-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.85rem 2rem;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.bip-investment-btn:hover {
+  background-color: #FFFFFF;
+  color: var(--bip-dark) !important;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .bip-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .bip-hero-left {
+    max-width: 100%;
+  }
+  .bip-included-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bip-included-col:nth-child(2) {
+    border-right: none;
+  }
+  .bip-included-col:nth-child(1),
+  .bip-included-col:nth-child(2),
+  .bip-included-col:nth-child(3),
+  .bip-included-col:nth-child(4) {
+    border-bottom: 1px solid var(--bip-border);
+  }
+  .bip-included-col:nth-child(5) {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .bip-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bip-wrap {
+    padding: 0 1.25rem;
+  }
+  .bip-hero-section {
+    padding: 2.25rem 0 3rem;
+  }
+  .bip-hero-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.35rem);
+    line-height: 1.12;
+    margin-bottom: 1.15rem;
+  }
+  .bip-hero-subline {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .bip-hero-desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+  .bip-included-grid {
+    grid-template-columns: 1fr;
+  }
+  .bip-included-col {
+    border-right: none;
+    border-bottom: 1px solid var(--bip-border);
+    padding: 1.25rem 1rem;
+  }
+  .bip-included-col:last-child {
+    border-bottom: none;
+    grid-column: span 1;
+  }
+  .bip-split-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .bip-steps-block {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--bip-border);
+  }
+}

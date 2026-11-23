@@ -1,0 +1,707 @@
+/* ==========================================================================
+   SERVICE 4: CAMPAIGN SHOOTS - PAGE-SPECIFIC STYLES
+   Scoped strictly to .campaign-shoots-page and .csp-* elements.
+   Does NOT modify global styles, header, footer, or other service pages.
+   ========================================================================== */
+
+@font-face {
+  font-family: "ShapiroWideRegular";
+  src: url("assets/fonts/shapirowide-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --csp-dark: #1E1B18;
+  --csp-body: #55514C;
+  --csp-muted: #7A7570;
+  --csp-border: rgba(30, 27, 24, 0.14);
+  --csp-border-dark: rgba(30, 27, 24, 0.45);
+  --csp-border-subtle: rgba(30, 27, 24, 0.08);
+  --csp-bg: #FFFFFF;
+  --csp-bg-warm: #FAF8F5;
+  --csp-bg-dark: #191816;
+  --font-csp-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-csp-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-csp-mono: "Lekton", "Courier Prime", monospace;
+  --font-csp-serif: "Playfair Display", Georgia, serif;
+}
+
+.campaign-shoots-page {
+  font-family: var(--font-csp-sans);
+  color: var(--csp-dark);
+  background-color: var(--csp-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neutralize global styles.css lowercase rule so mockup sentence-case and uppercase display exactly */
+.campaign-shoots-page p,
+.campaign-shoots-page span,
+.campaign-shoots-page li,
+.campaign-shoots-page blockquote,
+.campaign-shoots-page cite,
+.campaign-shoots-page button {
+  text-transform: none !important;
+}
+
+.campaign-shoots-page .csp-hero-eyebrow,
+.campaign-shoots-page .csp-hero-title,
+.campaign-shoots-page .csp-included-header h2,
+.campaign-shoots-page .csp-stat-num,
+.campaign-shoots-page .csp-block-title,
+.campaign-shoots-page .csp-step-num,
+.campaign-shoots-page .csp-proof-author,
+.campaign-shoots-page .csp-faq-header h2,
+.campaign-shoots-page .csp-mid-cta-title,
+.campaign-shoots-page .csp-mid-cta-btn,
+.campaign-shoots-page .csp-investment-line,
+.campaign-shoots-page .csp-investment-btn {
+  text-transform: uppercase !important;
+}
+
+.csp-main {
+  width: 100%;
+  position: relative;
+}
+
+.csp-wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION
+   -------------------------------------------------------------------------- */
+.csp-hero-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0 clamp(3rem, 4.5vw, 4.5rem);
+  background-color: var(--csp-bg);
+  border-bottom: 1px solid var(--csp-border-subtle);
+  overflow: hidden;
+}
+
+.csp-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) 1.08fr;
+  gap: clamp(2rem, 3.5vw, 3.75rem);
+  align-items: center;
+}
+
+.csp-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 560px;
+}
+
+.csp-hero-eyebrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.35rem;
+  padding: 0;
+}
+
+.csp-hero-eyebrow {
+  font-family: var(--font-csp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--csp-dark);
+  white-space: nowrap;
+}
+
+.csp-hero-eyebrow-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background-color: var(--csp-dark);
+  opacity: 0.35;
+}
+
+.csp-hero-title {
+  font-family: var(--font-csp-heading);
+  font-size: clamp(2rem, 3.2vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--csp-dark);
+  margin: 0 0 1.35rem 0;
+  padding: 0;
+  text-align: left;
+  word-break: break-word;
+}
+
+.csp-hero-subline {
+  font-family: var(--font-csp-sans);
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--csp-dark);
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.csp-hero-desc {
+  font-family: var(--font-csp-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--csp-body);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.csp-hero-media {
+  position: relative;
+  width: 100%;
+  background-color: #F5F3EF;
+  border: 1px solid var(--csp-border);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.csp-hero-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 380;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.csp-hero-media:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   2. WHAT'S INCLUDED SECTION (4-COLUMN CARD)
+   -------------------------------------------------------------------------- */
+.csp-included-section {
+  padding: clamp(2.5rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--csp-bg);
+  border-bottom: 1px solid var(--csp-border-subtle);
+}
+
+.csp-included-card {
+  border: 1px solid var(--csp-border);
+  background-color: var(--csp-bg-warm);
+  box-sizing: border-box;
+}
+
+.csp-included-header {
+  padding: 1rem clamp(1.25rem, 2.5vw, 2rem);
+  border-bottom: 1px solid var(--csp-border);
+}
+
+.csp-included-header h2 {
+  font-family: var(--font-csp-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--csp-dark);
+  margin: 0;
+}
+
+.csp-included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr 1.2fr;
+  align-items: stretch;
+}
+
+.csp-stat-col {
+  padding: clamp(1.75rem, 2.5vw, 2.5rem) clamp(1.25rem, 2vw, 2rem);
+  border-right: 1px solid var(--csp-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.csp-stat-col:last-child {
+  border-right: none;
+}
+
+.csp-stat-num {
+  font-family: var(--font-csp-heading);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--csp-dark);
+  margin-bottom: 0.85rem;
+}
+
+.csp-stat-text {
+  font-family: var(--font-csp-sans);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--csp-body);
+  margin: 0;
+}
+
+.csp-loc-col {
+  padding: clamp(1.75rem, 2.5vw, 2.5rem) clamp(1.25rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.csp-loc-text {
+  font-family: var(--font-csp-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--csp-dark);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. DETAILS SECTION: MEDIA + WHO IT'S FOR + HOW IT WORKS + INVESTMENT
+   -------------------------------------------------------------------------- */
+.csp-details-section {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  background-color: var(--csp-bg);
+  border-bottom: 1px solid var(--csp-border-subtle);
+}
+
+.csp-details-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.25fr;
+  gap: clamp(2.5rem, 4.5vw, 4.5rem);
+  align-items: start;
+}
+
+.csp-details-media {
+  border: 1px solid var(--csp-border);
+  background-color: #F5F3EF;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.csp-details-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 380 / 300;
+  object-fit: cover;
+  display: block;
+}
+
+.csp-details-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.csp-who-block {
+  margin-bottom: 2.25rem;
+}
+
+.csp-block-title {
+  font-family: var(--font-csp-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--csp-dark);
+  margin: 0 0 1rem 0;
+}
+
+.csp-who-text {
+  font-family: var(--font-csp-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--csp-body);
+  margin: 0;
+}
+
+.csp-details-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--csp-border);
+  margin: 0 0 2.25rem 0;
+}
+
+.csp-split-row {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.csp-steps-block {
+  padding-right: clamp(1rem, 2vw, 1.75rem);
+  border-right: 1px solid var(--csp-border);
+}
+
+.csp-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.csp-step-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.csp-step-num {
+  font-family: var(--font-csp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--csp-dark);
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.csp-step-content {
+  font-family: var(--font-csp-sans);
+  font-size: 0.84375rem;
+  line-height: 1.55;
+  color: var(--csp-body);
+}
+
+.csp-step-content strong {
+  font-weight: 700;
+  color: var(--csp-dark);
+}
+
+.csp-investment-block {
+  padding-left: 0;
+}
+
+.csp-investment-text {
+  font-family: var(--font-csp-sans);
+  font-size: 0.84375rem;
+  line-height: 1.65;
+  color: var(--csp-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. PROOF / TESTIMONIAL SECTION
+   -------------------------------------------------------------------------- */
+.csp-proof-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+  background-color: var(--csp-bg);
+  border-bottom: 1px solid var(--csp-border-subtle);
+}
+
+.csp-proof-card {
+  border: 1px solid var(--csp-border);
+  background-color: var(--csp-bg-warm);
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  overflow: hidden;
+  align-items: center;
+}
+
+.csp-proof-content {
+  padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.csp-proof-quote {
+  font-family: var(--font-csp-serif);
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--csp-dark);
+  margin: 0 0 1.25rem 0;
+}
+
+.csp-proof-author {
+  font-family: var(--font-csp-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--csp-muted);
+  margin: 0;
+}
+
+.csp-proof-media {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #EDE8E1;
+}
+
+.csp-proof-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   5. FAQ ACCORDION SECTION
+   -------------------------------------------------------------------------- */
+.csp-faq-section {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  background-color: var(--csp-bg);
+  border-bottom: 1px solid var(--csp-border-subtle);
+}
+
+.csp-faq-header {
+  margin-bottom: 2rem;
+}
+
+.csp-faq-header h2 {
+  font-family: var(--font-csp-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--csp-dark);
+  margin: 0;
+}
+
+.csp-faq-accordion {
+  width: 100%;
+  border-top: 1px solid var(--csp-border);
+}
+
+.csp-faq-item {
+  border-bottom: 1px solid var(--csp-border);
+}
+
+.csp-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-csp-sans);
+  font-size: clamp(0.9375rem, 1.1vw, 1.05rem);
+  font-weight: 500;
+  color: var(--csp-dark);
+  transition: color 0.2s ease;
+}
+
+.csp-faq-trigger:hover {
+  color: #000;
+}
+
+.csp-faq-icon {
+  font-family: var(--font-csp-mono);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--csp-dark);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+.csp-faq-item.is-open .csp-faq-icon {
+  transform: rotate(45deg);
+}
+
+.csp-faq-body {
+  padding: 0 0.5rem 1.35rem;
+}
+
+.csp-faq-body[hidden] {
+  display: none;
+}
+
+.csp-faq-body p {
+  font-family: var(--font-csp-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--csp-body);
+  margin: 0;
+  max-width: 900px;
+}
+
+/* --------------------------------------------------------------------------
+   6. MID CTA SECTION ("LAUNCHING SOMETHING NEW?")
+   -------------------------------------------------------------------------- */
+.csp-mid-cta-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+  background-color: var(--csp-bg);
+}
+
+.csp-mid-cta-card {
+  border: 1px solid var(--csp-border);
+  background-color: var(--csp-bg-warm);
+  padding: clamp(3rem, 5vw, 4.5rem) 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.csp-mid-cta-title {
+  font-family: var(--font-csp-sans);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--csp-dark);
+  margin: 0;
+}
+
+.csp-mid-cta-btn {
+  display: inline-block;
+  font-family: var(--font-csp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--csp-dark);
+  text-decoration: none;
+  border: 1px solid var(--csp-dark);
+  background-color: #FFFFFF;
+  padding: 0.95rem 2rem;
+  transition: all 0.25s ease;
+}
+
+.csp-mid-cta-btn:hover {
+  background-color: var(--csp-dark);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   7. BOTTOM INVESTMENT BANNER (FULL WIDTH BLACK)
+   -------------------------------------------------------------------------- */
+.csp-investment-banner {
+  background-color: var(--csp-bg-dark);
+  color: #FFFFFF;
+  padding: clamp(2.5rem, 3.5vw, 3.25rem) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.csp-investment-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.csp-investment-line {
+  font-family: var(--font-csp-mono);
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 900px;
+}
+
+.csp-investment-btn {
+  display: inline-block;
+  font-family: var(--font-csp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.85rem 2rem;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.csp-investment-btn:hover {
+  background-color: #FFFFFF;
+  color: var(--csp-dark) !important;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .csp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .csp-included-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .csp-stat-col:nth-child(2) {
+    border-right: none;
+  }
+  .csp-stat-col:nth-child(1),
+  .csp-stat-col:nth-child(2) {
+    border-bottom: 1px solid var(--csp-border);
+  }
+  .csp-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .csp-wrap {
+    padding: 0 1.25rem;
+  }
+  .csp-hero-section {
+    padding: 2.25rem 0 3rem;
+  }
+  .csp-hero-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.35rem);
+    line-height: 1.12;
+    margin-bottom: 1.15rem;
+  }
+  .csp-hero-subline {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .csp-hero-desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+  .csp-included-grid {
+    grid-template-columns: 1fr;
+  }
+  .csp-stat-col {
+    border-right: none;
+    border-bottom: 1px solid var(--csp-border);
+    padding: 1.5rem 1.25rem;
+  }
+  .csp-stat-col:last-child {
+    border-bottom: none;
+  }
+  .csp-split-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .csp-steps-block {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--csp-border);
+  }
+  .csp-proof-card {
+    grid-template-columns: 1fr;
+  }
+  .csp-proof-media {
+    height: 120px;
+  }
+  .csp-proof-media img {
+    height: 120px;
+  }
+}
