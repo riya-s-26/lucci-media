@@ -1,0 +1,667 @@
+/* ==========================================================================
+   SERVICE 7: GOOGLE BUSINESS PROFILE MANAGEMENT - PAGE-SPECIFIC STYLES
+   Scoped strictly to .google-business-profile-page and .gbp-* elements.
+   Does NOT modify global styles, header, footer, or other service pages.
+   ========================================================================== */
+
+@font-face {
+  font-family: "ShapiroWideRegular";
+  src: url("assets/fonts/shapirowide-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --gbp-dark: #1E1B18;
+  --gbp-body: #55514C;
+  --gbp-muted: #7A7570;
+  --gbp-border: rgba(30, 27, 24, 0.14);
+  --gbp-border-dark: rgba(30, 27, 24, 0.45);
+  --gbp-border-subtle: rgba(30, 27, 24, 0.08);
+  --gbp-bg: #FFFFFF;
+  --gbp-bg-warm: #FAF8F5;
+  --gbp-bg-dark: #191816;
+  --font-gbp-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-gbp-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-gbp-mono: "Lekton", "Courier Prime", monospace;
+  --font-gbp-serif: "Playfair Display", Georgia, serif;
+}
+
+.google-business-profile-page {
+  font-family: var(--font-gbp-sans);
+  color: var(--gbp-dark);
+  background-color: var(--gbp-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neutralize global styles.css lowercase rule so mockup sentence-case and uppercase display exactly */
+.google-business-profile-page p,
+.google-business-profile-page span,
+.google-business-profile-page li,
+.google-business-profile-page blockquote,
+.google-business-profile-page cite,
+.google-business-profile-page button {
+  text-transform: none !important;
+}
+
+.google-business-profile-page .gbp-hero-eyebrow,
+.google-business-profile-page .gbp-hero-title,
+.google-business-profile-page .gbp-included-header h2,
+.google-business-profile-page .gbp-block-title,
+.google-business-profile-page .gbp-step-num,
+.google-business-profile-page .gbp-faq-header h2,
+.google-business-profile-page .gbp-mid-cta-title,
+.google-business-profile-page .gbp-mid-cta-btn,
+.google-business-profile-page .gbp-investment-line,
+.google-business-profile-page .gbp-investment-btn {
+  text-transform: uppercase !important;
+}
+
+.gbp-main {
+  width: 100%;
+  position: relative;
+}
+
+.gbp-wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION
+   -------------------------------------------------------------------------- */
+.gbp-hero-section {
+  padding: clamp(2.5rem, 4vw, 4rem) 0 clamp(3rem, 4.5vw, 4.5rem);
+  background-color: var(--gbp-bg);
+  border-bottom: 1px solid var(--gbp-border-subtle);
+  overflow: hidden;
+}
+
+.gbp-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) 1.08fr;
+  gap: clamp(2rem, 3.5vw, 3.75rem);
+  align-items: center;
+}
+
+.gbp-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 560px;
+}
+
+.gbp-hero-eyebrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.35rem;
+  padding: 0;
+}
+
+.gbp-hero-eyebrow {
+  font-family: var(--font-gbp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gbp-dark);
+  white-space: nowrap;
+}
+
+.gbp-hero-eyebrow-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background-color: var(--gbp-dark);
+  opacity: 0.35;
+}
+
+.gbp-hero-title {
+  font-family: var(--font-gbp-heading);
+  font-size: clamp(2rem, 3.2vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--gbp-dark);
+  margin: 0 0 1.35rem 0;
+  padding: 0;
+  text-align: left;
+  word-break: break-word;
+}
+
+.gbp-hero-subline {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--gbp-dark);
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.gbp-hero-desc {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--gbp-body);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.gbp-hero-media {
+  position: relative;
+  width: 100%;
+  background-color: #F5F3EF;
+  border: 1px solid var(--gbp-border);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.gbp-hero-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 380;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gbp-hero-media:hover img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   2. WHAT'S INCLUDED SECTION (5-COLUMN CARD)
+   -------------------------------------------------------------------------- */
+.gbp-included-section {
+  padding: clamp(3rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--gbp-bg);
+  border-bottom: 1px solid var(--gbp-border-subtle);
+}
+
+.gbp-included-card {
+  border: 1px solid var(--gbp-border);
+  background-color: var(--gbp-bg-warm);
+  box-sizing: border-box;
+}
+
+.gbp-included-header {
+  border-bottom: 1px solid var(--gbp-border);
+  padding: 1.15rem 1.75rem;
+  background-color: var(--gbp-bg-warm);
+}
+
+.gbp-included-header h2 {
+  font-family: var(--font-gbp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gbp-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.gbp-included-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: var(--gbp-bg-warm);
+}
+
+.gbp-included-col {
+  padding: clamp(1.25rem, 2vw, 1.75rem) clamp(1rem, 1.4vw, 1.35rem);
+  border-right: 1px solid var(--gbp-border);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.gbp-included-col:last-child {
+  border-right: none;
+}
+
+.gbp-included-text {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--gbp-dark);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. WHO IT'S FOR + HOW IT WORKS + INVESTMENT SECTION
+   -------------------------------------------------------------------------- */
+.gbp-details-section {
+  padding: clamp(3rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--gbp-bg);
+  border-bottom: 1px solid var(--gbp-border-subtle);
+}
+
+.gbp-details-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 460px) 1.25fr;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
+  align-items: start;
+}
+
+.gbp-details-media {
+  position: relative;
+  width: 100%;
+  background-color: #F5F3EF;
+  border: 1px solid var(--gbp-border);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.gbp-details-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 360;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gbp-details-media:hover img {
+  transform: scale(1.02);
+}
+
+.gbp-details-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.gbp-who-block {
+  margin-bottom: 2rem;
+}
+
+.gbp-block-title {
+  font-family: var(--font-gbp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gbp-dark);
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.gbp-who-text {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--gbp-body);
+  margin: 0;
+  padding: 0;
+}
+
+.gbp-details-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gbp-border);
+  margin: 2rem 0;
+}
+
+.gbp-split-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.75rem, 3vw, 3rem);
+}
+
+.gbp-steps-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.gbp-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.gbp-step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  line-height: 1.6;
+  color: var(--gbp-body);
+}
+
+.gbp-step-num {
+  font-family: var(--font-gbp-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gbp-dark);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.gbp-step-content strong {
+  font-weight: 700;
+  color: var(--gbp-dark);
+}
+
+.gbp-investment-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.gbp-investment-text {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--gbp-body);
+  margin: 0 0 0.875rem 0;
+  padding: 0;
+}
+
+.gbp-investment-subtext {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.78125rem, 0.85vw, 0.84375rem);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--gbp-dark);
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--gbp-border);
+}
+
+/* --------------------------------------------------------------------------
+   4. FAQ ACCORDION SECTION
+   -------------------------------------------------------------------------- */
+.gbp-faq-section {
+  padding: clamp(3rem, 4.5vw, 4.5rem) 0;
+  background-color: var(--gbp-bg);
+  border-bottom: 1px solid var(--gbp-border-subtle);
+}
+
+.gbp-faq-card {
+  border: 1px solid var(--gbp-border);
+  background-color: var(--gbp-bg-warm);
+  box-sizing: border-box;
+}
+
+.gbp-faq-header {
+  border-bottom: 1px solid var(--gbp-border);
+  padding: 1.15rem 1.75rem;
+  background-color: var(--gbp-bg-warm);
+}
+
+.gbp-faq-header h2 {
+  font-family: var(--font-gbp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gbp-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.gbp-faq-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.gbp-faq-item {
+  border-bottom: 1px solid var(--gbp-border);
+  transition: background-color 0.2s ease;
+}
+
+.gbp-faq-item:last-child {
+  border-bottom: none;
+}
+
+.gbp-faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.95rem);
+  font-weight: 600;
+  color: var(--gbp-dark);
+  transition: color 0.2s ease;
+}
+
+.gbp-faq-trigger:hover {
+  color: #000000;
+}
+
+.gbp-faq-trigger span:first-child {
+  flex: 1;
+}
+
+.gbp-faq-icon {
+  font-family: var(--font-gbp-sans);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--gbp-muted);
+  line-height: 1;
+  margin-left: 1rem;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
+}
+
+.gbp-faq-item.is-open .gbp-faq-icon {
+  transform: rotate(45deg);
+  color: var(--gbp-dark);
+}
+
+.gbp-faq-body {
+  padding: 0 1.75rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.gbp-faq-body[hidden] {
+  display: none;
+}
+
+.gbp-faq-body p {
+  font-family: var(--font-gbp-sans);
+  font-size: clamp(0.84375rem, 0.9vw, 0.90625rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--gbp-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. MID CTA SECTION ("GET FOUND BEFORE YOUR COMPETITORS DO.")
+   -------------------------------------------------------------------------- */
+.gbp-mid-cta-section {
+  padding: clamp(3.5rem, 5vw, 5rem) 0;
+  background-color: var(--gbp-bg-warm);
+  border-bottom: 1px solid var(--gbp-border-subtle);
+  text-align: center;
+}
+
+.gbp-mid-cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.gbp-mid-cta-title {
+  font-family: var(--font-gbp-heading);
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gbp-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.gbp-mid-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2.25rem;
+  font-family: var(--font-gbp-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gbp-dark);
+  background: transparent;
+  border: 1px solid var(--gbp-dark);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gbp-mid-cta-btn:hover {
+  background-color: var(--gbp-dark);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   6. INVESTMENT BANNER (FULL WIDTH BLACK)
+   -------------------------------------------------------------------------- */
+.gbp-investment-banner {
+  background-color: var(--gbp-bg-dark);
+  color: #FFFFFF;
+  padding: clamp(2.25rem, 3.5vw, 3rem) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gbp-investment-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.gbp-investment-line {
+  font-family: var(--font-gbp-mono);
+  font-size: clamp(0.75rem, 0.85vw, 0.875rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0;
+}
+
+.gbp-investment-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-gbp-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #FFFFFF;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gbp-investment-btn:hover {
+  background: #FFFFFF;
+  color: var(--gbp-dark);
+  border-color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .gbp-included-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gbp-included-col:nth-child(3n) {
+    border-right: none;
+  }
+
+  .gbp-included-col:nth-child(-n+3) {
+    border-bottom: 1px solid var(--gbp-border);
+  }
+
+  .gbp-details-grid {
+    grid-template-columns: minmax(280px, 380px) 1.2fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gbp-wrap {
+    padding: 0 1.25rem;
+  }
+
+  .gbp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .gbp-hero-left {
+    max-width: 100%;
+  }
+
+  .gbp-hero-media {
+    max-width: 100%;
+  }
+
+  .gbp-included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gbp-included-col {
+    border-right: none !important;
+    border-bottom: 1px solid var(--gbp-border);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .gbp-included-col:last-child {
+    border-bottom: none;
+  }
+
+  .gbp-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gbp-details-media {
+    max-width: 100%;
+  }
+
+  .gbp-split-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gbp-faq-trigger {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .gbp-faq-body {
+    padding: 0 1.25rem 1.25rem;
+  }
+}
