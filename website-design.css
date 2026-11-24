@@ -133,7 +133,7 @@
 }
 
 .wdp-hero-title {
-  font-family: var(--font-wdp-heading);
+  font-family: 'ShapiroWideRegular', 'Montserrat', sans-serif;
   font-size: clamp(2rem, 3.2vw, 3.15rem);
   font-weight: 700;
   line-height: 1.1;
