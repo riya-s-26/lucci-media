@@ -78,7 +78,7 @@
 
 .cs-desc {
   margin: 0 0 44px 0;
-  font-family: var(--sans), "Montserrat", sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.75;
   color: #55504B;

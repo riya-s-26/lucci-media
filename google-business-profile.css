@@ -146,7 +146,7 @@
 }
 
 .gbp-hero-subline {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(1rem, 1.15vw, 1.15rem);
   font-weight: 700;
   line-height: 1.45;
@@ -157,7 +157,7 @@
 }
 
 .gbp-hero-desc {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.875rem, 0.95vw, 0.95rem);
   font-weight: 400;
   line-height: 1.75;
@@ -242,7 +242,7 @@
 }
 
 .gbp-included-text {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
   font-weight: 500;
   line-height: 1.5;
@@ -309,7 +309,7 @@
 }
 
 .gbp-who-text {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
   font-weight: 400;
   line-height: 1.7;
@@ -375,7 +375,7 @@
 }
 
 .gbp-investment-text {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.8125rem, 0.875vw, 0.875rem);
   font-weight: 400;
   line-height: 1.65;
@@ -385,7 +385,7 @@
 }
 
 .gbp-investment-subtext {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.78125rem, 0.85vw, 0.84375rem);
   font-weight: 500;
   line-height: 1.6;
@@ -490,7 +490,7 @@
 }
 
 .gbp-faq-body p {
-  font-family: var(--font-gbp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.84375rem, 0.9vw, 0.90625rem);
   font-weight: 400;
   line-height: 1.7;

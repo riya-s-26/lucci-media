@@ -116,7 +116,7 @@
 }
 
 .ts-hero-line {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: var(--ts-body);
@@ -134,7 +134,7 @@
 }
 
 .ts-intro-copy p {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.7;
   color: var(--ts-body);
@@ -250,7 +250,7 @@
 }
 
 .ts-included-desc {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.55;
   color: var(--ts-body);
@@ -333,7 +333,7 @@
 }
 
 .ts-whofor-body {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.65;
   color: var(--ts-body);
@@ -401,7 +401,7 @@
 }
 
 .ts-stat-desc {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
   color: var(--ts-body);
@@ -440,7 +440,7 @@
 }
 
 .ts-invest-sub {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.78);
@@ -600,7 +600,7 @@
 }
 
 .ts-faq-body p {
-  font-family: var(--font-ts-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.65;
   color: var(--ts-body);

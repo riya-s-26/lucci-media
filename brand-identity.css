@@ -146,7 +146,7 @@
 }
 
 .bip-hero-subline {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(1rem, 1.15vw, 1.15rem);
   font-weight: 700;
   line-height: 1.45;
@@ -157,7 +157,7 @@
 }
 
 .bip-hero-desc {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.875rem, 0.95vw, 0.95rem);
   font-weight: 400;
   line-height: 1.75;
@@ -239,7 +239,7 @@
 }
 
 .bip-included-text {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.84375rem;
   line-height: 1.6;
   color: var(--bip-body);
@@ -296,7 +296,7 @@
 }
 
 .bip-who-text {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--bip-body);
@@ -346,7 +346,7 @@
 }
 
 .bip-step-content {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.84375rem;
   line-height: 1.55;
   color: var(--bip-body);
@@ -362,7 +362,7 @@
 }
 
 .bip-investment-text {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.84375rem;
   line-height: 1.65;
   color: var(--bip-body);
@@ -370,7 +370,7 @@
 }
 
 .bip-investment-recommendation {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.6;
   color: var(--bip-muted);
@@ -459,7 +459,7 @@
 }
 
 .bip-faq-body p {
-  font-family: var(--font-bip-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--bip-body);

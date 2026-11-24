@@ -148,7 +148,7 @@
 }
 
 .csp-hero-subline {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(1rem, 1.15vw, 1.15rem);
   font-weight: 700;
   line-height: 1.45;
@@ -159,7 +159,7 @@
 }
 
 .csp-hero-desc {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.875rem, 0.95vw, 0.95rem);
   font-weight: 400;
   line-height: 1.75;
@@ -250,7 +250,7 @@
 }
 
 .csp-stat-text {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.55;
   color: var(--csp-body);
@@ -265,7 +265,7 @@
 }
 
 .csp-loc-text {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
   line-height: 1.6;
@@ -323,7 +323,7 @@
 }
 
 .csp-who-text {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--csp-body);
@@ -373,7 +373,7 @@
 }
 
 .csp-step-content {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.84375rem;
   line-height: 1.55;
   color: var(--csp-body);
@@ -389,7 +389,7 @@
 }
 
 .csp-investment-text {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.84375rem;
   line-height: 1.65;
   color: var(--csp-body);
@@ -532,7 +532,7 @@
 }
 
 .csp-faq-body p {
-  font-family: var(--font-csp-sans);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--csp-body);
