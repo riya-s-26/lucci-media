@@ -349,8 +349,14 @@
 
               <!-- Stat Box (Right) -->
               <div class="bp-stat-box">
-                <span class="bp-stat-big">125+</span>
-                <p class="bp-stat-desc">edited images per 2 hour session.</p>
+                <div class="bp-stat-block">
+                  <span class="bp-stat-big">125+</span>
+                  <p class="bp-stat-desc">edited images per 2 hour session.</p>
+                </div>
+                <div class="bp-stat-block">
+                  <span class="bp-stat-big">175+</span>
+                  <p class="bp-stat-desc">edited images per 3 hour session.</p>
+                </div>
               </div>
 
             </div>
@@ -383,7 +389,77 @@
     </section>
 
     <!-- ====================================================================
-         SECTION 5: INVESTMENT CTA BANNER
+         SECTION 5: FAQ ACCORDION (MATCHING SERVICE PAGE 1)
+         ==================================================================== -->
+    <section class="smm-faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="smm-container">
+        <div class="smm-faq-header">
+          <h2 id="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+        </div>
+
+        <div class="smm-faq-accordion" data-accordion>
+
+          <!-- Q1 -->
+          <div class="smm-faq-item is-open">
+            <button class="smm-faq-trigger" type="button" aria-expanded="true">
+              <span>Q1. Which session length do I need?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body">
+              <p>A 2 hour session delivers 125+ edited images and suits most solo founders. Choose 3 hours for 175+ images, more outfits or a product line. Studio time is always included.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q2. Where do the shoots happen?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>At Social Haus, our in-house studio in Lawrence, MA, just north of Boston. On-location shoots at your business are available.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q3. I don't know how to pose. Is that a problem?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>Not at all. Posing is our job. We direct every shot, from where your hands go to which way to angle your body.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q4. Can I bring my own makeup artist?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>Yes. Many clients bring their own hair and makeup artist.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q5. How many outfits can I bring?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>As many as you can change into during your session. Outfits and sets are unlimited.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: INVESTMENT CTA BANNER
          ==================================================================== -->
     <section class="bp-investment-section" aria-label="Investment Packages">
       <div class="bp-investment-inner">
@@ -440,5 +516,25 @@
       data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
   </nav>
 
+  <!-- Accordion Interactive Script for FAQ -->
+  <script>
+    document.querySelectorAll('.smm-faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.smm-faq-item');
+        const body = item.querySelector('.smm-faq-body');
+        const isOpen = item.classList.contains('is-open');
+
+        if (isOpen) {
+          item.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          body.hidden = true;
+        } else {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          body.hidden = false;
+        }
+      });
+    });
+  </script>
 </body>
 </html>

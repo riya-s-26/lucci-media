@@ -410,6 +410,8 @@
 }
 
 .wdp-faq-card {
+  max-width: 820px;
+  margin: 0 auto;
   border: 1px solid var(--wdp-border);
   background-color: var(--wdp-bg-warm);
   box-sizing: border-box;
@@ -419,6 +421,7 @@
   border-bottom: 1px solid var(--wdp-border);
   padding: 1.15rem 1.75rem;
   background-color: var(--wdp-bg-warm);
+  text-align: center;
 }
 
 .wdp-faq-header h2 {
@@ -429,6 +432,7 @@
   color: var(--wdp-dark);
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .wdp-faq-accordion {
@@ -486,7 +490,7 @@
 }
 
 .wdp-faq-body {
-  padding: 0 1.75rem 1.5rem;
+  padding: 0 1.75rem 1.25rem;
   box-sizing: border-box;
 }
 
