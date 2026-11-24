@@ -3406,3 +3406,51 @@ p,
   font-weight: 400 !important;
   font-style: normal !important;
 }
+
+/* ==========================================================================
+   SERVICE PAGES (1–8): ALL HEADINGS (H1-H6)
+   ========================================================================== */
+.service-page main h1,
+.service-page main h2,
+.service-page main h3,
+.service-page main h4,
+.service-page main h5,
+.service-page main h6,
+.brand-photography-page main h1,
+.brand-photography-page main h2,
+.brand-photography-page main h3,
+.brand-photography-page main h4,
+.brand-photography-page main h5,
+.brand-photography-page main h6,
+.campaign-shoots-page main h1,
+.campaign-shoots-page main h2,
+.campaign-shoots-page main h3,
+.campaign-shoots-page main h4,
+.campaign-shoots-page main h5,
+.campaign-shoots-page main h6,
+.brand-identity-page main h1,
+.brand-identity-page main h2,
+.brand-identity-page main h3,
+.brand-identity-page main h4,
+.brand-identity-page main h5,
+.brand-identity-page main h6,
+.website-design-page main h1,
+.website-design-page main h2,
+.website-design-page main h3,
+.website-design-page main h4,
+.website-design-page main h5,
+.website-design-page main h6,
+.google-business-profile-page main h1,
+.google-business-profile-page main h2,
+.google-business-profile-page main h3,
+.google-business-profile-page main h4,
+.google-business-profile-page main h5,
+.google-business-profile-page main h6,
+.cs-page-main h1,
+.cs-page-main h2,
+.cs-page-main h3,
+.cs-page-main h4,
+.cs-page-main h5,
+.cs-page-main h6 {
+  font-family: 'Nothing You Could Do', cursive !important;
+}

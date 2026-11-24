@@ -29,7 +29,7 @@
   --ts-border-subtle: rgba(30, 27, 24, 0.08);
   --ts-bg: #FFFFFF;
   --ts-bg-dark: #191816;
-  --font-ts-heading: 'ShapiroWideRegular', "Montserrat", sans-serif;
+  --font-ts-heading: 'Nothing You Could Do', cursive;
   --font-ts-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-ts-mono: "Lekton", "Courier Prime", monospace;
   --font-ts-serif: "Playfair Display", Georgia, serif;
@@ -188,7 +188,7 @@
 }
 
 .ts-included-header h2 {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -239,7 +239,7 @@
 }
 
 .ts-included-title {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -323,7 +323,7 @@
 }
 
 .ts-sub-heading {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -391,7 +391,7 @@
 }
 
 .ts-stat-big {
-  font-family: var(--font-ts-heading);
+  font-family: 'ShapiroWideRegular', 'Montserrat', sans-serif;
   font-size: clamp(3.5rem, 5vw, 5rem);
   font-weight: 700;
   line-height: 1;
@@ -429,7 +429,7 @@
 }
 
 .ts-invest-headline {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(0.85rem, 1.1vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -535,7 +535,7 @@
 }
 
 .ts-faq-header h2 {
-  font-family: var(--font-ts-sans);
+  font-family: 'Nothing You Could Do', cursive;
   font-size: clamp(1.1rem, 1.5vw, 1.35rem);
   font-weight: 700;
   letter-spacing: 0.1em;
