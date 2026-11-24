@@ -3391,3 +3391,18 @@ p,
     border-bottom: none !important;
   }
 }
+
+/* ==========================================================================
+   SERVICE PAGES: TESTIMONIAL QUOTE TYPOGRAPHY
+   ========================================================================== */
+.smm-proof-quote,
+.ts-proof-quote,
+.bp-quote-text,
+.csp-proof-quote,
+.bip-proof-quote,
+.wdp-proof-quote,
+.gbp-proof-quote {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}

@@ -422,9 +422,9 @@
 }
 
 .csp-proof-quote {
-  font-family: var(--font-csp-serif);
+  font-family: "Montserrat", var(--font-csp-sans);
   font-size: clamp(1.25rem, 1.8vw, 1.65rem);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.35;
   color: var(--csp-dark);

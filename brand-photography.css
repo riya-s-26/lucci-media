@@ -484,7 +484,8 @@
 }
 
 .bp-quote-text {
-  font-family: var(--font-bp-serif);
+  font-family: "Montserrat", var(--font-bp-sans);
+  font-weight: 400;
   font-size: clamp(1.05rem, 1.4vw, 1.25rem);
   font-style: normal;
   line-height: 1.6;
