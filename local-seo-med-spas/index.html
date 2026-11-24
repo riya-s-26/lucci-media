@@ -4,37 +4,124 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#FDFDFC">
-  <meta name="description" content="Local SEO — Coming Soon | Lucci Media">
-  <title>Local SEO — Coming Soon | Lucci Media</title>
+  <meta name="theme-color" content="#1E1B18">
+  <title>Local SEO for Med Spas, Salons + Estheticians | Lucci Media Boston</title>
+  <meta name="description"
+    content="Rank for the treatments your clients search. Local SEO for Boston med spas, injectors and salons: keywords, on-page fixes, content and monthly reporting.">
   <link rel="canonical" href="https://luccimedia.com/local-seo-med-spas">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Local SEO for Med Spas, Salons + Estheticians | Lucci Media Boston">
+  <meta property="og:description"
+    content="Rank for the treatments your clients search. Local SEO for Boston med spas, injectors and salons: keywords, on-page fixes, content and monthly reporting.">
+  <meta property="og:url" content="https://luccimedia.com/local-seo-med-spas">
+  <meta property="og:image" content="https://luccimedia.com/assets/services/local-seo-hero-main.webp">
 
   <link rel="icon" type="image/png" href="../assets/lucci-favicon.png">
   <link rel="preload" href="../assets/fonts/montserrat-latin-300-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/montserrat-latin-italic-700-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../styles.css?v=39.0">
-  <link rel="stylesheet" href="../coming-soon.css?v=30.0">
+  <link rel="stylesheet" href="../service-page.css?v=2.2">
   <style>
-    .cs-page-main .cs-title {
-      font-family: 'Nothing You Could Do', cursive !important;
+    @media (min-width: 769px) {
+      .smm-included-grid .smm-included-item:nth-child(n+4) {
+        border-bottom: none !important;
+      }
     }
   </style>
+
   <script>document.documentElement.classList.add('js');</script>
   <script src="../assets/vendor/lenis.min.js"></script>
   <script src="../script.js?v=28.0" defer></script>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Local SEO for Med Spas and Beauty Businesses",
+        "serviceType": "Local SEO",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Lucci Media",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "370 Merrimack St",
+            "addressLocality": "Lawrence",
+            "addressRegion": "MA",
+            "postalCode": "01843",
+            "addressCountry": "US"
+          },
+          "telephone": "978-221-7122",
+          "url": "https://luccimedia.com"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Boston"},
+          {"@type": "AdministrativeArea", "name": "Massachusetts"},
+          {"@type": "AdministrativeArea", "name": "New England"}
+        ],
+        "description": "Rank for the treatments your clients search. Local SEO for Boston med spas, injectors and salons: keywords, on-page fixes, content and monthly reporting."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is local SEO for a med spa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Local SEO is optimizing your website and online listings so you rank when people nearby search for your treatments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does SEO take to work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most businesses start seeing movement in 3 to 6 months. SEO compounds, so results keep building the longer it runs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need SEO if I'm already busy from Instagram?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Instagram depends on reach that changes every month. Google search brings clients who are already looking to book, which makes your growth more stable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I do SEO myself?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can. We share a DIY guide for business owners who aren't ready for full service. Most clients hire us because it takes hours every month to do well."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body>
+<body class="service-page">
   <div class="reading-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="announcement-bar" aria-label="Booking announcement">NOW BOOKING Q1 2027 <span>·</span> LIMITED CLIENT SPOTS</div>
+  <!-- ORIGINAL LUCCI MEDIA ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" aria-label="Booking announcement">
+    NOW BOOKING Q1 2027 <span>·</span> LIMITED CLIENT SPOTS
+  </div>
 
-  <!-- SITE HEADER -->
-    <header class="site-header" id="top">
+  <!-- ORIGINAL LUCCI MEDIA SITE HEADER -->
+  <header class="site-header" id="top">
     <a class="wordmark" href="../index.html" aria-label="Lucci Media, home">
       <img class="brand-logo" src="../assets/lucci-client-logo-black.png" alt="Lucci Media">
     </a>
@@ -65,9 +152,8 @@
             <a href="../google-business-profile-management.html" class="nav-dropdown-link is-available" role="menuitem">
               <span>Google Business Profile</span>
             </a>
-            <a href="javascript:void(0)" class="nav-dropdown-link is-soon" role="menuitem" aria-disabled="true" onclick="event.preventDefault(); return false;">
+            <a href="../local-seo-med-spas.html" class="nav-dropdown-link is-available" role="menuitem">
               <span>Local SEO</span>
-              <span class="nav-soon-badge">COMING SOON</span>
             </a>
           </div>
       </div>
@@ -81,28 +167,26 @@
     </button>
   </header>
 
-  <!-- MOBILE MENU DRAWER -->
-  <aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <!-- ORIGINAL LUCCI MEDIA MOBILE MENU -->
+  <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu-header">
-      <a class="wordmark" href="../index.html" aria-label="Lucci Media, home">
-        <img class="brand-logo" src="../assets/lucci-client-logo-black.png" alt="Lucci Media">
-      </a>
-      <button class="mobile-menu-close" type="button" data-mobile-menu-trigger aria-label="Close navigation menu">
-        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+      <span class="mobile-menu-title">MENU</span>
+      <button class="mobile-menu-close" type="button" aria-label="Close menu">✕</button>
     </div>
 
     <div class="mobile-menu-links">
       <a href="../index.html">HOME <span>01</span></a>
       <a href="../about.html">ABOUT <span>02</span></a>
-      <div class="mobile-nav-dropdown">
+      <div class="mobile-dropdown-wrap">
         <div class="mobile-dropdown-header">
-          <a href="../services.html" class="mobile-services-title">SERVICES <span>03</span></a>
-          <button type="button" class="mobile-dropdown-toggle" aria-expanded="true" aria-controls="mobile-services-menu" aria-label="Toggle Services menu">
-            <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <a href="../services.html" class="mobile-services-main-link">SERVICES <span>03</span></a>
+          <button type="button" class="mobile-dropdown-toggle" aria-expanded="false" aria-label="Toggle Services Submenu">
+            <svg class="mobile-dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </button>
         </div>
-        <div class="mobile-dropdown-menu" id="mobile-services-menu">
+        <div class="mobile-dropdown-sublinks">
         <a href="../social-media-management-boston.html" class="mobile-dropdown-link is-available">
           <span>Social Media Management</span>
         </a>
@@ -124,9 +208,8 @@
         <a href="../google-business-profile-management.html" class="mobile-dropdown-link is-available">
           <span>Google Business Profile</span>
         </a>
-        <a href="javascript:void(0)" class="mobile-dropdown-link is-soon" aria-disabled="true" onclick="event.preventDefault(); return false;">
+        <a href="../local-seo-med-spas.html" class="mobile-dropdown-link is-available">
           <span>Local SEO</span>
-          <span class="mobile-soon-badge">COMING SOON</span>
         </a>
       </div>
       </div>
@@ -140,33 +223,356 @@
     </div>
   </aside>
 
-  <!-- MAIN COMING SOON CONTENT -->
-  <main id="main" class="cs-page-main">
-    <div class="page-wrap cs-container" data-reveal>
-      <div class="cs-preview-media">
-        <img src="../assets/services/local-seo-preview.jpg"
-          srcset="../assets/services/local-seo-preview.jpg 1x, ../assets/services/local-seo-preview@2x.jpg 2x"
-          alt="Lucci Media Local SEO for aesthetic injectors and med spas" width="560" height="370" loading="eager">
+  <!-- ====================================================================
+       LOCAL SEO SERVICE PAGE CONTENT (MATCHING SERVICE 1 SYSTEM)
+       ==================================================================== -->
+  <main id="main">
+
+    <!-- ====================================================================
+         SECTION 1: HERO (EXACT 3-COLUMN EDITORIAL ARCHITECTURE)
+         ==================================================================== -->
+    <section class="smm-hero-section" aria-label="Local SEO Hero">
+      <div class="smm-container">
+        <div class="smm-hero-grid">
+
+          <!-- Left Column -->
+          <div class="smm-hero-left">
+            <div class="smm-hero-kicker-wrap">
+              <span class="smm-hero-kicker">LOCAL SEO</span>
+              <div class="smm-kicker-line" aria-hidden="true"></div>
+            </div>
+
+            <h1 class="smm-h1">LOCAL SEO FOR MED SPAS AND BEAUTY BUSINESSES</h1>
+
+            <p class="smm-hero-line">Instagram is where she finds you. Google is where she decides.</p>
+
+            <div class="smm-hero-divider" aria-hidden="true"></div>
+
+            <div class="smm-intro-copy">
+              <p>When someone searches "lip filler Boston" or "hydrafacial near me," the businesses on page one get the bookings. Lucci Media's local SEO helps med spas, injectors, salons and estheticians rank for the exact treatments their clients search, in the towns they serve. We already know your services, so there's no learning curve on what to optimize.</p>
+            </div>
+          </div>
+
+          <!-- Center Column: Main Photograph -->
+          <div class="smm-hero-center">
+            <img src="../assets/services/local-seo-hero-main.webp" 
+                 alt="Lucci Media local SEO for med spas and beauty brands" 
+                 class="smm-hero-img-main" 
+                 width="800" 
+                 height="1200" 
+                 fetchpriority="high">
+          </div>
+
+          <!-- Right Column: Sub Photograph & Secondary Kicker -->
+          <div class="smm-hero-right">
+            <div class="smm-hero-right-kicker-wrap">
+              <span class="smm-hero-right-kicker">LOCAL SEARCH · KEYWORDS · ON-PAGE</span>
+              <div class="smm-right-kicker-line" aria-hidden="true"></div>
+            </div>
+            <img src="../assets/services/local-seo-hero-sub.webp" 
+                 alt="Lucci Media local SEO reporting and strategy" 
+                 class="smm-hero-img-sub" 
+                 width="600" 
+                 height="900" 
+                 loading="eager">
+          </div>
+
+        </div>
       </div>
-      <p class="cs-eyebrow">[ SERVICE · LOCAL SEO ]</p>
-      <h1 class="cs-title">COMING SOON</h1>
-      <div class="cs-divider" aria-hidden="true"></div>
-      <p class="cs-desc">
-        We are currently crafting our Local SEO offering for med spas and beauty brands. In the meantime, explore our available services or connect with our team.
-      </p>
-      <div class="cs-actions">
-        <a href="../services.html" class="cs-btn cs-btn-primary">← BACK TO SERVICES</a>
-        <a href="../social-media-management-boston.html" class="cs-btn cs-btn-secondary">VIEW SOCIAL MEDIA MANAGEMENT <span class="cta-arrow-inline" aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: WHAT'S INCLUDED (GRID + ASIDE PANEL)
+         ==================================================================== -->
+    <section class="smm-included-section" aria-label="What is Included in Local SEO">
+      <div class="smm-container">
+        <div class="smm-included-card">
+
+          <div class="smm-included-header">
+            <h2>WHAT'S INCLUDED</h2>
+          </div>
+
+          <div class="smm-included-layout">
+
+            <!-- 6-item Numbered Grid -->
+            <div class="smm-included-grid smm-included-grid--6">
+
+              <!-- Item 01 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">01</span>
+                <h3 class="smm-included-title">KEYWORD RESEARCH</h3>
+                <p class="smm-included-desc">Keyword research for your treatments and service area</p>
+              </div>
+
+              <!-- Item 02 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">02</span>
+                <h3 class="smm-included-title">ON-PAGE OPTIMIZATION</h3>
+                <p class="smm-included-desc">On-page optimization: titles, headings, service pages and image alt text</p>
+              </div>
+
+              <!-- Item 03 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">03</span>
+                <h3 class="smm-included-title">TECHNICAL FIXES</h3>
+                <p class="smm-included-desc">Technical fixes: site speed, mobile issues and indexing</p>
+              </div>
+
+              <!-- Item 04 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">04</span>
+                <h3 class="smm-included-title">LOCAL CONTENT</h3>
+                <p class="smm-included-desc">Local content: service and location pages written for search</p>
+              </div>
+
+              <!-- Item 05 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">05</span>
+                <h3 class="smm-included-title">CITATION CONSISTENCY</h3>
+                <p class="smm-included-desc">Citation and directory consistency so Google trusts your name, address and phone</p>
+              </div>
+
+              <!-- Item 06 -->
+              <div class="smm-included-item">
+                <span class="smm-included-num">06</span>
+                <h3 class="smm-included-title">MONTHLY REPORTING</h3>
+                <p class="smm-included-desc">Monthly ranking and traffic reports</p>
+              </div>
+
+            </div>
+
+            <!-- Right Aside Feature Panel -->
+            <aside class="smm-included-aside">
+              <span class="smm-script-badge">Med Spas + Salons</span>
+              <div class="smm-included-aside-inner">
+                <h3>BUILT FOR THE BEAUTY INDUSTRY</h3>
+                <p>Rank for the treatments your clients search. Every optimization is handled by a team that already knows your industry.</p>
+              </div>
+            </aside>
+
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: WHO IT'S FOR (2-COLUMN EDITORIAL BLOCK)
+         ==================================================================== -->
+    <section class="smm-whofor-section" aria-label="Who Local SEO Is For">
+      <div class="smm-container">
+        <div class="smm-whofor-layout">
+          <div class="smm-whofor-image-wrap">
+            <img src="../assets/services/local-seo-who-for.webp" 
+                 alt="Med spa treatment room" 
+                 width="822" 
+                 height="592" 
+                 loading="lazy">
+          </div>
+          <div class="smm-whofor-content">
+            <h2 class="smm-whofor-heading">WHO IT'S FOR</h2>
+            <p>Med spas, injectors, salons and skin studios with a website that isn't bringing in new clients, or who are being outranked by competitors with worse reviews.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: HOW IT WORKS & RELATED SERVICES (TRIO SECTION)
+         ==================================================================== -->
+    <section class="smm-trio-section" aria-label="Process and Related Services">
+      <div class="smm-container">
+        <div class="smm-trio-grid">
+
+          <!-- Left Column: Additional Services -->
+          <div class="smm-trio-col-left">
+            <h3 class="smm-trio-heading">ADDITIONAL SERVICES</h3>
+            <nav class="smm-services-nav" aria-label="Additional Services">
+              <a href="../google-business-profile-management.html" class="smm-service-link">
+                <span>Google Business Profile</span>
+                <span class="smm-link-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="../med-spa-website-design.html" class="smm-service-link">
+                <span>Website design</span>
+                <span class="smm-link-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="../social-media-management-boston.html" class="smm-service-link">
+                <span>Social media management</span>
+                <span class="smm-link-arrow" aria-hidden="true">→</span>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Center Column: How It Works -->
+          <div class="smm-trio-col-center">
+            <h3 class="smm-trio-heading">HOW IT WORKS</h3>
+            <div class="smm-process-list">
+              <div class="smm-process-step">
+                <span class="smm-step-num">01</span>
+                <div class="smm-step-body">
+                  <span class="smm-step-name">Audit.</span>
+                  Where you rank today and what's holding you back.
+                </div>
+              </div>
+              <div class="smm-process-step">
+                <span class="smm-step-num">02</span>
+                <div class="smm-step-body">
+                  <span class="smm-step-name">Strategy.</span>
+                  The treatments and towns we'll target first.
+                </div>
+              </div>
+              <div class="smm-process-step">
+                <span class="smm-step-num">03</span>
+                <div class="smm-step-body">
+                  <span class="smm-step-name">Optimize.</span>
+                  On-page, technical and content work each month.
+                </div>
+              </div>
+              <div class="smm-process-step">
+                <span class="smm-step-num">04</span>
+                <div class="smm-step-body">
+                  <span class="smm-step-name">Report.</span>
+                  Rankings, traffic and inquiries every month.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Statistic Callout -->
+          <div class="smm-trio-col-right">
+            <div class="smm-stat-inner">
+              <div class="smm-stat-big">Page 1</div>
+              <p class="smm-stat-desc">When someone searches for your treatments nearby, page one is where the bookings happen.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: INVESTMENT & CLIENT TESTIMONIAL
+         ==================================================================== -->
+    <section class="smm-invest-proof-section" aria-label="Investment and Client Proof">
+      <div class="smm-container">
+        <div class="smm-invest-proof-grid">
+
+          <!-- Investment Box -->
+          <div class="smm-invest-box">
+            <span class="smm-sub-eyebrow">[ INVESTMENT ]</span>
+            <h2 class="smm-sub-title">Custom Partnerships. Proven Growth.</h2>
+            <p class="smm-invest-desc">SEO plans are custom quoted based on your market and how many services you want to rank for.</p>
+            <p class="smm-invest-desc">Book an SEO call and we'll recommend the right plan.</p>
+            <p class="smm-invest-desc">Pair with Google Business Profile management for the strongest local results.</p>
+            <a href="../inquire.html" class="smm-invest-btn">
+              <span>BOOK AN SEO CALL</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Proof (Testimonial Box) -->
+          <div class="smm-proof-box">
+            <span class="smm-sub-eyebrow">[ CLIENT TESTIMONIAL ]</span>
+            <blockquote class="smm-proof-quote">“I can't express how much confidence I've gained in my business since working with you.”</blockquote>
+            <cite class="smm-proof-attrib">SOCIAL MANAGEMENT CLIENT</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: FREQUENTLY ASKED QUESTIONS
+         ==================================================================== -->
+    <section class="smm-faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="smm-container">
+
+        <div class="smm-faq-header">
+          <h2 id="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+        </div>
+
+        <div class="smm-faq-accordion" data-accordion>
+
+          <!-- Q1 -->
+          <div class="smm-faq-item is-open">
+            <button class="smm-faq-trigger" type="button" aria-expanded="true">
+              <span>Q1. What is local SEO for a med spa?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body">
+              <p>Local SEO is optimizing your website and online listings so you rank when people nearby search for your treatments.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q2. How long does SEO take to work?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>Most businesses start seeing movement in 3 to 6 months. SEO compounds, so results keep building the longer it runs.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q3. Do I need SEO if I'm already busy from Instagram?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>Instagram depends on reach that changes every month. Google search brings clients who are already looking to book, which makes your growth more stable.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="smm-faq-item">
+            <button class="smm-faq-trigger" type="button" aria-expanded="false">
+              <span>Q4. Can I do SEO myself?</span>
+              <span class="smm-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="smm-faq-body" hidden>
+              <p>You can. We share a DIY guide for business owners who aren't ready for full service. Most clients hire us because it takes hours every month to do well.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: FINAL CTA (SPLIT BLACK BOX)
+         ==================================================================== -->
+    <section class="smm-cta-section" aria-label="Book an SEO Call">
+      <div class="smm-cta-split">
+        <div class="smm-cta-image-wrap">
+          <img src="../assets/services/local-seo-cta.webp" 
+               alt="Lucci Media local SEO client results" 
+               width="900" 
+               height="600" 
+               loading="lazy">
+        </div>
+        <div class="smm-cta-black-box">
+          <h2 class="smm-cta-headline">RANK FOR WHAT YOU'RE BEST AT.</h2>
+          <a href="../inquire.html" class="smm-cta-button">BOOK AN SEO CALL</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- SITE FOOTER -->
+  <!-- ====================================================================
+       SITE FOOTER
+       ==================================================================== -->
   <footer class="site-footer" id="footer" data-reveal>
     <div class="footer-meta-bar page-wrap">
       <div class="footer-meta-col footer-meta-left">
         <a href="https://www.instagram.com/luccimedia/" target="_blank" rel="noreferrer">CONNECT ON IG + TIKTOK <span
-            aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            aria-hidden="true"><svg class="cta-arrow-icon" viewBox="0 0 10 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.35"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg></span></a>
       </div>
       <div class="footer-meta-col footer-meta-center">
         <span class="footer-est">EST. 2021 ── BOSTON</span>
@@ -179,7 +585,8 @@
 
     <div class="footer-brand-stage page-wrap">
       <div class="footer-logo-stage" aria-label="Lucci Media">
-        <img class="footer-brand-logo" src="../assets/lucci-horizontal-logo-black.png?v=2.0" alt="Lucci Media" width="700" height="100">
+        <img class="footer-brand-logo" src="../assets/lucci-horizontal-logo-black.png?v=2.0" alt="Lucci Media" width="700"
+          height="100">
       </div>
     </div>
 
@@ -197,11 +604,32 @@
     </div>
   </footer>
 
+  <!-- MOBILE BOTTOM NAVIGATION BAR -->
   <nav class="mobile-bottom-bar" aria-label="Quick navigation">
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="../inquire.html">Apply</a>
-    <button type="button" data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../inquire.html">Apply</a><button type="button"
+      data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
   </nav>
+
+  <!-- Accordion Interactive Script for FAQ -->
+  <script>
+    document.querySelectorAll('.smm-faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.smm-faq-item');
+        const body = item.querySelector('.smm-faq-body');
+        const isOpen = item.classList.contains('is-open');
+
+        if (isOpen) {
+          item.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          body.hidden = true;
+        } else {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          body.hidden = false;
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>

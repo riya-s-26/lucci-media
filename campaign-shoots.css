@@ -241,7 +241,7 @@
 }
 
 .csp-stat-num {
-  font-family: 'ShapiroWideRegular', 'Montserrat', sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(2.25rem, 3.5vw, 3.25rem);
   font-weight: 700;
   line-height: 1;

@@ -435,7 +435,7 @@
 }
 
 .bp-stat-big {
-  font-family: 'ShapiroWideRegular', 'Montserrat', sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(3.25rem, 5.5vw, 5.25rem);
   font-weight: 700;
   line-height: 1;
