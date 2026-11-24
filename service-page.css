@@ -22,7 +22,7 @@
 }
 
 .service-page {
-  font-family: var(--font-primary, "Montserrat", sans-serif);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   color: #1E1B18;
   background-color: #FFFFFF;
   line-height: 1.5;
@@ -76,7 +76,7 @@
 }
 
 .smm-hero-kicker {
-  font-family: var(--font-primary, "Montserrat", sans-serif);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -283,7 +283,7 @@
 }
 
 .smm-included-num {
-  font-family: var(--font-primary, "Montserrat", sans-serif);
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
