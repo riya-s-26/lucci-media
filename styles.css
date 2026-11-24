@@ -474,6 +474,7 @@ button {
 
 .desktop-nav .nav-dropdown-menu a.is-soon {
   color: #55504B;
+  cursor: default !important;
 }
 
 .desktop-nav .nav-dropdown-menu a:hover,
@@ -609,6 +610,7 @@ button {
 
 .mobile-dropdown-menu a.is-soon {
   color: #55504B;
+  cursor: default !important;
 }
 
 .mobile-dropdown-menu a:hover,
