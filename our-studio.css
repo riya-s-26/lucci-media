@@ -331,41 +331,94 @@
 
 /* ==========================================================================
    MOVING IMAGE GALLERY (SEAMLESS MULTI-ROW CONTINUOUS MARQUEE)
+   STRICT ZERO-GAP & PRECISE EDGE TOUCHING
    ========================================================================== */
 :root {
-  --marquee-gap: 0px;
+  --marquee-gap: 0px !important;
+}
+
+.studio-marquee-container,
+.studio-marquee-container * {
+  box-sizing: border-box;
 }
 
 .studio-marquee-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  grid-gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
   touch-action: pan-y;
   user-select: none;
   -webkit-user-select: none;
+  background: transparent !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
 }
 
 .studio-marquee-row {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  line-height: 0;
+  display: flex !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  grid-gap: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  background: transparent !important;
 }
 
 .studio-marquee-track {
-  display: flex;
-  gap: 0;
-  width: max-content;
+  display: flex !important;
+  gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  grid-gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  width: max-content !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  background: transparent !important;
 }
 
 .studio-marquee-group {
-  display: flex;
-  gap: 0;
-  flex-shrink: 0;
+  display: flex !important;
+  gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  grid-gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  flex-shrink: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  background: transparent !important;
   will-change: transform;
 }
 
@@ -389,30 +442,51 @@
 
 /* Individual Gallery Item Sizing & Aspect Ratios */
 .studio-marquee-item {
-  height: clamp(250px, 22vw, 320px);
-  flex-shrink: 0;
-  overflow: hidden;
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
+  height: clamp(250px, 22vw, 320px) !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  display: block !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
 }
 
 .studio-marquee-item.is-portrait {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 2 / 3 !important;
+  width: calc(clamp(250px, 22vw, 320px) * 2 / 3) !important;
 }
 
 .studio-marquee-item.is-landscape {
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 2 !important;
+  width: calc(clamp(250px, 22vw, 320px) * 3 / 2) !important;
 }
 
 .studio-marquee-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  max-height: none !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   pointer-events: none;
   transition: transform 0.45s ease;
 }
@@ -423,20 +497,20 @@
 
 /* Seamless Continuous Marquee Keyframes */
 @keyframes marquee-left {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
 @keyframes marquee-right {
-  from {
-    transform: translateX(-100%);
+  0% {
+    transform: translate3d(-100%, 0, 0);
   }
-  to {
-    transform: translateX(0);
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -518,11 +592,21 @@
   }
 
   :root {
-    --marquee-gap: 0px;
+    --marquee-gap: 0px !important;
   }
 
   .studio-marquee-item {
-    height: clamp(200px, 24vw, 260px);
+    height: clamp(200px, 24vw, 260px) !important;
+  }
+
+  .studio-marquee-item.is-portrait {
+    aspect-ratio: 2 / 3 !important;
+    width: calc(clamp(200px, 24vw, 260px) * 2 / 3) !important;
+  }
+
+  .studio-marquee-item.is-landscape {
+    aspect-ratio: 3 / 2 !important;
+    width: calc(clamp(200px, 24vw, 260px) * 3 / 2) !important;
   }
 
   .row-move-left .studio-marquee-group {
@@ -570,11 +654,21 @@
   }
 
   :root {
-    --marquee-gap: 0px;
+    --marquee-gap: 0px !important;
   }
 
   .studio-marquee-item {
-    height: clamp(170px, 36vw, 215px);
+    height: clamp(170px, 36vw, 215px) !important;
+  }
+
+  .studio-marquee-item.is-portrait {
+    aspect-ratio: 2 / 3 !important;
+    width: calc(clamp(170px, 36vw, 215px) * 2 / 3) !important;
+  }
+
+  .studio-marquee-item.is-landscape {
+    aspect-ratio: 3 / 2 !important;
+    width: calc(clamp(170px, 36vw, 215px) * 3 / 2) !important;
   }
 
   .row-move-left .studio-marquee-group {

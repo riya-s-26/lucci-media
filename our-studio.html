@@ -28,7 +28,159 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css?v=39.0">
-  <link rel="stylesheet" href="our-studio.css?v=1.0">
+  <link rel="stylesheet" href="our-studio.css?v=3.0">
+  <style id="our-studio-gallery-seamless">
+    /* Strictly scoped zero-gap & edge-to-edge touching rules for Our Studio gallery */
+    :root {
+      --marquee-gap: 0px !important;
+    }
+    .our-studio-page .studio-marquee-container,
+    .our-studio-page .studio-marquee-container * {
+      box-sizing: border-box !important;
+    }
+    .our-studio-page .studio-marquee-container {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+      row-gap: 0 !important;
+      column-gap: 0 !important;
+      grid-gap: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-style: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow: hidden !important;
+      position: relative !important;
+      background: transparent !important;
+      mask-image: none !important;
+      -webkit-mask-image: none !important;
+    }
+    .our-studio-page .studio-marquee-row {
+      display: flex !important;
+      overflow: hidden !important;
+      width: 100% !important;
+      position: relative !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-style: none !important;
+      gap: 0 !important;
+      row-gap: 0 !important;
+      column-gap: 0 !important;
+      grid-gap: 0 !important;
+      line-height: 0 !important;
+      font-size: 0 !important;
+      background: transparent !important;
+    }
+    .our-studio-page .studio-marquee-track {
+      display: flex !important;
+      gap: 0 !important;
+      row-gap: 0 !important;
+      column-gap: 0 !important;
+      grid-gap: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-style: none !important;
+      width: max-content !important;
+      line-height: 0 !important;
+      font-size: 0 !important;
+      background: transparent !important;
+    }
+    .our-studio-page .studio-marquee-group {
+      display: flex !important;
+      gap: 0 !important;
+      row-gap: 0 !important;
+      column-gap: 0 !important;
+      grid-gap: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-style: none !important;
+      flex-shrink: 0 !important;
+      line-height: 0 !important;
+      font-size: 0 !important;
+      background: transparent !important;
+      will-change: transform;
+    }
+    .our-studio-page .studio-marquee-item {
+      height: clamp(250px, 22vw, 320px) !important;
+      flex-shrink: 0 !important;
+      flex-grow: 0 !important;
+      overflow: hidden !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-style: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: relative !important;
+      display: block !important;
+      line-height: 0 !important;
+      font-size: 0 !important;
+    }
+    .our-studio-page .studio-marquee-item.is-portrait {
+      aspect-ratio: 2 / 3 !important;
+      width: calc(clamp(250px, 22vw, 320px) * 2 / 3) !important;
+    }
+    .our-studio-page .studio-marquee-item.is-landscape {
+      aspect-ratio: 3 / 2 !important;
+      width: calc(clamp(250px, 22vw, 320px) * 3 / 2) !important;
+    }
+    .our-studio-page .studio-marquee-item img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      min-width: 100% !important;
+      max-height: none !important;
+      min-height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-style: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      pointer-events: none;
+      transition: transform 0.45s ease;
+    }
+    .our-studio-page .studio-marquee-item:hover img {
+      transform: scale(1.03);
+    }
+    @media (max-width: 1024px) {
+      .our-studio-page .studio-marquee-item {
+        height: clamp(200px, 24vw, 260px) !important;
+      }
+      .our-studio-page .studio-marquee-item.is-portrait {
+        aspect-ratio: 2 / 3 !important;
+        width: calc(clamp(200px, 24vw, 260px) * 2 / 3) !important;
+      }
+      .our-studio-page .studio-marquee-item.is-landscape {
+        aspect-ratio: 3 / 2 !important;
+        width: calc(clamp(200px, 24vw, 260px) * 3 / 2) !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .our-studio-page .studio-marquee-item {
+        height: clamp(170px, 36vw, 215px) !important;
+      }
+      .our-studio-page .studio-marquee-item.is-portrait {
+        aspect-ratio: 2 / 3 !important;
+        width: calc(clamp(170px, 36vw, 215px) * 2 / 3) !important;
+      }
+      .our-studio-page .studio-marquee-item.is-landscape {
+        aspect-ratio: 3 / 2 !important;
+        width: calc(clamp(170px, 36vw, 215px) * 3 / 2) !important;
+      }
+    }
+  </style>
   <script>document.documentElement.classList.add('js');</script>
   <script src="assets/vendor/lenis.min.js"></script>
   <script src="script.js?v=26.0" defer></script>
