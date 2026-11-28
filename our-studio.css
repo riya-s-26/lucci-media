@@ -333,22 +333,19 @@
    MOVING IMAGE GALLERY (SEAMLESS MULTI-ROW CONTINUOUS MARQUEE)
    ========================================================================== */
 :root {
-  --marquee-gap: 24px;
+  --marquee-gap: 0px;
 }
 
 .studio-marquee-container {
   display: flex;
   flex-direction: column;
-  gap: var(--marquee-gap);
+  gap: 0;
   width: 100%;
   overflow: hidden;
   position: relative;
   touch-action: pan-y;
   user-select: none;
   -webkit-user-select: none;
-  /* Subtle edge feather mask for seamless entrance/exit */
-  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
 }
 
 .studio-marquee-row {
@@ -356,17 +353,18 @@
   overflow: hidden;
   width: 100%;
   position: relative;
+  line-height: 0;
 }
 
 .studio-marquee-track {
   display: flex;
-  gap: var(--marquee-gap);
+  gap: 0;
   width: max-content;
 }
 
 .studio-marquee-group {
   display: flex;
-  gap: var(--marquee-gap);
+  gap: 0;
   flex-shrink: 0;
   will-change: transform;
 }
@@ -394,8 +392,10 @@
   height: clamp(250px, 22vw, 320px);
   flex-shrink: 0;
   overflow: hidden;
-  background-color: #F5F4F0;
-  border: 1px solid var(--studio-border-subtle);
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
@@ -427,13 +427,13 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - var(--marquee-gap)));
+    transform: translateX(-100%);
   }
 }
 
 @keyframes marquee-right {
   from {
-    transform: translateX(calc(-100% - var(--marquee-gap)));
+    transform: translateX(-100%);
   }
   to {
     transform: translateX(0);
@@ -518,7 +518,7 @@
   }
 
   :root {
-    --marquee-gap: 20px;
+    --marquee-gap: 0px;
   }
 
   .studio-marquee-item {
@@ -570,7 +570,7 @@
   }
 
   :root {
-    --marquee-gap: 16px;
+    --marquee-gap: 0px;
   }
 
   .studio-marquee-item {
@@ -587,11 +587,6 @@
 
   .row-move-left-alt .studio-marquee-group {
     animation-duration: 30s;
-  }
-
-  .studio-marquee-container {
-    mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
   }
 
   .studio-bottom-cta {

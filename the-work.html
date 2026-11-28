@@ -194,8 +194,8 @@
           <!-- Left: Large Main Video Player -->
           <div class="work-video-player-container">
             <div class="work-video-wrapper">
-              <video id="work-main-video" class="work-main-video" controls playsinline muted preload="auto"
-                poster="assets/work/DSC05799.JPG" data-active-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4">
+              <video id="work-main-video" class="work-main-video" controls playsinline muted loop preload="auto"
+                poster="assets/work/video_dropbox_work_poster.jpg" data-active-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4">
                 <source src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4" type="video/mp4">
                 <source src="assets/work/ee6e05451db64cb48028fb98795e3710.MOV" type="video/quicktime">
                 Your browser does not support the video tag.
@@ -206,16 +206,16 @@
           <!-- Right: Vertical Video Playlist -->
           <div class="work-video-playlist" role="listbox" aria-label="Featured videos playlist">
 
-            <!-- Item 1: Beauty Campaign (Active Default) -->
+            <!-- Item 1: On-Site Video Production (Dropbox Work Folder - Active Default) -->
             <div class="work-playlist-item is-active" role="option" aria-selected="true" tabindex="0"
               data-video-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4"
-              data-poster="assets/work/DSC05799.JPG">
+              data-poster="assets/work/video_dropbox_work_poster.jpg">
               <div class="work-playlist-thumb">
-                <img src="assets/work/DSC05799.JPG" alt="Beauty Campaign thumbnail" width="160" height="100" loading="lazy">
+                <img src="assets/work/video_dropbox_work_thumb.jpg" alt="On-Site Video Production thumbnail" width="160" height="100" loading="lazy">
               </div>
               <div class="work-playlist-info">
-                <h3 class="work-playlist-title">Beauty Campaign</h3>
-                <span class="work-playlist-duration">01:24</span>
+                <h3 class="work-playlist-title">On-Site Video Production</h3>
+                <span class="work-playlist-duration">00:06</span>
               </div>
               <div class="work-playlist-arrow" aria-hidden="true">
                 <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -224,52 +224,16 @@
               </div>
             </div>
 
-            <!-- Item 2: BTS - Studio Shoot -->
+            <!-- Item 2: Studio Showcase Production (Dropbox Studio Folder) -->
             <div class="work-playlist-item" role="option" aria-selected="false" tabindex="0"
               data-video-src="assets/work/studio_shoot.mp4"
-              data-poster="assets/work/IMG_9059.jpg">
+              data-poster="assets/work/video_dropbox_studio_poster.jpg">
               <div class="work-playlist-thumb">
-                <img src="assets/work/IMG_9059.jpg" alt="BTS Studio Shoot thumbnail" width="160" height="100" loading="lazy">
+                <img src="assets/work/video_dropbox_studio_thumb.jpg" alt="Studio Showcase Production thumbnail" width="160" height="100" loading="lazy">
               </div>
               <div class="work-playlist-info">
-                <h3 class="work-playlist-title">BTS - Studio Shoot</h3>
-                <span class="work-playlist-duration">00:58</span>
-              </div>
-              <div class="work-playlist-arrow" aria-hidden="true">
-                <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1.5L9 6L1 10.5V1.5Z" />
-                </svg>
-              </div>
-            </div>
-
-            <!-- Item 3: Fashion Film -->
-            <div class="work-playlist-item" role="option" aria-selected="false" tabindex="0"
-              data-video-src="assets/work/fashion_film.mp4"
-              data-poster="assets/work/min_05_laughing_outline.JPG">
-              <div class="work-playlist-thumb">
-                <img src="assets/work/min_05_laughing_outline.JPG" alt="Fashion Film thumbnail" width="160" height="100" loading="lazy">
-              </div>
-              <div class="work-playlist-info">
-                <h3 class="work-playlist-title">Fashion Film</h3>
-                <span class="work-playlist-duration">01:42</span>
-              </div>
-              <div class="work-playlist-arrow" aria-hidden="true">
-                <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1.5L9 6L1 10.5V1.5Z" />
-                </svg>
-              </div>
-            </div>
-
-            <!-- Item 4: Product Film -->
-            <div class="work-playlist-item" role="option" aria-selected="false" tabindex="0"
-              data-video-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4"
-              data-poster="assets/work/DSC06984.JPG">
-              <div class="work-playlist-thumb">
-                <img src="assets/work/DSC06984.JPG" alt="Product Film thumbnail" width="160" height="100" loading="lazy">
-              </div>
-              <div class="work-playlist-info">
-                <h3 class="work-playlist-title">Product Film</h3>
-                <span class="work-playlist-duration">01:05</span>
+                <h3 class="work-playlist-title">Studio Showcase Production</h3>
+                <span class="work-playlist-duration">00:23</span>
               </div>
               <div class="work-playlist-arrow" aria-hidden="true">
                 <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -654,6 +618,7 @@
           if (posterSrc) mainVideo.poster = posterSrc;
           mainVideo.pause();
           mainVideo.src = videoSrc;
+          mainVideo.currentTime = 0;
           mainVideo.load();
         }
 
