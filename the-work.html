@@ -177,7 +177,7 @@
     </section>
 
     <!-- ====================================================================
-       SECTION 2: VIDEO SHOWCASE (AUTOMATIC PLAYBACK & NATIVE CONTROLS)
+       SECTION 2: FEATURED PRODUCTION (VIDEO SHOWCASE WITH INTERACTIVE PLAYLIST)
        ==================================================================== -->
     <section class="work-video-section" aria-labelledby="video-section-heading">
       <div class="work-container">
@@ -185,19 +185,99 @@
         <div class="work-section-header">
           <span class="work-eyebrow">[ ON-SITE VIDEO CONTENT ]</span>
           <h2 id="video-section-heading">Featured Production</h2>
-          <p>Dynamic on-site video captures the authentic energy, client experience, and signature details that define
+          <p>Dynamic on-site video capturing the authentic energy, client experience, and signature details that define
             your brand.</p>
         </div>
 
-        <!-- Featured Vertical Video: Autoplay, Muted, Loop, Playsinline -->
-        <div class="work-video-container">
-          <div class="work-video-wrapper">
-            <video class="work-video" autoplay muted loop playsinline controls preload="auto"
-              poster="assets/work/DSC05799.JPG">
-              <source src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4" type="video/mp4">
-              <source src="assets/work/ee6e05451db64cb48028fb98795e3710.MOV" type="video/quicktime">
-              Your browser does not support the video tag.
-            </video>
+        <!-- Video Player & Interactive Playlist Stage -->
+        <div class="work-video-stage">
+          <!-- Left: Large Main Video Player -->
+          <div class="work-video-player-container">
+            <div class="work-video-wrapper">
+              <video id="work-main-video" class="work-main-video" controls playsinline muted preload="auto"
+                poster="assets/work/DSC05799.JPG" data-active-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4">
+                <source src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4" type="video/mp4">
+                <source src="assets/work/ee6e05451db64cb48028fb98795e3710.MOV" type="video/quicktime">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- Right: Vertical Video Playlist -->
+          <div class="work-video-playlist" role="listbox" aria-label="Featured videos playlist">
+
+            <!-- Item 1: Beauty Campaign (Active Default) -->
+            <div class="work-playlist-item is-active" role="option" aria-selected="true" tabindex="0"
+              data-video-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4"
+              data-poster="assets/work/DSC05799.JPG">
+              <div class="work-playlist-thumb">
+                <img src="assets/work/DSC05799.JPG" alt="Beauty Campaign thumbnail" width="160" height="100" loading="lazy">
+              </div>
+              <div class="work-playlist-info">
+                <h3 class="work-playlist-title">Beauty Campaign</h3>
+                <span class="work-playlist-duration">01:24</span>
+              </div>
+              <div class="work-playlist-arrow" aria-hidden="true">
+                <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L9 6L1 10.5V1.5Z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Item 2: BTS - Studio Shoot -->
+            <div class="work-playlist-item" role="option" aria-selected="false" tabindex="0"
+              data-video-src="assets/work/studio_shoot.mp4"
+              data-poster="assets/work/IMG_9059.jpg">
+              <div class="work-playlist-thumb">
+                <img src="assets/work/IMG_9059.jpg" alt="BTS Studio Shoot thumbnail" width="160" height="100" loading="lazy">
+              </div>
+              <div class="work-playlist-info">
+                <h3 class="work-playlist-title">BTS - Studio Shoot</h3>
+                <span class="work-playlist-duration">00:58</span>
+              </div>
+              <div class="work-playlist-arrow" aria-hidden="true">
+                <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L9 6L1 10.5V1.5Z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Item 3: Fashion Film -->
+            <div class="work-playlist-item" role="option" aria-selected="false" tabindex="0"
+              data-video-src="assets/work/fashion_film.mp4"
+              data-poster="assets/work/min_05_laughing_outline.JPG">
+              <div class="work-playlist-thumb">
+                <img src="assets/work/min_05_laughing_outline.JPG" alt="Fashion Film thumbnail" width="160" height="100" loading="lazy">
+              </div>
+              <div class="work-playlist-info">
+                <h3 class="work-playlist-title">Fashion Film</h3>
+                <span class="work-playlist-duration">01:42</span>
+              </div>
+              <div class="work-playlist-arrow" aria-hidden="true">
+                <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L9 6L1 10.5V1.5Z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Item 4: Product Film -->
+            <div class="work-playlist-item" role="option" aria-selected="false" tabindex="0"
+              data-video-src="assets/work/ee6e05451db64cb48028fb98795e3710.mp4"
+              data-poster="assets/work/DSC06984.JPG">
+              <div class="work-playlist-thumb">
+                <img src="assets/work/DSC06984.JPG" alt="Product Film thumbnail" width="160" height="100" loading="lazy">
+              </div>
+              <div class="work-playlist-info">
+                <h3 class="work-playlist-title">Product Film</h3>
+                <span class="work-playlist-duration">01:05</span>
+              </div>
+              <div class="work-playlist-arrow" aria-hidden="true">
+                <svg viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L9 6L1 10.5V1.5Z" />
+                </svg>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -542,40 +622,97 @@
       data-mobile-menu-trigger aria-expanded="false" aria-controls="mobile-menu">Menu</button>
   </nav>
 
-  <!-- Video Automatic Playback & Intersection Controller -->
+  <!-- Video Automatic Playback & Interactive Hover Playlist Controller -->
   <script>
     (function () {
-      var video = document.querySelector('.work-video');
-      if (!video) return;
+      var mainVideo = document.getElementById('work-main-video');
+      var playlistItems = document.querySelectorAll('.work-playlist-item');
+      if (!mainVideo || !playlistItems.length) return;
 
-      // Always ensure muted for browser autoplay compliance
-      video.muted = true;
+      function selectVideo(item, shouldPlay) {
+        var videoSrc = item.getAttribute('data-video-src');
+        var posterSrc = item.getAttribute('data-poster');
+        if (!videoSrc) return;
 
-      // Try autoplay on page load
-      var playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(function () {
-          // Fallback handled gracefully
+        // If clicking/hovering already active item while playing, don't restart
+        if (item.classList.contains('is-active') && !mainVideo.paused) {
+          return;
+        }
+
+        // Update active highlight on playlist items
+        playlistItems.forEach(function (i) {
+          i.classList.remove('is-active');
+          i.setAttribute('aria-selected', 'false');
         });
+        item.classList.add('is-active');
+        item.setAttribute('aria-selected', 'true');
+
+        // Check if src changed
+        var currentSrc = mainVideo.getAttribute('data-active-src');
+        if (currentSrc !== videoSrc) {
+          mainVideo.setAttribute('data-active-src', videoSrc);
+          if (posterSrc) mainVideo.poster = posterSrc;
+          mainVideo.pause();
+          mainVideo.src = videoSrc;
+          mainVideo.load();
+        }
+
+        if (shouldPlay) {
+          mainVideo.muted = true;
+          var playPromise = mainVideo.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(function () {
+              // Silently handle any browser interruption
+            });
+          }
+        }
       }
 
-      // Automatic playback when video enters viewport
+      // Desktop: hover over playlist item switches video and autoplays
+      var hasHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      playlistItems.forEach(function (item) {
+        if (hasHover) {
+          item.addEventListener('mouseenter', function () {
+            selectVideo(item, true);
+          });
+        }
+
+        // Tap / Click for mobile devices, touchscreens, and accessibility
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          selectVideo(item, true);
+        });
+
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectVideo(item, true);
+          }
+        });
+      });
+
+      // Autoplay muted on initial page load / viewport intersection
+      mainVideo.muted = true;
+      var initPlay = mainVideo.play();
+      if (initPlay !== undefined) {
+        initPlay.catch(function () {});
+      }
+
       if ('IntersectionObserver' in window) {
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              video.muted = true;
-              var p = video.play();
-              if (p !== undefined) {
-                p.catch(function () {});
-              }
+              mainVideo.muted = true;
+              var p = mainVideo.play();
+              if (p !== undefined) p.catch(function () {});
             } else {
-              video.pause();
+              mainVideo.pause();
             }
           });
         }, { threshold: 0.25 });
 
-        observer.observe(video);
+        observer.observe(mainVideo);
       }
     })();
   </script>
