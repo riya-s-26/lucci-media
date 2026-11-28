@@ -225,6 +225,10 @@
   border-bottom: 1px solid var(--work-border-subtle);
 }
 
+.work-video-section .work-eyebrow {
+  font-family: var(--font-work-mono), monospace;
+}
+
 .work-section-header {
   margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
   text-align: center;
